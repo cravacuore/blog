@@ -4,7 +4,7 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <h3 class="page-heading">Posts</h3>
 
   <ul class="post-list">
     {% for post in site.posts %}
@@ -12,7 +12,7 @@ layout: default
       {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
       {% unless year == this_year %}
         {% assign year = this_year %}
-          <h3>{{ year }}</h3>
+          <h2>{{ year }}</h2>
       {% endunless %}
 
       <li class="post-link">
