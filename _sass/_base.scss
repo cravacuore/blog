@@ -85,22 +85,37 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: $base-font-weight;
 }
 
+h1 {
+  color: #F45D4C;
+}
+
+h2 {
+  color: #F7A541;
+}
+
+h3 {
+  color: #FACA66;
+}
+
+h4 {
+  color: #FEE5AD;
+}
+
 
 
 /**
  * Links
  */
 a {
-    color: $brand-color;
+    color: #009FC5;
     text-decoration: none;
 
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
+    // &:visited {
+    //     color: darken($brand-color, 15%);
+    // }
 
     &:hover {
-        color: $text-color;
-        text-decoration: underline;
+        color: lighten(#009FC5, 25%);
     }
 }
 
@@ -110,12 +125,13 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
+    color: #A1DBB2;
+    padding-top: 6pt;
+    padding-bottom: 6pt;
+    background-color: rgba(66, 66, 66, 0.31);
+    border-left: 4px solid $grey-color-dark;
     padding-left: $spacing-unit / 2;
     font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
 
     > :last-child {
         margin-bottom: 0;
@@ -129,25 +145,26 @@ blockquote {
  */
 pre,
 code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
+  font-size: 15px;
+  border: 1px solid $grey-color-dark;
+  border-radius: 3px;
+  background-color: $code-background;
 }
 
 code {
-    padding: 1px 5px;
+  font-size: 0.9em;
+  padding: 1px 5px;
 }
 
 pre {
-    padding: 8px 12px;
-    overflow-x: auto;
+  padding: 8px 12px;
+  overflow-x: auto;
 
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 
