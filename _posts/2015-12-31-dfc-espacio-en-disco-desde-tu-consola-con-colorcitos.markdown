@@ -8,6 +8,10 @@ Nunca usé una GUI para hacer algo tan simple como ver el espacio que tengo disp
 
 > df -h
 
+o también:
+
+> lsblk
+
 Pero me encontré con una utilidad muy similar que le agrega un poco de color y una barra de porcentaje para obtener la información de mis discos de forma más rápida y visual. Esta herramienta es **dfc**, también para utilizar desde tu consola de preferencia que me pareció muy buena.
 
 Algunas funcionalidades que tiene es la posibilidad de mostrar sólo algunos sectores del disco (*'-p'*), sumar los sectores mostrados (*'-s'*), entre otras. Para más info:
