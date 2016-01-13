@@ -1,30 +1,67 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>Cravacuore&#39;s Blog</title>
+    <description>This is my personal blog space for random ideas, write about software libre, programming, technology and some other of my passions.
+</description>
+    <link>http://cravacuore.github.io/blog/</link>
+    <atom:link href="http://cravacuore.github.io/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 02 Jan 2016 12:23:29 -0300</pubDate>
+    <lastBuildDate>Sat, 02 Jan 2016 12:23:29 -0300</lastBuildDate>
+    <generator>Jekyll v3.0.1</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>dfc - Espacio en disco desde tu consola con colorcitos</title>
+        <description>&lt;p&gt;Nunca usé una GUI para hacer algo tan simple como ver el espacio que tengo disponible en mis discos. De hecho siempre me arreglé usando en consola:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;df -h&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;o también:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;lsblk&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Pero me encontré con una utilidad muy similar que le agrega un poco de color y una barra de porcentaje para obtener la información de mis discos de forma más rápida y visual. Esta herramienta es &lt;strong&gt;dfc&lt;/strong&gt;, también para utilizar desde tu consola de preferencia que me pareció muy buena.&lt;/p&gt;
+
+&lt;p&gt;Algunas funcionalidades que tiene es la posibilidad de mostrar sólo algunos sectores del disco (&lt;em&gt;‘-p’&lt;/em&gt;), sumar los sectores mostrados (&lt;em&gt;‘-s’&lt;/em&gt;), entre otras. Para más info:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;man dfc&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Acá pueden ver una imágen haciendo uso de la herramienta:
+&lt;img src=&quot;https://cloud.openmailbox.org/index.php/apps/files_sharing/ajax/publicpreview.php?x=1350&amp;amp;y=770&amp;amp;a=true&amp;amp;file=dfc.png&amp;amp;t=iPDfIK8RIlXgF0a&amp;amp;scalingup=0&quot; alt=&quot;dfc&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En Archlinux, la encontramos en los repos oficiales de &lt;em&gt;community&lt;/em&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;sudo pacman -S dfc&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Espero les sirva. Saludos.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 31 Dec 2015 18:42:12 -0300</pubDate>
+        <link>http://cravacuore.github.io/blog/2015/12/31/dfc-espacio-en-disco-desde-tu-consola-con-colorcitos.html</link>
+        <guid isPermaLink="true">http://cravacuore.github.io/blog/2015/12/31/dfc-espacio-en-disco-desde-tu-consola-con-colorcitos.html</guid>
+        
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Hello World!</title>
+        <description>&lt;p&gt;Hola, este es el primer post de este espacio. La idea de este blog es simplemente escribir sobre temas de interés personal, ya sean al estilo de recordatorios, opiniones de cuestiones de tecnología, programación, software libre, etcétera.&lt;/p&gt;
+
+&lt;p&gt;Seguramente este sea el primero de unos cuantos. Nos estamos leyendo.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 25 Nov 2015 21:14:54 -0300</pubDate>
+        <link>http://cravacuore.github.io/blog/2015/11/25/hello-world.html</link>
+        <guid isPermaLink="true">http://cravacuore.github.io/blog/2015/11/25/hello-world.html</guid>
+        
+        
+      </item>
+    
   </channel>
 </rss>

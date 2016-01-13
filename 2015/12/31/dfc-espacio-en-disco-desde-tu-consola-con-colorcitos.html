@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Cravacuore's Blog</title>
-  <meta name="description" content="This is my personal blog space for random ideas, write about software libre, programming, technology and some other of my passions.
-">
+  <title>dfc - Espacio en disco desde tu consola con colorcitos</title>
+  <meta name="description" content="Nunca usé una GUI para hacer algo tan simple como ver el espacio que tengo disponible en mis discos. De hecho siempre me arreglé usando en consola:">
 
   <link rel="stylesheet" href="/blog/css/main.css">
-  <link rel="canonical" href="http://cravacuore.github.io/blog/">
+  <link rel="canonical" href="http://cravacuore.github.io/blog/2015/12/31/dfc-espacio-en-disco-desde-tu-consola-con-colorcitos.html">
   <link rel="alternate" type="application/rss+xml" title="Cravacuore's Blog" href="http://cravacuore.github.io/blog/feed.xml">
 </head>
 
@@ -55,38 +54,48 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h3 class="page-heading">Posts</h3>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">dfc - Espacio en disco desde tu consola con colorcitos</h1>
+    <p class="post-meta"><time datetime="2015-12-31T18:42:12-03:00" itemprop="datePublished">Dec 31, 2015</time></p>
+  </header>
 
-  <ul class="post-list">
-    
+  <div class="post-content" itemprop="articleBody">
+    <p>Nunca usé una GUI para hacer algo tan simple como ver el espacio que tengo disponible en mis discos. De hecho siempre me arreglé usando en consola:</p>
 
-      
-      
-        
-          <h2>2015</h2>
-      
+<blockquote>
+  <p>df -h</p>
+</blockquote>
 
-      <li class="post-link">
-        <span class="post-meta">Dec 31</span> -
-        <a href="/blog/2015/12/31/dfc-espacio-en-disco-desde-tu-consola-con-colorcitos.html">dfc - Espacio en disco desde tu consola con colorcitos</a>
-      </li>
+<p>o también:</p>
 
-    
+<blockquote>
+  <p>lsblk</p>
+</blockquote>
 
-      
-      
+<p>Pero me encontré con una utilidad muy similar que le agrega un poco de color y una barra de porcentaje para obtener la información de mis discos de forma más rápida y visual. Esta herramienta es <strong>dfc</strong>, también para utilizar desde tu consola de preferencia que me pareció muy buena.</p>
 
-      <li class="post-link">
-        <span class="post-meta">Nov 25</span> -
-        <a href="/blog/2015/11/25/hello-world.html">Hello World!</a>
-      </li>
+<p>Algunas funcionalidades que tiene es la posibilidad de mostrar sólo algunos sectores del disco (<em>‘-p’</em>), sumar los sectores mostrados (<em>‘-s’</em>), entre otras. Para más info:</p>
 
-    
-  </ul>
+<blockquote>
+  <p>man dfc</p>
+</blockquote>
 
-</div>
+<p>Acá pueden ver una imágen haciendo uso de la herramienta:
+<img src="https://cloud.openmailbox.org/index.php/apps/files_sharing/ajax/publicpreview.php?x=1350&amp;y=770&amp;a=true&amp;file=dfc.png&amp;t=iPDfIK8RIlXgF0a&amp;scalingup=0" alt="dfc" /></p>
+
+<p>En Archlinux, la encontramos en los repos oficiales de <em>community</em>:</p>
+
+<blockquote>
+  <p>sudo pacman -S dfc</p>
+</blockquote>
+
+<p>Espero les sirva. Saludos.</p>
+
+  </div>
+
+</article>
 
       </div>
     </div>
