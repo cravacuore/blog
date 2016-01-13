@@ -6,8 +6,8 @@
 </description>
     <link>http://cravacuore.github.io/blog/</link>
     <atom:link href="http://cravacuore.github.io/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 02 Jan 2016 12:23:29 -0300</pubDate>
-    <lastBuildDate>Sat, 02 Jan 2016 12:23:29 -0300</lastBuildDate>
+    <pubDate>Wed, 13 Jan 2016 14:15:11 -0300</pubDate>
+    <lastBuildDate>Wed, 13 Jan 2016 14:15:11 -0300</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -38,7 +38,7 @@
 &lt;p&gt;En Archlinux, la encontramos en los repos oficiales de &lt;em&gt;community&lt;/em&gt;:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;sudo pacman -S dfc&lt;/p&gt;
+  &lt;h1 id=&quot;pacman--s-dfc&quot;&gt;pacman -S dfc&lt;/h1&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Espero les sirva. Saludos.&lt;/p&gt;
