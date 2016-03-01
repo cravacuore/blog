@@ -23,6 +23,6 @@ Acá pueden ver una imágen haciendo uso de la herramienta:
 
 En Archlinux, la encontramos en los repos oficiales de *community*:
 
-> sudo pacman -S dfc
+> \# pacman -S dfc
 
 Espero les sirva. Saludos.
