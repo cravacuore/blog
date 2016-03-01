@@ -6,13 +6,12 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Cravacuore's Blog
-email: cravacuore24@gmail.com
+title: rawBlog
 description: > # this means to ignore newlines until "baseurl:"
   This is my personal blog space for random ideas, write about software libre,
-  programming, technology and some other of my passions.
+  programming, technology, cycling and some other of my passions.
 baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "http://cravacuore.github.io" # the base hostname & protocol for your site
+url: "http://cravacuore.com.ar" # the base hostname & protocol for your site
 github_username: cravacuore
 
 # Build settings
