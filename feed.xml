@@ -6,9 +6,28 @@
 </description>
     <link>http://cravacuore.com.ar/blog/</link>
     <atom:link href="http://cravacuore.com.ar/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 29 Feb 2016 22:25:51 -0300</pubDate>
-    <lastBuildDate>Mon, 29 Feb 2016 22:25:51 -0300</lastBuildDate>
+    <pubDate>Tue, 05 Apr 2016 23:42:03 -0300</pubDate>
+    <lastBuildDate>Tue, 05 Apr 2016 23:42:03 -0300</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Reencontrando las opciones de escritorio - Plasma 5</title>
+        <description>&lt;p&gt;Hace rato que me había resignado en que por algún motivo en mi escritorio, usando Plasma 5, no podía acceder a las opciones del escritorio. El único lugar desde el que había podido acceder en algún momento fue desde el &lt;em&gt;toolbox&lt;/em&gt;, el cual se habilita/deshabilita desde este mismo menú, por lo cual no tenía acceso al mismo. No figuraba en el buscador de Plasma, ni entre las opciones de sistema, ni desde &lt;em&gt;kcmshell&lt;/em&gt; en consola.&lt;/p&gt;
+
+&lt;p&gt;Hasta que pregunté en el lugar adecuado, y un alma caritativa, me comentó de un &lt;em&gt;shortcut&lt;/em&gt; de teclado:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Alt + d + s&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Y así de simple, usando ese atajo en el escritorio me hace aparecer las opciones que buscaba hace rato.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 05 Apr 2016 23:37:46 -0300</pubDate>
+        <link>http://cravacuore.com.ar/blog/2016/04/05/opciones-de-escritorio-plasma-5.html</link>
+        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2016/04/05/opciones-de-escritorio-plasma-5.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>dfc - Espacio en disco desde tu consola con colorcitos</title>
