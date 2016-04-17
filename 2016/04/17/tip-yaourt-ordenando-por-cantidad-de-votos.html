@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>rawBlog</title>
-  <meta name="description" content="This is my personal blog space for random ideas, write about software libre, programming, technology, cycling and some other of my passions.
-">
+  <title>[Tip] Yaourt - Ordenando por cantidad de votos</title>
+  <meta name="description" content="Si como yo usás ArchLinux y yaourt como manejador de los paquetes en AUR, este es un tip que quizás te venga bien.">
 
   <link rel="stylesheet" href="/blog/css/main.css">
-  <link rel="canonical" href="http://cravacuore.com.ar/blog/">
+  <link rel="canonical" href="http://cravacuore.com.ar/blog/2016/04/17/tip-yaourt-ordenando-por-cantidad-de-votos.html">
   <link rel="alternate" type="application/rss+xml" title="rawBlog" href="http://cravacuore.com.ar/blog/feed.xml">
 </head>
 
@@ -55,61 +54,45 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h3 class="page-heading">Posts</h3>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">[Tip] Yaourt - Ordenando por cantidad de votos</h1>
+    <p class="post-meta"><time datetime="2016-04-17T13:32:12-03:00" itemprop="datePublished">Apr 17, 2016</time></p>
+  </header>
 
-  <ul class="post-list">
-    
+  <div class="post-content" itemprop="articleBody">
+    <p>Si como yo usás <a href="https://archlinux.org/"><strong>ArchLinux</strong></a> y <a href="https://aur.archlinux.org/packages/yaourt/"><em>yaourt</em></a> como manejador de los paquetes en <a href="https://aur.archlinux.org/"><strong>AUR</strong></a>, este es un <em>tip</em> que quizás te venga bien.</p>
 
-      
-      
-        
-          <h2>2016</h2>
-      
+<p>La mayor cantidad de veces en las que busco un paquete para instalar de AUR, busco el más conocido y votado con el nombre del paquete. Y aprovechando que en AUR se tiene el sistema de votos para puntuar cada paquete, lo más práctico es poder ordenar bajo este criterio. Para esto buscamos de la siguiente forma:</p>
 
-      <li class="post-link">
-        <span class="post-meta">Apr 17</span> -
-        <a href="/blog/2016/04/17/tip-yaourt-ordenando-por-cantidad-de-votos.html">[Tip] Yaourt - Ordenando por cantidad de votos</a>
-      </li>
+<blockquote>
+  <p>yaourt ‘nombre_paquete’ –sort w</p>
+</blockquote>
 
-    
+<p>o:</p>
 
-      
-      
+<blockquote>
+  <p>yaourt -Ss ‘nombre_paquete’ –sort w</p>
+</blockquote>
 
-      <li class="post-link">
-        <span class="post-meta">Apr 5</span> -
-        <a href="/blog/2016/04/05/opciones-de-escritorio-plasma-5.html">Reencontrando las opciones de escritorio - Plasma 5</a>
-      </li>
+<p>También pueden ordenar por popularidad:</p>
 
-    
+<blockquote>
+  <p>yaourt ‘nombre_paquete’ –sort p</p>
+</blockquote>
 
-      
-      
-        
-          <h2>2015</h2>
-      
+<p>Estas opciones y otras opciones son heredadas por el uso de <em>package-query</em>, para más información:</p>
 
-      <li class="post-link">
-        <span class="post-meta">Dec 31</span> -
-        <a href="/blog/2015/12/31/dfc-espacio-en-disco-desde-tu-consola-con-colorcitos.html">dfc - Espacio en disco desde tu consola con colorcitos</a>
-      </li>
+<blockquote>
+  <p>man package-query</p>
+</blockquote>
 
-    
+<p>Saludos.</p>
 
-      
-      
+  </div>
 
-      <li class="post-link">
-        <span class="post-meta">Nov 25</span> -
-        <a href="/blog/2015/11/25/hello-world.html">Hello World!</a>
-      </li>
-
-    
-  </ul>
-
-</div>
+</article>
 
       </div>
     </div>

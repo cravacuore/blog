@@ -6,9 +6,46 @@
 </description>
     <link>http://cravacuore.com.ar/blog/</link>
     <atom:link href="http://cravacuore.com.ar/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 06 Apr 2016 00:13:38 -0300</pubDate>
-    <lastBuildDate>Wed, 06 Apr 2016 00:13:38 -0300</lastBuildDate>
+    <pubDate>Sun, 17 Apr 2016 13:50:50 -0300</pubDate>
+    <lastBuildDate>Sun, 17 Apr 2016 13:50:50 -0300</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>[Tip] Yaourt - Ordenando por cantidad de votos</title>
+        <description>&lt;p&gt;Si como yo usás &lt;a href=&quot;https://archlinux.org/&quot;&gt;&lt;strong&gt;ArchLinux&lt;/strong&gt;&lt;/a&gt; y &lt;a href=&quot;https://aur.archlinux.org/packages/yaourt/&quot;&gt;&lt;em&gt;yaourt&lt;/em&gt;&lt;/a&gt; como manejador de los paquetes en &lt;a href=&quot;https://aur.archlinux.org/&quot;&gt;&lt;strong&gt;AUR&lt;/strong&gt;&lt;/a&gt;, este es un &lt;em&gt;tip&lt;/em&gt; que quizás te venga bien.&lt;/p&gt;
+
+&lt;p&gt;La mayor cantidad de veces en las que busco un paquete para instalar de AUR, busco el más conocido y votado con el nombre del paquete. Y aprovechando que en AUR se tiene el sistema de votos para puntuar cada paquete, lo más práctico es poder ordenar bajo este criterio. Para esto buscamos de la siguiente forma:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;yaourt ‘nombre_paquete’ –sort w&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;o:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;yaourt -Ss ‘nombre_paquete’ –sort w&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;También pueden ordenar por popularidad:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;yaourt ‘nombre_paquete’ –sort p&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Estas opciones y otras opciones son heredadas por el uso de &lt;em&gt;package-query&lt;/em&gt;, para más información:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;man package-query&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Saludos.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 17 Apr 2016 13:32:12 -0300</pubDate>
+        <link>http://cravacuore.com.ar/blog/2016/04/17/tip-yaourt-ordenando-por-cantidad-de-votos.html</link>
+        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2016/04/17/tip-yaourt-ordenando-por-cantidad-de-votos.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Reencontrando las opciones de escritorio - Plasma 5</title>
