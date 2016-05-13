@@ -6,12 +6,12 @@
 </description>
     <link>http://cravacuore.com.ar/blog/</link>
     <atom:link href="http://cravacuore.com.ar/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 13 May 2016 18:26:02 -0300</pubDate>
-    <lastBuildDate>Fri, 13 May 2016 18:26:02 -0300</lastBuildDate>
+    <pubDate>Fri, 13 May 2016 18:39:31 -0300</pubDate>
+    <lastBuildDate>Fri, 13 May 2016 18:39:31 -0300</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
-        <title>[Django] MultipleSelectField y como lograr un filtrado sobre un campo utilizando este paquete</title>
+        <title>[Django] MultipleSelectField y su filtrado</title>
         <description>&lt;p&gt;En una aplicación &lt;a href=&quot;https://www.djangoproject.com/&quot;&gt;Django&lt;/a&gt; sobre la que estoy trabajando me surgió la necesidad de tener un campo al que le pueda asignar más de una opción dentro de mis &lt;em&gt;choices&lt;/em&gt; (que no es más que una lista de tuplas representando valores, como por ejemplo estados). En este caso quería evitar tener que crear una clase para representar esto, ya que ya se utilizaban las &lt;em&gt;choices&lt;/em&gt; y no quería tener que guardar estos valores en la base de datos.&lt;/p&gt;
 
 &lt;p&gt;Dando vueltas me encontré con &lt;a href=&quot;https://github.com/goinnn/django-multiselectfield&quot;&gt;django-multiselectfield&lt;/a&gt; y fue justo lo que necesitaba. Este lo que nos termina guardando es una lista de &lt;em&gt;strings&lt;/em&gt; con los valores seleccionados.&lt;/p&gt;
@@ -102,8 +102,8 @@
 &lt;p&gt;Y con esto logré el propósito deseado.&lt;/p&gt;
 </description>
         <pubDate>Fri, 13 May 2016 17:51:59 -0300</pubDate>
-        <link>http://cravacuore.com.ar/blog/2016/05/13/django-multipleselectfield-y-como-lograr-un-filtrado-sobre-un-campo-utilizando-este-paquete.html</link>
-        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2016/05/13/django-multipleselectfield-y-como-lograr-un-filtrado-sobre-un-campo-utilizando-este-paquete.html</guid>
+        <link>http://cravacuore.com.ar/blog/2016/05/13/django-multipleselectfield-y-su-filtrado.html</link>
+        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2016/05/13/django-multipleselectfield-y-su-filtrado.html</guid>
         
         
       </item>
