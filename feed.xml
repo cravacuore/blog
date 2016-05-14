@@ -6,8 +6,8 @@
 </description>
     <link>http://cravacuore.com.ar/blog/</link>
     <atom:link href="http://cravacuore.com.ar/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 14 May 2016 00:22:14 -0300</pubDate>
-    <lastBuildDate>Sat, 14 May 2016 00:22:14 -0300</lastBuildDate>
+    <pubDate>Sat, 14 May 2016 00:32:20 -0300</pubDate>
+    <lastBuildDate>Sat, 14 May 2016 00:32:20 -0300</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -30,7 +30,7 @@
 
 &lt;h3 id=&quot;ublock--ublock-origin&quot;&gt;uBlock != uBlock Origin&lt;/h3&gt;
 
-&lt;p&gt;No se debe confundir el &lt;em&gt;addon&lt;/em&gt; uBlock con el uBlock Origin. Uno fue un &lt;em&gt;fork&lt;/em&gt; del otro, y tomaron distintos caminos para su desarrollo. Yo elegí en su momento utilizar uBlock Origin, y al momento de escribir este &lt;em&gt;post&lt;/em&gt; uBlock hace meses que no tiene actualizaciones, mientras que uBlock Origin las tiene diariamente.&lt;/p&gt;
+&lt;p&gt;No se debe confundir el &lt;em&gt;addon&lt;/em&gt; uBlock con el uBlock Origin. Uno fue un &lt;em&gt;fork&lt;/em&gt; del otro, y tomaron distintos caminos para su desarrollo. Yo elegí en su momento utilizar uBlock Origin, y al momento de escribir este &lt;em&gt;post&lt;/em&gt; uBlock hace meses que no tiene actualizaciones, mientras que uBlock Origin las tiene a diario.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/&quot;&gt;Link Addon - uBlock Origin&lt;/a&gt;&lt;/p&gt;
 
@@ -94,7 +94,7 @@
 
 &lt;h2 id=&quot;vimfx&quot;&gt;VimFx&lt;/h2&gt;
 
-&lt;p&gt;Si sos un usuario del editor de textos &lt;a href=&quot;http://www.vim.org/&quot;&gt;vim&lt;/a&gt;, y sos feliz con los “movimientos” que se realizan en este, que mejor que poder usar los mismos para manejarte en tu navegador. Este &lt;em&gt;addon&lt;/em&gt; hace justo eso, te permite manejarte en el navegador sólo con el teclado bajo atajos al estilo de &lt;em&gt;vim&lt;/em&gt;. Navegación con las teclas &lt;code class=&quot;highlighter-rouge&quot;&gt;hjkl&lt;/code&gt;, &lt;em&gt;scroll&lt;/em&gt; por página con &lt;code class=&quot;highlighter-rouge&quot;&gt;d&lt;/code&gt; y &lt;code class=&quot;highlighter-rouge&quot;&gt;u&lt;/code&gt;, búsqueda con &lt;code class=&quot;highlighter-rouge&quot;&gt;/&lt;/code&gt;, y lo mejor, con &lt;code class=&quot;highlighter-rouge&quot;&gt;f&lt;/code&gt; te despliega letras sobre los links visibles de la página que estás viendo, y al apretar la esas letras es como hacer &lt;em&gt;click&lt;/em&gt; sobre ese link, lo mismo con &lt;code class=&quot;highlighter-rouge&quot;&gt;F&lt;/code&gt; pero te abre en una nueva pestaña; entre muchas otras funcionalidades.&lt;/p&gt;
+&lt;p&gt;Si sos un usuario del editor de textos &lt;a href=&quot;http://www.vim.org/&quot;&gt;vim&lt;/a&gt;, y sos feliz con los “movimientos” que se realizan en este, que mejor que poder usar los mismos para manejarte en tu navegador. Este &lt;em&gt;addon&lt;/em&gt; hace justo eso, te permite manejarte en el navegador sólo con el teclado bajo atajos al estilo de &lt;em&gt;vim&lt;/em&gt;. Navegación con las teclas &lt;code class=&quot;highlighter-rouge&quot;&gt;hjkl&lt;/code&gt;, &lt;em&gt;scroll&lt;/em&gt; por página con &lt;code class=&quot;highlighter-rouge&quot;&gt;d&lt;/code&gt; y &lt;code class=&quot;highlighter-rouge&quot;&gt;u&lt;/code&gt;, búsqueda con &lt;code class=&quot;highlighter-rouge&quot;&gt;/&lt;/code&gt;, y lo mejor, con &lt;code class=&quot;highlighter-rouge&quot;&gt;f&lt;/code&gt; te despliega letras sobre los &lt;em&gt;links&lt;/em&gt; visibles de la página que estás viendo, y al apretar esas letras es como hacer &lt;em&gt;click&lt;/em&gt; sobre ese link, lo mismo con &lt;code class=&quot;highlighter-rouge&quot;&gt;F&lt;/code&gt; pero te abre en una nueva pestaña; entre muchas otras funcionalidades.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/vimfx/&quot;&gt;Link Addon - VimFx&lt;/a&gt;&lt;/p&gt;
 
@@ -141,9 +141,9 @@
 
 &lt;p&gt;Eso es todo.&lt;/p&gt;
 </description>
-        <pubDate>Fri, 13 May 2016 23:58:09 -0300</pubDate>
-        <link>http://cravacuore.com.ar/blog/2016/05/13/firefox-mis-add-ons-extensions.html</link>
-        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2016/05/13/firefox-mis-add-ons-extensions.html</guid>
+        <pubDate>Sat, 14 May 2016 00:28:09 -0300</pubDate>
+        <link>http://cravacuore.com.ar/blog/2016/05/14/firefox-mis-add-ons-extensions.html</link>
+        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2016/05/14/firefox-mis-add-ons-extensions.html</guid>
         
         
       </item>
