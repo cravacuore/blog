@@ -6,9 +6,147 @@
 </description>
     <link>http://cravacuore.com.ar/blog/</link>
     <atom:link href="http://cravacuore.com.ar/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 13 May 2016 18:39:31 -0300</pubDate>
-    <lastBuildDate>Fri, 13 May 2016 18:39:31 -0300</lastBuildDate>
+    <pubDate>Sat, 14 May 2016 00:12:40 -0300</pubDate>
+    <lastBuildDate>Sat, 14 May 2016 00:12:40 -0300</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Firefox - Mis Add-ons (Extensions)</title>
+        <description>&lt;p&gt;Voy a nombrar los &lt;em&gt;add-ons&lt;/em&gt; o extensiones que utilizo a diario en mi navegador Firefox, y comentar el porqué los uso brevemente.&lt;/p&gt;
+
+&lt;p&gt;Este &lt;em&gt;post&lt;/em&gt; lo escribo por dos razones, una en forma de recordatorio cuando quiero instalar algunos en alguna instalación ajena y la otra para poder referenciar este &lt;em&gt;post&lt;/em&gt; cuando me preguntan que extensiones recomendaria o utilizo. Además voy a dejar los &lt;em&gt;links&lt;/em&gt; a cada uno para instalar rápidamente y no tener que buscarlos.&lt;/p&gt;
+
+&lt;h1 id=&quot;privacidad--seguridad&quot;&gt;Privacidad / Seguridad&lt;/h1&gt;
+
+&lt;h2 id=&quot;disconnect&quot;&gt;Disconnect&lt;/h2&gt;
+
+&lt;p&gt;Un &lt;em&gt;addon open source&lt;/em&gt; que logra que las páginas carguen más rápido y para el “trackeo” de terceros. Lo utilizo principalmente para evitar los botones para compartir por redes sociales (que no utilizo) y por consecuente evitar el “trackeo” de esas redes, y como &lt;em&gt;plus&lt;/em&gt; las páginas cargar más rápido.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/disconnect/&quot;&gt;Link Addon - Disconnect&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;ublock-origin&quot;&gt;uBlock Origin&lt;/h2&gt;
+
+&lt;p&gt;Esta es la alternativa que prefiero en contraparte a otros bloqueadores de publicidad. Lo prefiero porque consume menos recursos y no sólo bloquea publicidades, sino además &lt;em&gt;trackers&lt;/em&gt; y páginas con &lt;em&gt;malware&lt;/em&gt;. Es un proyecto de &lt;em&gt;software&lt;/em&gt; libre, con licencia GPLv3 &lt;a href=&quot;https://github.com/gorhill/uBlock/&quot;&gt;alojado en Github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;ublock--ublock-origin&quot;&gt;uBlock != uBlock Origin&lt;/h3&gt;
+
+&lt;p&gt;No se debe confundir el &lt;em&gt;addon&lt;/em&gt; uBlock con el uBlock Origin. Uno fue un &lt;em&gt;fork&lt;/em&gt; del otro, y tomaron distintos caminos para su desarrollo. Yo elegí en su momento utilizar uBlock Origin, y al momento de escribir este &lt;em&gt;post&lt;/em&gt; uBlock hace meses que no tiene actualizaciones, mientras que uBlock Origin las tiene diariamente.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/&quot;&gt;Link Addon - uBlock Origin&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;https-everywhere&quot;&gt;HTTPS-Everywhere&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Encrypt the Web!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Logra que toda página que tenga disponible su versión con &lt;em&gt;HTTPS&lt;/em&gt; se cargue directamente, por ejemplo si escribo github.com me va a cargar automáticamente https://github.com. Una funcionalidad muy útil que hace que siempre que sea posible naveguemos utilizando conexiones cifradas.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.eff.org/https-everywhere&quot;&gt;Link página oficial - Descarga&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;self-destructing-cookies&quot;&gt;Self-Destructing Cookies&lt;/h2&gt;
+
+&lt;p&gt;Hay muchas razones por las que se las páginas guardan &lt;em&gt;cookies&lt;/em&gt; en el navegador, puede ser para simplemente saber que cosas ya visitaste en su página, guardar tu &lt;em&gt;nick&lt;/em&gt;, mantener una &lt;em&gt;session&lt;/em&gt;, o para “trackearte”, o espiarte, etcétera. Lo molesto es que muchas veces se guardan incontables &lt;em&gt;cookies&lt;/em&gt; incluso de páginas a las que entramos sólo por una vez y quedan indefinidamente, haciendo a largo plazo posiblemente más lenta la navegación, y los problemas de seguridad que pueden causar.&lt;/p&gt;
+
+&lt;p&gt;Para evitar todo eso que comentaba antes uso este &lt;em&gt;addon&lt;/em&gt;, que simplemente cuando cerramos una pestaña automáticamente borra todas las &lt;em&gt;cookies&lt;/em&gt; que haya generado esa página.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/self-destructing-cookies/&quot;&gt;Link Addon - Self-Destructing Cookies&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;privacy-settings&quot;&gt;Privacy Settings&lt;/h2&gt;
+
+&lt;p&gt;Una de las tareas que más aburren, es acordarse que cosas te conviene modificar entrando al temido &lt;em&gt;about:config&lt;/em&gt; para deshabilitar opciones que no necesitás y muchas veces pueden repercutir contra tu privacidad. Este &lt;em&gt;addon&lt;/em&gt; simplifica cambiando las variables de configuración bajo distintos perfiles, desde uno con los valores &lt;em&gt;defaults&lt;/em&gt; a otros más restrictivos, además de poder prender/apagar a mano los que quieras en el momento si lo necesitás con una interfaz simple a golpe de &lt;em&gt;click&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/privacy-settings/&quot;&gt;Link Addon - Privacy Settings&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;random-agent-spoofer&quot;&gt;Random Agent Spoofer&lt;/h2&gt;
+
+&lt;p&gt;Para intentar evitar un poco lo que se llama el &lt;em&gt;fingerprint&lt;/em&gt;, la “huella digital”, de tu navegador. El navegador mantiene un &lt;em&gt;string&lt;/em&gt; con bastante información llamado “user-agent”, como el nombre y versión de tu navegador, que sistema operativo utilizás, entre otras cosas. Este &lt;em&gt;addon&lt;/em&gt; te provee la facilidad de cambiar estos datos, y cambiar de forma &lt;em&gt;random&lt;/em&gt; o por elección entre distintos &lt;em&gt;profiles&lt;/em&gt; de navegadores, sistemas operativos, etcétera; dando datos “falsos” para hacerle creer a quien o lo que lo lea. Además sirve si queremos probar alguna funcionalidad de una página, por ejemplo si una página cambia su formato, color, tamaño, datos o lo que sea dependiendo de estos datos. Y se puede configurar para que se cambie automáticamente cada cierto período de tiempo.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/random-agent-spoofer/&quot;&gt;Link Addon - Random Agent Spoofer&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;desarrollo-de-software&quot;&gt;Desarrollo de Software&lt;/h1&gt;
+
+&lt;h2 id=&quot;firebug&quot;&gt;Firebug&lt;/h2&gt;
+
+&lt;p&gt;Este &lt;em&gt;addon&lt;/em&gt; extiende ampliamente las herramientas para desarrollo web, permitiendo editar, hacer &lt;em&gt;debug&lt;/em&gt; y monitorear en vivo cualquier elemento en una página web. Imprescindible.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/firebug/&quot;&gt;Link Addon - Firebug&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;rest-easy&quot;&gt;REST Easy&lt;/h2&gt;
+
+&lt;p&gt;Un cliente REST simple en el navegador. Permite realizar &lt;em&gt;requests&lt;/em&gt; seleccionando el método HTTP, y pudiendo visualizar la información, y sus &lt;em&gt;headers&lt;/em&gt;, etcétera.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/rest-easy/&quot;&gt;Link Addon - REST Easy&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;otras-utilidades&quot;&gt;Otras utilidades&lt;/h1&gt;
+
+&lt;h2 id=&quot;duckduckgo-plus&quot;&gt;DuckDuckGo Plus&lt;/h2&gt;
+
+&lt;p&gt;Si usás &lt;a href=&quot;https://duckduckgo.com/&quot;&gt;DuckDuckGo&lt;/a&gt; como tu buscador por defecto (lo cual deberías :P), este &lt;em&gt;addon&lt;/em&gt; permite utilizar este buscador para varias funciones. La que principalmente utilizo es poder realizar búsquedas directamente desde la barra de direcciones. Además permite, seleccionar texto de una página, hacer click derecho y tener la opción de buscar información sobre ese texto, entre otras cosas. Super recomendado si te gusta el pato como buscador.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/duckduckgo-for-firefox/&quot;&gt;Link Addon - DuckDuckGo Plus&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;killspinners&quot;&gt;KillSpinners&lt;/h2&gt;
+
+&lt;p&gt;Hay páginas que nunca terminan de cargar, y si tenés una conexión a internet lenta..menos! Para evitar que las páginas se queden cargando indefinidamente gastando esa preciosa cantidad de banda ancha, quizás hasta innecesariamente por causa de algún &lt;em&gt;script&lt;/em&gt;, o lo que sea; este &lt;em&gt;addon&lt;/em&gt; corta la carga de una página si esta no se terminó de cargar a los 30 segundos (tiempo &lt;em&gt;default&lt;/em&gt;). Muy útil, especialmente si abrimos muchas pestañas rápido, mejor aprovechar la conexión para lo que vas utilizando y seguir cargando a medida que es necesario.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/killspinners/&quot;&gt;Link Addon - KillSpinner&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;vimfx&quot;&gt;VimFx&lt;/h2&gt;
+
+&lt;p&gt;Si sos un usuario del editor de textos &lt;a href=&quot;http://www.vim.org/&quot;&gt;vim&lt;/a&gt;, y sos feliz con los “movimientos” que se realizan en este, que mejor que poder usar los mismos para manejarte en tu navegador. Este &lt;em&gt;addon&lt;/em&gt; hace justo eso, te permite manejarte en el navegador sólo con el teclado bajo atajos al estilo de &lt;em&gt;vim&lt;/em&gt;. Navegación con las teclas &lt;code class=&quot;highlighter-rouge&quot;&gt;hjkl&lt;/code&gt;, &lt;em&gt;scroll&lt;/em&gt; por página con &lt;code class=&quot;highlighter-rouge&quot;&gt;d&lt;/code&gt; y &lt;code class=&quot;highlighter-rouge&quot;&gt;u&lt;/code&gt;, búsqueda con &lt;code class=&quot;highlighter-rouge&quot;&gt;/&lt;/code&gt;, y lo mejor, con &lt;code class=&quot;highlighter-rouge&quot;&gt;f&lt;/code&gt; te despliega letras sobre los links visibles de la página que estás viendo, y al apretar la esas letras es como hacer &lt;em&gt;click&lt;/em&gt; sobre ese link, lo mismo con &lt;code class=&quot;highlighter-rouge&quot;&gt;F&lt;/code&gt; pero te abre en una nueva pestaña; entre muchas otras funcionalidades.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/vimfx/&quot;&gt;Link Addon - VimFx&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;tab-groups&quot;&gt;Tab Groups&lt;/h2&gt;
+
+&lt;p&gt;Esta era una funcionalidad que antes venía incluída en Firefox, si la extrañabas, la podés agregar nuevamente con este &lt;em&gt;addon&lt;/em&gt;. Este te permite tener “agrupados” ciertas pestañas y así tener ordenados distintos grupos o áreas.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/tab-groups-panorama/&quot;&gt;Link Addon - Tab Groups&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;send-tab-to-device&quot;&gt;Send Tab to Device&lt;/h2&gt;
+
+&lt;p&gt;Si como yo utilizás el poder tener sincronizado los Firefox en distintos dispositivos con &lt;a href=&quot;https://www.mozilla.org/en-US/firefox/sync/&quot;&gt;Firefox Sync&lt;/a&gt;, para tener acceso a las páginas guardadas, etcétera; por ejemplo, entre tu computadora y tu celular ambos con Firefox, desde la aplicación de Android se facilita el poder enviar una pestaña a otro dispositivo pero no se tiene la misma facilidad para hacer al revés (de una computadora a otro dispositivo). Este &lt;em&gt;addon&lt;/em&gt; te deja hacer justo eso, haciendo &lt;em&gt;click&lt;/em&gt; derecho sobre la página que querés mandar, y &lt;code class=&quot;highlighter-rouge&quot;&gt;Send this page to device&lt;/code&gt; donde te aparece un listado con tus dispositivos, aceptás y se envía.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/send-tab-to-device/&quot;&gt;Link Addon - Send Tab to Device&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;onetab&quot;&gt;OneTab&lt;/h2&gt;
+
+&lt;p&gt;Si como yo a veces podés llegar a tener 50+ pestañas en tu navegador por ‘X’ razón (lo cual además de ser un despropósito es un a punto de desatarse &lt;strong&gt;caos&lt;/strong&gt; :P), esta es tu salvación. Este &lt;em&gt;addon&lt;/em&gt; te deja simplemente guardar de forma rápida todas las URLs de las pestañas que tenías abiertas apretando sólo un botón y tenerlas listadas, pero sin estar comiéndote los recursos y con el peligro de perder toda esa vital información que tendrías que ya haber leído pero lo dejabas para otro momento xD. Además te deja exportar los listados, lo cual utilizo para realizar &lt;em&gt;backups&lt;/em&gt; de mis muchas pestañas que no quiero perder si se cierra el Firefox y surge algún error. Recomiendo dejar “pinneada” la pestaña con el listado de OneTab.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/onetab/&quot;&gt;Link Addon - OneTab&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;site-launcher&quot;&gt;Site Launcher&lt;/h2&gt;
+
+&lt;p&gt;Si hay páginas que visitás diariamente, y no te gusta tener una barra con los marcadores (&lt;em&gt;Bookmarks Toolbar&lt;/em&gt;) o no querés usar el mouse para abrir rápidamente ciertas páginas. Este &lt;em&gt;addon&lt;/em&gt; te permite tener un panel con páginas que se pueden abrir con una combinación de teclas, en mi caso por ejemplo, &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + Espacio&lt;/code&gt; me abre el panel y dentro del panel aprieto &lt;code class=&quot;highlighter-rouge&quot;&gt;h&lt;/code&gt; me abre mi Github, entonces para abrir &lt;a href=&quot;https://www.openmailbox.org/&quot;&gt;Openmailbox&lt;/a&gt; simplemente es &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + Espacio y letra o&lt;/code&gt;. Totalmente configurable qué páginas y con qué letra.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/sitelauncher/&quot;&gt;Link Addon - Site Launcher&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;gnotifier&quot;&gt;GNotifier&lt;/h2&gt;
+
+&lt;p&gt;Este &lt;em&gt;addon&lt;/em&gt; sirve si querés que para las notificaciones de Firefox se utilicen las notificaciones nativas de tu sistema.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/gnotifier/&quot;&gt;Link Addon - GNotifier&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;addons-en-firefox-para-android&quot;&gt;Addons en Firefox para Android&lt;/h1&gt;
+
+&lt;p&gt;En Android no sólo tenemos una &lt;a href=&quot;https://play.google.com/store/apps/details?id=org.mozilla.firefox&quot;&gt;versión de Firefox&lt;/a&gt; para utilizar, sino que a esta también se le pueden instalar extensiones. Aunque no haya una variedad tan amplia como para el navegador, varias de las esenciales de las nombradas anteriormente se encuentran disponibles.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/android/addon/ublock-origin/&quot;&gt;uBlock Origin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/android/addon/https-everywhere/&quot;&gt;HTTPS-Everywhere&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/android/addon/self-destructing-cookies/&quot;&gt;Self-Destructing Cookies&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/android/addon/privacy-settings/&quot;&gt;Privacy Settings&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Eso es todo.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 13 May 2016 23:58:09 -0300</pubDate>
+        <link>http://cravacuore.com.ar/blog/2016/05/13/firefox-mis-add-ons-extensions.html</link>
+        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2016/05/13/firefox-mis-add-ons-extensions.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>[Django] MultipleSelectField y su filtrado</title>
