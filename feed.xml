@@ -6,15 +6,15 @@
 </description>
     <link>http://cravacuore.com.ar/blog/</link>
     <atom:link href="http://cravacuore.com.ar/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 14 May 2016 00:33:54 -0300</pubDate>
-    <lastBuildDate>Sat, 14 May 2016 00:33:54 -0300</lastBuildDate>
+    <pubDate>Sat, 14 May 2016 02:18:27 -0300</pubDate>
+    <lastBuildDate>Sat, 14 May 2016 02:18:27 -0300</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Firefox - Mis Add-ons (Extensions)</title>
         <description>&lt;p&gt;Voy a nombrar los &lt;em&gt;add-ons&lt;/em&gt; o extensiones que utilizo a diario en mi navegador Firefox, y comentar el porqué los uso brevemente.&lt;/p&gt;
 
-&lt;p&gt;Este &lt;em&gt;post&lt;/em&gt; lo escribo por dos razones, una en forma de recordatorio cuando quiero instalar algunos en alguna instalación ajena y la otra para poder referenciar este &lt;em&gt;post&lt;/em&gt; cuando me preguntan que extensiones recomendaria o utilizo. Además voy a dejar los &lt;em&gt;links&lt;/em&gt; a cada uno para instalar rápidamente y no tener que buscarlos.&lt;/p&gt;
+&lt;p&gt;Este &lt;em&gt;post&lt;/em&gt; lo escribo por dos razones: una en forma de recordatorio cuando quiero instalar algunos en alguna instalación ajena y la otra para poder referenciar este &lt;em&gt;post&lt;/em&gt; cuando me preguntan que extensiones recomendaria o utilizo. Además voy a dejar los &lt;em&gt;links&lt;/em&gt; a cada uno para instalar rápidamente y no tener que buscarlos.&lt;/p&gt;
 
 &lt;h1 id=&quot;privacidad--seguridad&quot;&gt;Privacidad / Seguridad&lt;/h1&gt;
 
@@ -26,7 +26,7 @@
 
 &lt;h2 id=&quot;ublock-origin&quot;&gt;uBlock Origin&lt;/h2&gt;
 
-&lt;p&gt;Esta es la alternativa que prefiero en contraparte a otros bloqueadores de publicidad. Lo prefiero porque consume menos recursos y no sólo bloquea publicidades, sino además &lt;em&gt;trackers&lt;/em&gt; y páginas con &lt;em&gt;malware&lt;/em&gt;. Es un proyecto de &lt;em&gt;software&lt;/em&gt; libre, con licencia GPLv3 &lt;a href=&quot;https://github.com/gorhill/uBlock/&quot;&gt;alojado en Github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Esta es la alternativa que prefiero en contraparte a otros bloqueadores de publicidad. Opto por él porque consume menos recursos y no sólo bloquea publicidades, sino también &lt;em&gt;trackers&lt;/em&gt; y páginas con &lt;em&gt;malware&lt;/em&gt;. Es un proyecto de &lt;em&gt;software&lt;/em&gt; libre, con licencia GPLv3 &lt;a href=&quot;https://github.com/gorhill/uBlock/&quot;&gt;alojado en Github&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;ublock--ublock-origin&quot;&gt;uBlock != uBlock Origin&lt;/h3&gt;
 
@@ -46,7 +46,7 @@
 
 &lt;h2 id=&quot;self-destructing-cookies&quot;&gt;Self-Destructing Cookies&lt;/h2&gt;
 
-&lt;p&gt;Hay muchas razones por las que se las páginas guardan &lt;em&gt;cookies&lt;/em&gt; en el navegador, puede ser para simplemente saber que cosas ya visitaste en su página, guardar tu &lt;em&gt;nick&lt;/em&gt;, mantener una &lt;em&gt;session&lt;/em&gt;, o para “trackearte”, o espiarte, etcétera. Lo molesto es que muchas veces se guardan incontables &lt;em&gt;cookies&lt;/em&gt; incluso de páginas a las que entramos sólo por una vez y quedan indefinidamente, haciendo a largo plazo posiblemente más lenta la navegación, y los problemas de seguridad que pueden causar.&lt;/p&gt;
+&lt;p&gt;Hay muchas razones por las que las páginas guardan &lt;em&gt;cookies&lt;/em&gt; en el navegador, puede ser para simplemente saber que cosas ya visitaste en su página, guardar tu &lt;em&gt;nick&lt;/em&gt;, mantener una &lt;em&gt;session&lt;/em&gt;, o para “trackearte”, o espiarte, etcétera. Lo molesto es que muchas veces se guardan incontables &lt;em&gt;cookies&lt;/em&gt; incluso de páginas a las que entramos sólo por una vez y quedan indefinidamente, haciendo a largo plazo posiblemente más lenta la navegación, y los problemas de seguridad que pueden causar.&lt;/p&gt;
 
 &lt;p&gt;Para evitar todo eso que comentaba antes uso este &lt;em&gt;addon&lt;/em&gt;, que simplemente cuando cerramos una pestaña automáticamente borra todas las &lt;em&gt;cookies&lt;/em&gt; que haya generado esa página.&lt;/p&gt;
 
@@ -88,7 +88,7 @@
 
 &lt;h2 id=&quot;killspinners&quot;&gt;KillSpinners&lt;/h2&gt;
 
-&lt;p&gt;Hay páginas que nunca terminan de cargar, y si tenés una conexión a internet lenta..menos! Para evitar que las páginas se queden cargando indefinidamente gastando esa preciosa cantidad de banda ancha, quizás hasta innecesariamente por causa de algún &lt;em&gt;script&lt;/em&gt;, o lo que sea; este &lt;em&gt;addon&lt;/em&gt; corta la carga de una página si esta no se terminó de cargar a los 30 segundos (tiempo &lt;em&gt;default&lt;/em&gt;). Muy útil, especialmente si abrimos muchas pestañas rápido, mejor aprovechar la conexión para lo que vas utilizando y seguir cargando a medida que es necesario.&lt;/p&gt;
+&lt;p&gt;Hay páginas que nunca terminan de cargar, y si tenés una conexión a internet lenta..menos! Para evitar que las páginas se queden cargando indefinidamente gastando esa preciosa cantidad de banda ancha, quizás innecesariamente por causa de algún &lt;em&gt;script&lt;/em&gt;, o lo que sea; este &lt;em&gt;addon&lt;/em&gt; corta la carga de una página si esta no se terminó de cargar a los 30 segundos (tiempo &lt;em&gt;default&lt;/em&gt;). Muy útil, especialmente si abrimos muchas pestañas rápido, mejor aprovechar la conexión para lo que vas utilizando y seguir cargando a medida que es necesario.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/killspinners/&quot;&gt;Link Addon - KillSpinner&lt;/a&gt;&lt;/p&gt;
 
