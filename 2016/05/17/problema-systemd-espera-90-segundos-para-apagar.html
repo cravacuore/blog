@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>rawBlog</title>
-  <meta name="description" content="This is my personal blog space for random ideas, write about software libre, programming, technology, cycling and some other of my passions.
-">
+  <title>Problema SystemD Espera 90 Segundos Para Apagar</title>
+  <meta name="description" content="Dejando de lado los flamewars respecto a systemd. Vengo usando systemd desde que en ArchLinux se adoptó este init como el “default” y no tuve mayores problem...">
 
   <link rel="stylesheet" href="/blog/css/main.css">
-  <link rel="canonical" href="http://cravacuore.com.ar/blog/">
+  <link rel="canonical" href="http://cravacuore.com.ar/blog/2016/05/17/problema-systemd-espera-90-segundos-para-apagar.html">
   <link rel="alternate" type="application/rss+xml" title="rawBlog" href="http://cravacuore.com.ar/blog/feed.xml">
 </head>
 
@@ -55,91 +54,32 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h3 class="page-heading">Posts</h3>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Problema SystemD Espera 90 Segundos Para Apagar</h1>
+    <p class="post-meta"><time datetime="2016-05-17T01:22:13-03:00" itemprop="datePublished">May 17, 2016</time></p>
+  </header>
 
-  <ul class="post-list">
-    
+  <div class="post-content" itemprop="articleBody">
+    <p>Dejando de lado los <em>flamewars</em> respecto a <em>systemd</em>. Vengo usando <em>systemd</em> desde que en ArchLinux se adoptó este <em>init</em> como el “<em>default</em>” y no tuve mayores problemas. Pero hay un <a href="https://github.com/systemd/systemd/issues/1615">bug</a>, el cual me molesta bastante que al intentar apagar la computadora, me deja esperando 90 segundos sobre un error del estilo <em>“A stop job is running for Session c2 for user…“</em>.</p>
 
-      
-      
-        
-          <h2>2016</h2>
-      
+<p>Una forma de solucionar por lo menos para que la espera sea menor y se fuerce el apagado del sistema, es cambiando este tiempo predeterminado de 90 segundos. Para esto modificamos nuestro archivo de configuración <code class="highlighter-rouge">/etc/systemd/system.conf</code>, y descomentamos de la sección <code class="highlighter-rouge">[Manager]</code> la propiedad <code class="highlighter-rouge">DefaultTimeoutStopSec</code> y le ponemos el tiempo deseado. En mi caso lo dejé de la siguiente forma:</p>
 
-      <li class="post-link">
-        <span class="post-meta">May 17</span> -
-        <a href="/blog/2016/05/17/problema-systemd-espera-90-segundos-para-apagar.html">Problema SystemD Espera 90 Segundos Para Apagar</a>
-      </li>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="p">[</span><span class="n">Manager</span><span class="p">]</span>
+<span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="c">#DefaultStandardError=inherit</span>
+<span class="c">#DefaultTimeoutStartSec=90s</span>
+<span class="n">DefaultTimeoutStopSec</span><span class="o">=</span><span class="mi">10</span><span class="n">s</span>
+<span class="c">#DefaultRestartSec=100ms</span>
+<span class="c">#DefaultStartLimitInterval=10s</span>
+<span class="p">[</span><span class="o">...</span><span class="p">]</span></code></pre></figure>
 
-    
+<p>Quedando así de un tiempo aceptable el apagado del equipo. Mientras se espera que se resuelva este problema.</p>
 
-      
-      
+  </div>
 
-      <li class="post-link">
-        <span class="post-meta">May 14</span> -
-        <a href="/blog/2016/05/14/firefox-mis-add-ons-extensions.html">Firefox - Mis Add-ons (Extensions)</a>
-      </li>
-
-    
-
-      
-      
-
-      <li class="post-link">
-        <span class="post-meta">May 13</span> -
-        <a href="/blog/2016/05/13/django-multipleselectfield-y-su-filtrado.html">[Django] MultipleSelectField y su filtrado</a>
-      </li>
-
-    
-
-      
-      
-
-      <li class="post-link">
-        <span class="post-meta">Apr 17</span> -
-        <a href="/blog/2016/04/17/tip-yaourt-ordenando-por-cantidad-de-votos.html">[Tip] Yaourt - Ordenando por cantidad de votos</a>
-      </li>
-
-    
-
-      
-      
-
-      <li class="post-link">
-        <span class="post-meta">Apr 5</span> -
-        <a href="/blog/2016/04/05/opciones-de-escritorio-plasma-5.html">Reencontrando las opciones de escritorio - Plasma 5</a>
-      </li>
-
-    
-
-      
-      
-        
-          <h2>2015</h2>
-      
-
-      <li class="post-link">
-        <span class="post-meta">Dec 31</span> -
-        <a href="/blog/2015/12/31/dfc-espacio-en-disco-desde-tu-consola-con-colorcitos.html">dfc - Espacio en disco desde tu consola con colorcitos</a>
-      </li>
-
-    
-
-      
-      
-
-      <li class="post-link">
-        <span class="post-meta">Nov 25</span> -
-        <a href="/blog/2015/11/25/hello-world.html">Hello World!</a>
-      </li>
-
-    
-  </ul>
-
-</div>
+</article>
 
       </div>
     </div>
