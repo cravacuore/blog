@@ -2,6 +2,7 @@
 layout: post
 title: "Firefox - Mis Add-ons (Extensions)"
 date: 2016-05-14T00:28:09-03:00
+comments: true
 ---
 
 Voy a nombrar los *add-ons* o extensiones que utilizo a diario en mi navegador Firefox, y comentar el porqué los uso brevemente.

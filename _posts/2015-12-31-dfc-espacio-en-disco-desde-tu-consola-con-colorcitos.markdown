@@ -2,6 +2,7 @@
 layout: post
 title: "dfc - Espacio en disco desde tu consola con colorcitos"
 date: 2015-12-31T18:42:12-03:00
+comments: true
 ---
 
 Nunca usé una GUI para hacer algo tan simple como ver el espacio que tengo disponible en mis discos. De hecho siempre me arreglé usando en consola:

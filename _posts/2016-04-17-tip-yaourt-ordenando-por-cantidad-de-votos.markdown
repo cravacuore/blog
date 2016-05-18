@@ -2,6 +2,7 @@
 layout: post
 title: "[Tip] Yaourt - Ordenando por cantidad de votos"
 date: 2016-04-17T13:32:12-03:00
+comments: true
 ---
 
 Si como yo usás [**ArchLinux**](https://archlinux.org/) y [*yaourt*](https://aur.archlinux.org/packages/yaourt/) como manejador de los paquetes en [**AUR**](https://aur.archlinux.org/), este es un *tip* que quizás te venga bien.

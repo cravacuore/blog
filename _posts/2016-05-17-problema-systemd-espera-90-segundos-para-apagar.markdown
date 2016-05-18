@@ -2,6 +2,7 @@
 layout: post
 title: "Problema SystemD Espera 90 Segundos Para Apagar"
 date: 2016-05-17T01:22:13-03:00
+comments: true
 ---
 
 Dejando de lado los *flamewars* respecto a *systemd*. Vengo usando *systemd* desde que en ArchLinux se adoptó este *init* como el "*default*" y no tuve mayores problemas. Pero hay un [bug](https://github.com/systemd/systemd/issues/1615), el cual me molesta bastante que al intentar apagar la computadora, me deja esperando 90 segundos sobre un error del estilo *"A stop job is running for Session c2 for user..."*.

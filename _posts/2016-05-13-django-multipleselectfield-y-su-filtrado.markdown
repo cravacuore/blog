@@ -2,6 +2,7 @@
 layout: post
 title: "[Django] MultipleSelectField y su filtrado"
 date: 2016-05-13T17:51:59-03:00
+comments: true
 ---
 
 En una aplicación [Django](https://www.djangoproject.com/) sobre la que estoy trabajando me surgió la necesidad de tener un campo al que le pueda asignar más de una opción dentro de mis *choices* (que no es más que una lista de tuplas representando valores, como por ejemplo estados). En este caso quería evitar tener que crear una clase para representar esto, ya que ya se utilizaban las *choices* y no quería tener que guardar estos valores en la base de datos.
