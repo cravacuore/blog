@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>dfc - Espacio en disco desde tu consola con colorcitos</title>
-  <meta name="description" content="Nunca usé una GUI para hacer algo tan simple como ver el espacio que tengo disponible en mis discos. De hecho siempre me arreglé usando en consola:">
+  <title>[Firefox] Deshabilitar abrir Url del clipboard con click del medio</title>
+  <meta name="description" content="Ya hacía rato que al estar usando Firefox en la notebook, mientras scrolleaba, se me abría alguna página que tenía copiada en mi clipboard.">
 
   <link rel="stylesheet" href="/blog/css/main.css">
-  <link rel="canonical" href="http://cravacuore.com.ar/blog/2015/12/31/dfc-espacio-en-disco-desde-tu-consola-con-colorcitos.html">
+  <link rel="canonical" href="http://cravacuore.com.ar/blog/2016/06/08/firefox-deshabilitar-abrir-url-del-clipboard-con-click-del-medio.html">
   <link rel="alternate" type="application/rss+xml" title="rawBlog" href="http://cravacuore.com.ar/blog/feed.xml">
 </head>
 
@@ -57,41 +57,28 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">dfc - Espacio en disco desde tu consola con colorcitos</h1>
-    <p class="post-meta"><time datetime="2015-12-31T18:42:12-03:00" itemprop="datePublished">Dec 31, 2015</time></p>
+    <h1 class="post-title" itemprop="name headline">[Firefox] Deshabilitar abrir Url del clipboard con click del medio</h1>
+    <p class="post-meta"><time datetime="2016-06-08T23:52:56-03:00" itemprop="datePublished">Jun 8, 2016</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>Nunca usé una GUI para hacer algo tan simple como ver el espacio que tengo disponible en mis discos. De hecho siempre me arreglé usando en consola:</p>
+    <p>Ya hacía rato que al estar usando Firefox en la notebook, mientras <em>scrolleaba</em>, se me abría alguna página que tenía copiada en mi <em>clipboard</em>.</p>
+
+<p>Esto se debía a que si en el <em>pad</em> hago un <em>tap</em> con dos dedos separados me lo tomaba como hacer <em>click</em> del medio, el cual Firefox tiene como predeterminado para abrir en la pestaña actual la <em>url</em> que tengas copiada en tu <em>clipboard</em>.</p>
+
+<p>Simple y rápido, vamos a:</p>
 
 <blockquote>
-  <p>df -h</p>
+  <p>about:config</p>
 </blockquote>
 
-<p>o también:</p>
+<p>Buscamos:</p>
 
 <blockquote>
-  <p>lsblk</p>
+  <p>middlemouse.contentLoadURL</p>
 </blockquote>
 
-<p>Pero me encontré con una utilidad muy similar que le agrega un poco de color y una barra de porcentaje para obtener la información de mis discos de forma más rápida y visual. Esta herramienta es <strong>dfc</strong>, también para utilizar desde tu consola de preferencia que me pareció muy buena.</p>
-
-<p>Algunas funcionalidades que tiene es la posibilidad de mostrar sólo algunos sectores del disco (<em>‘-p’</em>), sumar los sectores mostrados (<em>‘-s’</em>), entre otras. Para más info:</p>
-
-<blockquote>
-  <p>man dfc</p>
-</blockquote>
-
-<p>Acá pueden ver una imágen haciendo uso de la herramienta:
-<img src="https://cloud.openmailbox.org/index.php/apps/files_sharing/ajax/publicpreview.php?x=1350&amp;y=770&amp;a=true&amp;file=dfc.png&amp;t=iPDfIK8RIlXgF0a&amp;scalingup=0" alt="dfc" /></p>
-
-<p>En Archlinux, la encontramos en los repos oficiales de <em>community</em>:</p>
-
-<blockquote>
-  <p># pacman -S dfc</p>
-</blockquote>
-
-<p>Espero les sirva. Saludos.</p>
+<p>Y cambiamos su valor <em>default</em> de <code class="highlighter-rouge">true</code> a <code class="highlighter-rouge">false</code>.</p>
 
   </div>
 
@@ -99,20 +86,6 @@
 
 
         
-<div id="disqus_thread"></div>
-    <script type="text/javascript">
-        var disqus_shortname = 'cravacuore';
-        // var disqus_developer = 1; // Comment out when the site is live
-        var disqus_identifier = "/2015/12/31/dfc-espacio-en-disco-desde-tu-consola-con-colorcitos.html";
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-
 
       </div>
     </div>
