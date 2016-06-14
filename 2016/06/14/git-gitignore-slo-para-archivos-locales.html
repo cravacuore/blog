@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>rawBlog</title>
-  <meta name="description" content="This is my personal blog space for random ideas, write about software libre, programming, technology, cycling and some other of my passions.
-">
+  <title>[Git] .gitignore sólo para archivos locales</title>
+  <meta name="description" content="Ignorando archivos localmente">
 
   <link rel="stylesheet" href="/blog/css/main.css">
-  <link rel="canonical" href="http://cravacuore.com.ar/blog/">
+  <link rel="canonical" href="http://cravacuore.com.ar/blog/2016/06/14/git-gitignore-slo-para-archivos-locales.html">
   <link rel="alternate" type="application/rss+xml" title="rawBlog" href="http://cravacuore.com.ar/blog/feed.xml">
 </head>
 
@@ -55,114 +54,40 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h3 class="page-heading">Posts</h3>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">[Git] .gitignore sólo para archivos locales</h1>
+    <p class="post-meta"><time datetime="2016-06-14T12:19:08-03:00" itemprop="datePublished">Jun 14, 2016</time></p>
+  </header>
 
-  <ul class="post-list">
-    
+  <div class="post-content" itemprop="articleBody">
+    <h1 id="ignorando-archivos-localmente">Ignorando archivos localmente</h1>
 
-      
-      
-        
-          <h2>2016</h2>
-      
+<p>Cuando uno trabaja en un proyecto git, se tiene un archivo <code class="highlighter-rouge">.gitignore</code> para que no se versionen ciertos archivos del proyecto. A veces algunos de estos sólo nos incumben localmente para nuestro entorno y no son específicos del proyecto, por ejemplo archivos de configuración del IDE que estemos utilizando. Agregarlos no tiene sentido e ignorarlos a través de esta configuración tampoco sería apropiado.</p>
 
-      <li class="post-link">
-        <span class="post-meta">Jun 14</span> -
-        <a href="/blog/2016/06/14/git-gitignore-slo-para-archivos-locales.html">[Git] .gitignore sólo para archivos locales</a>
-      </li>
+<p>Para esto podemos hacer uso del archivo <code class="highlighter-rouge">.git/info/exclude</code> dentro de nuestro proyecto. En este se utiliza la misma sintaxis que en el <em>gitignore</em> y sólo se mantiene localmente, evitando así agregar archivos innecesarios de nuestro entorno.</p>
 
-    
+  </div>
 
-      
-      
-
-      <li class="post-link">
-        <span class="post-meta">Jun 8</span> -
-        <a href="/blog/2016/06/08/firefox-deshabilitar-abrir-url-del-clipboard-con-click-del-medio.html">[Firefox] Deshabilitar abrir Url del clipboard con click del medio</a>
-      </li>
-
-    
-
-      
-      
-
-      <li class="post-link">
-        <span class="post-meta">May 17</span> -
-        <a href="/blog/2016/05/17/problema-systemd-espera-90-segundos-para-apagar.html">Problema SystemD Espera 90 Segundos Para Apagar</a>
-      </li>
-
-    
-
-      
-      
-
-      <li class="post-link">
-        <span class="post-meta">May 14</span> -
-        <a href="/blog/2016/05/14/firefox-mis-add-ons-extensions.html">Firefox - Mis Add-ons (Extensions)</a>
-      </li>
-
-    
-
-      
-      
-
-      <li class="post-link">
-        <span class="post-meta">May 13</span> -
-        <a href="/blog/2016/05/13/django-multipleselectfield-y-su-filtrado.html">[Django] MultipleSelectField y su filtrado</a>
-      </li>
-
-    
-
-      
-      
-
-      <li class="post-link">
-        <span class="post-meta">Apr 17</span> -
-        <a href="/blog/2016/04/17/tip-yaourt-ordenando-por-cantidad-de-votos.html">[Tip] Yaourt - Ordenando por cantidad de votos</a>
-      </li>
-
-    
-
-      
-      
-
-      <li class="post-link">
-        <span class="post-meta">Apr 5</span> -
-        <a href="/blog/2016/04/05/opciones-de-escritorio-plasma-5.html">Reencontrando las opciones de escritorio - Plasma 5</a>
-      </li>
-
-    
-
-      
-      
-        
-          <h2>2015</h2>
-      
-
-      <li class="post-link">
-        <span class="post-meta">Dec 31</span> -
-        <a href="/blog/2015/12/31/dfc-espacio-en-disco-desde-tu-consola-con-colorcitos.html">dfc - Espacio en disco desde tu consola con colorcitos</a>
-      </li>
-
-    
-
-      
-      
-
-      <li class="post-link">
-        <span class="post-meta">Nov 25</span> -
-        <a href="/blog/2015/11/25/hello-world.html">Hello World!</a>
-      </li>
-
-    
-  </ul>
-
-</div>
+</article>
 
 
         
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'cravacuore';
+        // var disqus_developer = 1; // Comment out when the site is live
+        var disqus_identifier = "/2016/06/14/git-gitignore-slo-para-archivos-locales.html";
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+
 
       </div>
     </div>

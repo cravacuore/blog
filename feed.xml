@@ -6,9 +6,24 @@
 </description>
     <link>http://cravacuore.com.ar/blog/</link>
     <atom:link href="http://cravacuore.com.ar/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 08 Jun 2016 23:58:15 -0300</pubDate>
-    <lastBuildDate>Wed, 08 Jun 2016 23:58:15 -0300</lastBuildDate>
+    <pubDate>Tue, 14 Jun 2016 12:39:39 -0300</pubDate>
+    <lastBuildDate>Tue, 14 Jun 2016 12:39:39 -0300</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>[Git] .gitignore sólo para archivos locales</title>
+        <description>&lt;h1 id=&quot;ignorando-archivos-localmente&quot;&gt;Ignorando archivos localmente&lt;/h1&gt;
+
+&lt;p&gt;Cuando uno trabaja en un proyecto git, se tiene un archivo &lt;code class=&quot;highlighter-rouge&quot;&gt;.gitignore&lt;/code&gt; para que no se versionen ciertos archivos del proyecto. A veces algunos de estos sólo nos incumben localmente para nuestro entorno y no son específicos del proyecto, por ejemplo archivos de configuración del IDE que estemos utilizando. Agregarlos no tiene sentido e ignorarlos a través de esta configuración tampoco sería apropiado.&lt;/p&gt;
+
+&lt;p&gt;Para esto podemos hacer uso del archivo &lt;code class=&quot;highlighter-rouge&quot;&gt;.git/info/exclude&lt;/code&gt; dentro de nuestro proyecto. En este se utiliza la misma sintaxis que en el &lt;em&gt;gitignore&lt;/em&gt; y sólo se mantiene localmente, evitando así agregar archivos innecesarios de nuestro entorno.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 14 Jun 2016 12:19:08 -0300</pubDate>
+        <link>http://cravacuore.com.ar/blog/2016/06/14/git-gitignore-slo-para-archivos-locales.html</link>
+        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2016/06/14/git-gitignore-slo-para-archivos-locales.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>[Firefox] Deshabilitar abrir Url del clipboard con click del medio</title>
