@@ -6,9 +6,48 @@
 </description>
     <link>http://cravacuore.com.ar/blog/</link>
     <atom:link href="http://cravacuore.com.ar/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 14 Jun 2016 12:39:39 -0300</pubDate>
-    <lastBuildDate>Tue, 14 Jun 2016 12:39:39 -0300</lastBuildDate>
+    <pubDate>Wed, 15 Jun 2016 22:13:30 -0300</pubDate>
+    <lastBuildDate>Wed, 15 Jun 2016 22:13:30 -0300</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>[Git] Stashing - Guardando Trabajo en Progreso</title>
+        <description>&lt;p&gt;Muchas veces mientras estamos programando sobre algún proyecto, tenemos algún &lt;em&gt;issue&lt;/em&gt; avanzado pero no completado y nos urge tener que hacer algún cambio en un &lt;em&gt;branch&lt;/em&gt; distinto al que estamos. Esto puede pasar más o menos seguido dependiendo si estamos en un equipo de trabajo, si usamos &lt;em&gt;feature branches&lt;/em&gt;, u otras razones.&lt;/p&gt;
+
+&lt;p&gt;Hacer &lt;em&gt;stash&lt;/em&gt; en &lt;em&gt;git&lt;/em&gt;, nos permite justamente esto, nos guarda todos nuestros archivos estén como &lt;em&gt;staged&lt;/em&gt; o &lt;em&gt;unstaged&lt;/em&gt; como un &lt;strong&gt;WIP&lt;/strong&gt; (Work In Progress). Para esto hacemos un:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;git stash&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Podemos ahora cambiar de &lt;em&gt;branch&lt;/em&gt; o lo que tengamos que hacer. Cuando querramos volver esos cambios sobre el branch que estábamos trabajando, hacemos:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;git stash apply&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Este nos trae el último stash realizado.&lt;/p&gt;
+
+&lt;p&gt;Podemos hacer varios &lt;em&gt;stash&lt;/em&gt; seguidos, para ver el listado de estos:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;git stash list&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Y para traer uno de esos cambios en particular, por ejemplo:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;git stash apply stash@{1}&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Esto resulta muy útil mientras trabajamos en proyectos versionados con &lt;em&gt;git&lt;/em&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 15 Jun 2016 21:59:52 -0300</pubDate>
+        <link>http://cravacuore.com.ar/blog/2016/06/15/git-stashing-guardando-trabajo-en-progreso.html</link>
+        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2016/06/15/git-stashing-guardando-trabajo-en-progreso.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>[Git] .gitignore sólo para archivos locales</title>
