@@ -6,9 +6,42 @@
 </description>
     <link>http://cravacuore.com.ar/blog/</link>
     <atom:link href="http://cravacuore.com.ar/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 15 Jun 2016 22:13:30 -0300</pubDate>
-    <lastBuildDate>Wed, 15 Jun 2016 22:13:30 -0300</lastBuildDate>
+    <pubDate>Mon, 20 Jun 2016 09:58:07 -0300</pubDate>
+    <lastBuildDate>Mon, 20 Jun 2016 09:58:07 -0300</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>[Django] Upload Multiple FileField</title>
+        <description>&lt;p&gt;Por defecto un &lt;strong&gt;FileField&lt;/strong&gt; de los &lt;em&gt;forms&lt;/em&gt; de Django sólo te deja subir de a un archivo. Si lo que se necesita en tu proyecto es subir varios archivos desde un mismo campo del formulario, ya sea de forma &lt;em&gt;drag&amp;amp;drop&lt;/em&gt; o seleccionando varios en el &lt;em&gt;browser&lt;/em&gt; de archivos manteniendo apretada la tecla &lt;em&gt;Ctrl&lt;/em&gt;. Se puede lograr sin &lt;em&gt;plugins&lt;/em&gt; de la siguiente manera.&lt;/p&gt;
+
+&lt;h3 id=&quot;cambiando-forms&quot;&gt;Cambiando forms&lt;/h3&gt;
+
+&lt;p&gt;En nuestro &lt;em&gt;form&lt;/em&gt;, debemos especificar el campo como un &lt;em&gt;FileField&lt;/em&gt; de la siguiente forma.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;dasa/forms.py&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DasaForm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;forms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Form&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;lala_field&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;forms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FileField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;forms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ClearableFileInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attrs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;multiple&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;cambiando-views&quot;&gt;Cambiando views&lt;/h3&gt;
+
+&lt;p&gt;Y por el lado de nuestro &lt;em&gt;views&lt;/em&gt;, en el método que se esté utilizando obtenemos la lista de archivos, e iteramos con lo que queramos hacer.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;dasa/views.py&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;    &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FILES&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getlist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;lala_field&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;form&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is_valid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Do something&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.djangoproject.com/en/1.9/topics/http/file-uploads/#uploading-multiple-files&quot;&gt;Fuente&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 20 Jun 2016 09:43:30 -0300</pubDate>
+        <link>http://cravacuore.com.ar/blog/2016/06/20/django-upload-multiple-filefield.html</link>
+        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2016/06/20/django-upload-multiple-filefield.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>[Git] Stashing - Guardando Trabajo en Progreso</title>
@@ -443,19 +476,6 @@
         <pubDate>Thu, 31 Dec 2015 18:42:12 -0300</pubDate>
         <link>http://cravacuore.com.ar/blog/2015/12/31/dfc-espacio-en-disco-desde-tu-consola-con-colorcitos.html</link>
         <guid isPermaLink="true">http://cravacuore.com.ar/blog/2015/12/31/dfc-espacio-en-disco-desde-tu-consola-con-colorcitos.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Hello World!</title>
-        <description>&lt;p&gt;Hola, este es el primer post de este espacio. La idea de este blog es simplemente escribir sobre temas de interés personal, ya sean al estilo de recordatorios, opiniones de cuestiones de tecnología, programación, software libre, etcétera.&lt;/p&gt;
-
-&lt;p&gt;Seguramente este sea el primero de unos cuantos. Nos estamos leyendo.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 25 Nov 2015 21:14:54 -0300</pubDate>
-        <link>http://cravacuore.com.ar/blog/2015/11/25/hello-world.html</link>
-        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2015/11/25/hello-world.html</guid>
         
         
       </item>

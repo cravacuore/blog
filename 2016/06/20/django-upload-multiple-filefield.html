@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>rawBlog</title>
-  <meta name="description" content="This is my personal blog space for random ideas, write about software libre, programming, technology, cycling and some other of my passions.
-">
+  <title>[Django] Upload Multiple FileField</title>
+  <meta name="description" content="Por defecto un FileField de los forms de Django sólo te deja subir de a un archivo. Si lo que se necesita en tu proyecto es subir varios archivos desde un mi...">
 
   <link rel="stylesheet" href="/blog/css/main.css">
-  <link rel="canonical" href="http://cravacuore.com.ar/blog/">
+  <link rel="canonical" href="http://cravacuore.com.ar/blog/2016/06/20/django-upload-multiple-filefield.html">
   <link rel="alternate" type="application/rss+xml" title="rawBlog" href="http://cravacuore.com.ar/blog/feed.xml">
 </head>
 
@@ -55,134 +54,58 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h3 class="page-heading">Posts</h3>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">[Django] Upload Multiple FileField</h1>
+    <p class="post-meta"><time datetime="2016-06-20T09:43:30-03:00" itemprop="datePublished">Jun 20, 2016</time></p>
+  </header>
 
-  <ul class="post-list">
-    
+  <div class="post-content" itemprop="articleBody">
+    <p>Por defecto un <strong>FileField</strong> de los <em>forms</em> de Django sólo te deja subir de a un archivo. Si lo que se necesita en tu proyecto es subir varios archivos desde un mismo campo del formulario, ya sea de forma <em>drag&amp;drop</em> o seleccionando varios en el <em>browser</em> de archivos manteniendo apretada la tecla <em>Ctrl</em>. Se puede lograr sin <em>plugins</em> de la siguiente manera.</p>
 
-      
-      
-        
-          <h2>2016</h2>
-      
+<h3 id="cambiando-forms">Cambiando forms</h3>
 
-      <li class="post-link">
-        <span class="post-meta">Jun 20</span> -
-        <a href="/blog/2016/06/20/django-upload-multiple-filefield.html">[Django] Upload Multiple FileField</a>
-      </li>
+<p>En nuestro <em>form</em>, debemos especificar el campo como un <em>FileField</em> de la siguiente forma.</p>
 
-    
+<p><code class="highlighter-rouge">dasa/forms.py</code></p>
 
-      
-      
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">DasaForm</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">Form</span><span class="p">):</span>
+  <span class="n">lala_field</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">FileField</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">forms</span><span class="o">.</span><span class="n">ClearableFileInput</span><span class="p">(</span><span class="n">attrs</span><span class="o">=</span><span class="p">{</span><span class="s">'multiple'</span><span class="p">:</span> <span class="bp">True</span><span class="p">}))</span></code></pre></figure>
 
-      <li class="post-link">
-        <span class="post-meta">Jun 15</span> -
-        <a href="/blog/2016/06/15/git-stashing-guardando-trabajo-en-progreso.html">[Git] Stashing - Guardando Trabajo en Progreso</a>
-      </li>
+<h3 id="cambiando-views">Cambiando views</h3>
 
-    
+<p>Y por el lado de nuestro <em>views</em>, en el método que se esté utilizando obtenemos la lista de archivos, e iteramos con lo que queramos hacer.</p>
 
-      
-      
+<p><code class="highlighter-rouge">dasa/views.py</code></p>
 
-      <li class="post-link">
-        <span class="post-meta">Jun 14</span> -
-        <a href="/blog/2016/06/14/git-gitignore-slo-para-archivos-locales.html">[Git] .gitignore sólo para archivos locales</a>
-      </li>
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">files</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">FILES</span><span class="o">.</span><span class="n">getlist</span><span class="p">(</span><span class="s">'lala_field'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+    <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+        <span class="o">...</span> <span class="c"># Do something</span></code></pre></figure>
 
-    
+<p><a href="https://docs.djangoproject.com/en/1.9/topics/http/file-uploads/#uploading-multiple-files">Fuente</a></p>
 
-      
-      
+  </div>
 
-      <li class="post-link">
-        <span class="post-meta">Jun 8</span> -
-        <a href="/blog/2016/06/08/firefox-deshabilitar-abrir-url-del-clipboard-con-click-del-medio.html">[Firefox] Deshabilitar abrir Url del clipboard con click del medio</a>
-      </li>
-
-    
-
-      
-      
-
-      <li class="post-link">
-        <span class="post-meta">May 17</span> -
-        <a href="/blog/2016/05/17/problema-systemd-espera-90-segundos-para-apagar.html">Problema SystemD Espera 90 Segundos Para Apagar</a>
-      </li>
-
-    
-
-      
-      
-
-      <li class="post-link">
-        <span class="post-meta">May 14</span> -
-        <a href="/blog/2016/05/14/firefox-mis-add-ons-extensions.html">Firefox - Mis Add-ons (Extensions)</a>
-      </li>
-
-    
-
-      
-      
-
-      <li class="post-link">
-        <span class="post-meta">May 13</span> -
-        <a href="/blog/2016/05/13/django-multipleselectfield-y-su-filtrado.html">[Django] MultipleSelectField y su filtrado</a>
-      </li>
-
-    
-
-      
-      
-
-      <li class="post-link">
-        <span class="post-meta">Apr 17</span> -
-        <a href="/blog/2016/04/17/tip-yaourt-ordenando-por-cantidad-de-votos.html">[Tip] Yaourt - Ordenando por cantidad de votos</a>
-      </li>
-
-    
-
-      
-      
-
-      <li class="post-link">
-        <span class="post-meta">Apr 5</span> -
-        <a href="/blog/2016/04/05/opciones-de-escritorio-plasma-5.html">Reencontrando las opciones de escritorio - Plasma 5</a>
-      </li>
-
-    
-
-      
-      
-        
-          <h2>2015</h2>
-      
-
-      <li class="post-link">
-        <span class="post-meta">Dec 31</span> -
-        <a href="/blog/2015/12/31/dfc-espacio-en-disco-desde-tu-consola-con-colorcitos.html">dfc - Espacio en disco desde tu consola con colorcitos</a>
-      </li>
-
-    
-
-      
-      
-
-      <li class="post-link">
-        <span class="post-meta">Nov 25</span> -
-        <a href="/blog/2015/11/25/hello-world.html">Hello World!</a>
-      </li>
-
-    
-  </ul>
-
-</div>
+</article>
 
 
         
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'cravacuore';
+        // var disqus_developer = 1; // Comment out when the site is live
+        var disqus_identifier = "/2016/06/20/django-upload-multiple-filefield.html";
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+
 
       </div>
     </div>
