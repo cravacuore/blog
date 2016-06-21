@@ -6,9 +6,53 @@
 </description>
     <link>http://cravacuore.com.ar/blog/</link>
     <atom:link href="http://cravacuore.com.ar/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Jun 2016 09:58:07 -0300</pubDate>
-    <lastBuildDate>Mon, 20 Jun 2016 09:58:07 -0300</lastBuildDate>
+    <pubDate>Tue, 21 Jun 2016 17:37:39 -0300</pubDate>
+    <lastBuildDate>Tue, 21 Jun 2016 17:37:39 -0300</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>[Git] Cambiando mensajes de commits anteriores</title>
+        <description>&lt;h2 id=&quot;sobreescribiendo-commit-anterior&quot;&gt;Sobreescribiendo commit anterior&lt;/h2&gt;
+
+&lt;p&gt;Una de las utilidades que uso muy seguido al querer hacer un pequeño cambio que me olvidé hacer en el último &lt;em&gt;commit&lt;/em&gt; es:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git commit --amend&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Este comando me deja pisar el último &lt;em&gt;commit&lt;/em&gt; que realicé con uno nuevo. Ya sea para agregar algún cambio, o si simplemente quiero cambiar el mensaje de ese &lt;em&gt;commit&lt;/em&gt;. Si todavía no hice un &lt;em&gt;push&lt;/em&gt; de los cambios eso es todo, si por el contrario ya lo realizamos, vamos a tener que forzarlo haciendo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git push --force&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;y-si-quiero-cambiar-los-mensajes-de-los-ltimos-3-commits&quot;&gt;¿Y si quiero cambiar los mensajes de los últimos 3 commits?&lt;/h2&gt;
+
+&lt;p&gt;En mi caso, me había confundido con el número de &lt;em&gt;issue&lt;/em&gt; al que hacía referencia en el mensaje de los últimos 3 &lt;em&gt;commits&lt;/em&gt;. Esto lo pude corregir haciendo uso de &lt;code class=&quot;highlighter-rouge&quot;&gt;rebase&lt;/code&gt; de la siguiente forma:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git rebase -i HEAD~4&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Nos da un listado con los últimos 4 &lt;em&gt;commits&lt;/em&gt;, con la siguiente pinta:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pick 12039uh No me importa
+pick f809asd Alto 3er commit
+pick blj0800 Mi super commit 2
+pick m24bjk1 EL commit&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Cambiamos el &lt;code class=&quot;highlighter-rouge&quot;&gt;pick&lt;/code&gt; por &lt;code class=&quot;highlighter-rouge&quot;&gt;reword&lt;/code&gt; sobre los &lt;em&gt;commits&lt;/em&gt; cuyos mensajes queremos modificar, para que quede así:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pick 12039uh No me importa
+reword f809asd Alto 3er commit
+reword blj0800 Mi super commit 2
+reword m24bjk1 EL commit&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Guardamos, y en cada &lt;em&gt;commit&lt;/em&gt; podemos cambiar el mensaje. Después hacemos un &lt;code class=&quot;highlighter-rouge&quot;&gt;git push -f&lt;/code&gt;. Y así podemos cambiar varios mensajes de &lt;em&gt;commits&lt;/em&gt; anteriores.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;Nota: recomiendo leer más sobre &lt;code class=&quot;highlighter-rouge&quot;&gt;git rebase&lt;/code&gt; ya que deja hacer más acciones sobre nuestros &lt;em&gt;commits&lt;/em&gt; anteriores. Quizás más adelante escriba más sobre el tema.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 21 Jun 2016 17:06:50 -0300</pubDate>
+        <link>http://cravacuore.com.ar/blog/2016/06/21/git-cambiando-mensajes-de-commits-anteriores.html</link>
+        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2016/06/21/git-cambiando-mensajes-de-commits-anteriores.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>[Django] Upload Multiple FileField</title>
@@ -436,46 +480,6 @@
         <pubDate>Tue, 05 Apr 2016 23:37:46 -0300</pubDate>
         <link>http://cravacuore.com.ar/blog/2016/04/05/opciones-de-escritorio-plasma-5.html</link>
         <guid isPermaLink="true">http://cravacuore.com.ar/blog/2016/04/05/opciones-de-escritorio-plasma-5.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>dfc - Espacio en disco desde tu consola con colorcitos</title>
-        <description>&lt;p&gt;Nunca usé una GUI para hacer algo tan simple como ver el espacio que tengo disponible en mis discos. De hecho siempre me arreglé usando en consola:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;df -h&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;o también:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;lsblk&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Pero me encontré con una utilidad muy similar que le agrega un poco de color y una barra de porcentaje para obtener la información de mis discos de forma más rápida y visual. Esta herramienta es &lt;strong&gt;dfc&lt;/strong&gt;, también para utilizar desde tu consola de preferencia que me pareció muy buena.&lt;/p&gt;
-
-&lt;p&gt;Algunas funcionalidades que tiene es la posibilidad de mostrar sólo algunos sectores del disco (&lt;em&gt;‘-p’&lt;/em&gt;), sumar los sectores mostrados (&lt;em&gt;‘-s’&lt;/em&gt;), entre otras. Para más info:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;man dfc&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Acá pueden ver una imágen haciendo uso de la herramienta:
-&lt;img src=&quot;https://cloud.openmailbox.org/index.php/apps/files_sharing/ajax/publicpreview.php?x=1350&amp;amp;y=770&amp;amp;a=true&amp;amp;file=dfc.png&amp;amp;t=iPDfIK8RIlXgF0a&amp;amp;scalingup=0&quot; alt=&quot;dfc&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;En Archlinux, la encontramos en los repos oficiales de &lt;em&gt;community&lt;/em&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;# pacman -S dfc&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Espero les sirva. Saludos.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 31 Dec 2015 18:42:12 -0300</pubDate>
-        <link>http://cravacuore.com.ar/blog/2015/12/31/dfc-espacio-en-disco-desde-tu-consola-con-colorcitos.html</link>
-        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2015/12/31/dfc-espacio-en-disco-desde-tu-consola-con-colorcitos.html</guid>
         
         
       </item>
