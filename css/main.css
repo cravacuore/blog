@@ -157,6 +157,9 @@ pre {
   .icon > svg path {
     fill: #b4b4b4; }
 
+footer li {
+  margin: .5em; }
+
 /**
  * Site header
  */
