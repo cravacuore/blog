@@ -6,8 +6,8 @@
 </description>
     <link>http://cravacuore.com.ar/blog/</link>
     <atom:link href="http://cravacuore.com.ar/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 14 Sep 2016 19:25:27 -0300</pubDate>
-    <lastBuildDate>Wed, 14 Sep 2016 19:25:27 -0300</lastBuildDate>
+    <pubDate>Wed, 14 Sep 2016 19:28:13 -0300</pubDate>
+    <lastBuildDate>Wed, 14 Sep 2016 19:28:13 -0300</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -90,7 +90,7 @@
 git checkout stable
 sudo ./install/install.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Ambas funcionan correctamente, y dejan hacer lo deseado. Incluso crear nuevos perfiles &lt;em&gt;custom&lt;/em&gt;. Depende de gustos personales, o alguna característica particular de una que no tenga la otra, o la comodidad de que esté en &lt;strong&gt;AUR&lt;/strong&gt; (caso de razerCommander).&lt;/p&gt;
+&lt;p&gt;Ambas funcionan correctamente, y dejan hacer lo deseado. Incluso crear nuevos perfiles &lt;em&gt;custom&lt;/em&gt;. Depende de gustos personales, alguna característica particular, o la comodidad de que esté en &lt;strong&gt;AUR&lt;/strong&gt; (caso de razerCommander) el que te decidas por una o la otra.&lt;/p&gt;
 
 &lt;h3 id=&quot;efectos&quot;&gt;Efectos&lt;/h3&gt;
 
