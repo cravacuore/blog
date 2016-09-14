@@ -6,8 +6,8 @@
 </description>
     <link>http://cravacuore.com.ar/blog/</link>
     <atom:link href="http://cravacuore.com.ar/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 14 Sep 2016 19:32:31 -0300</pubDate>
-    <lastBuildDate>Wed, 14 Sep 2016 19:32:31 -0300</lastBuildDate>
+    <pubDate>Wed, 14 Sep 2016 20:12:07 -0300</pubDate>
+    <lastBuildDate>Wed, 14 Sep 2016 20:12:07 -0300</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -30,12 +30,15 @@
     &lt;ul&gt;
       &lt;li&gt;retroiluminación RGB “Chroma”&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;switches Razer Green&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;10-keyless&lt;/em&gt; (sin &lt;em&gt;numpad&lt;/em&gt;)&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;10-keyless&lt;/em&gt; (sin &lt;em&gt;numpad&lt;/em&gt; = “Tournament Edition”)&lt;/li&gt;
+      &lt;li&gt;trae un estuche, para llevarlo a tus más arduas batallas en Lan Party xD.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Hace unos meses pude conseguir uno. En particular este fue, como lo dice el título, un &lt;em&gt;Razer BlackWidow Chroma Tournament Edition&lt;/em&gt; con los &lt;em&gt;switches Razer Green&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cloud.openmailbox.org/index.php/apps/files_sharing/ajax/publicpreview.php?x=1299&amp;amp;y=770&amp;amp;a=true&amp;amp;file=razer-keyboard-wave-effect.jpg&amp;amp;t=SduLVmIYbQgSfBe&amp;amp;scalingup=0&quot; alt=&quot;razer-keyboard&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;La experiencia de un teclado mecánico era algo que tenía que probar y este fue el reemplazo de mi querido y muy hermoso &lt;a href=&quot;http://www.razerzone.com/gaming-keyboards-keypads/razer-lycosa-mirror&quot;&gt;Razer Lycosa Mirror&lt;/a&gt;.&lt;/p&gt;
 
@@ -81,6 +84,8 @@
   &lt;p&gt;yaourt -S razerCommander&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;&lt;img src=&quot;https://cloud.openmailbox.org/index.php/apps/files_sharing/ajax/publicpreview.php?x=1299&amp;amp;y=770&amp;amp;a=true&amp;amp;file=razer-gui-razerCommander.png&amp;amp;t=3SYH3rE6eo9ulpj&amp;amp;scalingup=0&quot; alt=&quot;razerCommander&quot; /&gt;&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/lah7/polychromatic&quot;&gt;Polychromatic&lt;/a&gt;: esta me parece está un poco más completa. Además de incluir un &lt;em&gt;applet&lt;/em&gt; para el &lt;em&gt;traybar&lt;/em&gt; desde donde controlar los efectos, la interfaz me parece un poco más cómoda y limpia. A su vez con esta última en particular me lista bien en caso de tener otros dispositivos Razer Chroma, cosa que no me funcionaba hasta el momento con razerCommander.&lt;/li&gt;
 &lt;/ul&gt;
@@ -89,6 +94,8 @@
 &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;polychromatic
 git checkout stable
 sudo ./install/install.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cloud.openmailbox.org/index.php/apps/files_sharing/ajax/publicpreview.php?x=1299&amp;amp;y=770&amp;amp;a=true&amp;amp;file=razer-gui-polychromatic-controller.png&amp;amp;t=PFNnwRkG1NnpWY8&amp;amp;scalingup=0&quot; alt=&quot;Polychromatic&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ambas funcionan correctamente, y dejan hacer lo deseado. Incluso crear nuevos perfiles &lt;em&gt;custom&lt;/em&gt;. Depende de gustos personales, alguna característica particular, o la comodidad de que esté en &lt;strong&gt;AUR&lt;/strong&gt; (caso de razerCommander) el que te decidas por una o la otra.&lt;/p&gt;
 
