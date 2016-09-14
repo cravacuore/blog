@@ -6,8 +6,8 @@
 </description>
     <link>http://cravacuore.com.ar/blog/</link>
     <atom:link href="http://cravacuore.com.ar/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 14 Sep 2016 19:29:56 -0300</pubDate>
-    <lastBuildDate>Wed, 14 Sep 2016 19:29:56 -0300</lastBuildDate>
+    <pubDate>Wed, 14 Sep 2016 19:30:47 -0300</pubDate>
+    <lastBuildDate>Wed, 14 Sep 2016 19:30:47 -0300</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -112,7 +112,7 @@ sudo ./install/install.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Como conclusión puedo decirles que escribir en teclado mecánico es un placer, y le recomiendo conseguirse uno a toda persona que se pase horas de horas usándolo como es mi caso como programador. Pero ya sea que escribas novelas, seas un &lt;em&gt;Pro Player&lt;/em&gt; de &lt;strong&gt;LoL&lt;/strong&gt; o escribas recetas para un blog; te super recomiendo te consigas uno de estos teclados mecánicos.&lt;/p&gt;
 
-&lt;p&gt;Además la travesía para lograr hacer funcionar los millones de colores RGB en el teclado fue muy poco doloroso, gracias a los genios que crearon &lt;em&gt;razer-drivers&lt;/em&gt;. Funciona sin problemas, y siguen agregando soporte para tener colorcitos en otros dispositivos Razer Chroma, para que disfruten de horas mirando como hace el ciclo de colores y sean unos enfermos hipnotizados de la emoción xD. En forma de agradecimiento, y aprovechando a mi beneficio les hice algunos aportes al código y documentación en su repo, espero poder contribuir próximamente más substancialmente. Quien sabe quizás termine haciendo efectos locos, se me ocurren algunos que quisiera como perfil para Vim que cambie dependiendo el modo en el que esté, flash de colores para distintas notificaciones ya sea desktop o vinculadas al celular, o incluso alguno que siga el ritmo de la música en Spotify o Vlc..ya veremos xD&lt;/p&gt;
+&lt;p&gt;Además la travesía para lograr hacer funcionar los millones de colores RGB en el teclado fue muy poco doloroso, gracias a los genios que crearon &lt;em&gt;razer-drivers&lt;/em&gt;. Funciona sin problemas, y siguen agregando soporte para tener colorcitos en otros dispositivos Razer Chroma, para que disfruten de horas mirando como hace el ciclo de colores y sean unos enfermos hipnotizados de la emoción xD. En forma de agradecimiento, y aprovechando a mi beneficio les hice unos muy pequeños aportes al código y documentación en su repo, espero poder contribuir próximamente más substancialmente. Quien sabe quizás termine haciendo efectos locos, se me ocurren algunos que quisiera como perfil para Vim que cambie dependiendo el modo en el que esté, flash de colores para distintas notificaciones ya sea desktop o vinculadas al celular, o incluso alguno que siga el ritmo de la música en Spotify o Vlc..ya veremos xD&lt;/p&gt;
 </description>
         <pubDate>Wed, 14 Sep 2016 18:30:53 -0300</pubDate>
         <link>http://cravacuore.com.ar/blog/2016/09/14/razer-blackwidow-chroma-tournament-edition-archlinux.html</link>
