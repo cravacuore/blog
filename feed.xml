@@ -6,8 +6,8 @@
 </description>
     <link>http://cravacuore.com.ar/blog/</link>
     <atom:link href="http://cravacuore.com.ar/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 14 Sep 2016 20:20:15 -0300</pubDate>
-    <lastBuildDate>Wed, 14 Sep 2016 20:20:15 -0300</lastBuildDate>
+    <pubDate>Wed, 14 Sep 2016 20:55:13 -0300</pubDate>
+    <lastBuildDate>Wed, 14 Sep 2016 20:55:13 -0300</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -56,7 +56,7 @@
   &lt;li&gt;&lt;a href=&quot;https://github.com/terrycain/razer-drivers&quot;&gt;https://github.com/terrycain/razer-drivers&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Y tiene una &lt;a href=&quot;https://terrycain.github.io/razer-drivers/&quot;&gt;página&lt;/a&gt; donde también se listan los dispositivos que actualmente soporta.&lt;/p&gt;
+&lt;p&gt;La cual tiene una &lt;a href=&quot;https://terrycain.github.io/razer-drivers/&quot;&gt;página&lt;/a&gt; donde se listan los dispositivos que actualmente soporta entre otra información.&lt;/p&gt;
 
 &lt;h3 id=&quot;instalando&quot;&gt;Instalando&lt;/h3&gt;
 
@@ -66,7 +66,7 @@
   &lt;p&gt;yaourt -S razer-driver-meta&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;O por cada uno de los paquetes necesarios por separados, que serían &lt;em&gt;razer-driver-dkms&lt;/em&gt;, &lt;em&gt;razer-daemon&lt;/em&gt;, &lt;em&gt;python-razer&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;O cada uno de los paquetes necesarios por separados, que serían &lt;em&gt;razer-driver-dkms&lt;/em&gt;, &lt;em&gt;razer-daemon&lt;/em&gt;, &lt;em&gt;python-razer&lt;/em&gt; también desde &lt;strong&gt;AUR&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;yaourt -S razer-driver-dkms razer-daemon python-razer&lt;/p&gt;
