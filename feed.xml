@@ -6,19 +6,19 @@
 </description>
     <link>http://cravacuore.com.ar/blog/</link>
     <atom:link href="http://cravacuore.com.ar/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 15 Sep 2016 21:28:50 -0300</pubDate>
-    <lastBuildDate>Thu, 15 Sep 2016 21:28:50 -0300</lastBuildDate>
+    <pubDate>Thu, 15 Sep 2016 23:44:25 -0300</pubDate>
+    <lastBuildDate>Thu, 15 Sep 2016 23:44:25 -0300</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Razer Firefly y efectos sincronizados (razer-drivers) - ArchLinux</title>
-        <description>&lt;p&gt;Encadenado a el cambio de mi teclado por uno mecánico, como conté &lt;a href=&quot;http://cravacuore.com.ar/blog/2016/09/14/razer-blackwidow-chroma-tournament-edition-archlinux.html&quot;&gt;acá&lt;/a&gt;, ya quería cambiar mi &lt;em&gt;mouse pad&lt;/em&gt; que desde hace muchos años era un &lt;a href=&quot;https://steelseries.com/gaming-mousepads/qck-mini&quot;&gt;SteelSeries Qck Mini&lt;/a&gt; por uno nuevo un poco más grande. Por comodidad y principalmente para lograr mejores matanzas en mis ocasionales partidas de Urban Terror :D.&lt;/p&gt;
+        <description>&lt;p&gt;Vinculado al reciente cambio de mi teclado por uno mecánico, como conté &lt;a href=&quot;http://cravacuore.com.ar/blog/2016/09/14/razer-blackwidow-chroma-tournament-edition-archlinux.html&quot;&gt;acá&lt;/a&gt;, vino la idea de cambiar mi &lt;em&gt;mouse pad&lt;/em&gt; que desde hace muchos años era un &lt;a href=&quot;https://steelseries.com/gaming-mousepads/qck-mini&quot;&gt;SteelSeries Qck Mini&lt;/a&gt; por uno nuevo un poco más grande. Por comodidad y principalmente para lograr mejores matanzas en mis ocasionales partidas de Urban Terror :D.&lt;/p&gt;
 
 &lt;p&gt;Así fue como empecé a buscar el reemplazo ideal, y dado mi anterior compra &lt;em&gt;Razer&lt;/em&gt; con el teclado Chroma (RGB retroiluminado. a.k.a. colorcitos locos) me encontré con su &lt;em&gt;mouse pad&lt;/em&gt; &lt;a href=&quot;http://www.razerzone.com/gaming-mouse-mats/razer-firefly&quot;&gt;Razer Firefly&lt;/a&gt; también de la línea &lt;em&gt;Chroma&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://cloud.openmailbox.org/index.php/apps/files_sharing/ajax/publicpreview.php?x=1875&amp;amp;y=1052&amp;amp;a=true&amp;amp;file=razer-firefly.jpg&amp;amp;t=R211Kf4JxA2Giky&amp;amp;scalingup=0&quot; alt=&quot;razer-firefly&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Tan lindo como se ve, ahí notan que lo terminé adquiriendo :P. Pero sin olvidar antes de revisar si también tenía soporte por parte de &lt;a href=&quot;https://github.com/terrycain/razer-drivers&quot;&gt;razer-drivers&lt;/a&gt; que también utilicé para lograr los efectos en mi teclado.&lt;/p&gt;
+&lt;p&gt;Tan lindo como se ve, como notan lo terminé adquiriendo :P. Pero sin olvidar antes de revisar si tenía soporte por parte de &lt;a href=&quot;https://github.com/terrycain/razer-drivers&quot;&gt;razer-drivers&lt;/a&gt; que también usé para lograr los efectos colorinches en mi teclado.&lt;/p&gt;
 
 &lt;h3 id=&quot;sincronizacin-de-efectos&quot;&gt;Sincronización de efectos&lt;/h3&gt;
 
