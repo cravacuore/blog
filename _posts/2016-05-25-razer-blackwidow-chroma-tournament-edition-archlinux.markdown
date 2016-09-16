@@ -37,7 +37,7 @@ Ya había tomado el recaudo de verificar si era factible el poder controlar esta
 
   * [https://github.com/terrycain/razer-drivers](https://github.com/terrycain/razer-drivers)
 
-Y tiene una [página](https://terrycain.github.io/razer-drivers/) donde también se listan los dispositivos que actualmente soporta.
+La cual tiene una [página](https://terrycain.github.io/razer-drivers/) donde se listan los dispositivos que actualmente soporta entre otra información.
 
 ### Instalando
 
@@ -45,7 +45,7 @@ Anteriormente se tenía que hacer un clon del repo e instalar cada paquete a man
 
 > yaourt -S razer-driver-meta
 
-O por cada uno de los paquetes necesarios por separados, que serían *razer-driver-dkms*, *razer-daemon*, *python-razer*.
+O cada uno de los paquetes necesarios por separados, que serían *razer-driver-dkms*, *razer-daemon*, *python-razer* también desde **AUR**.
 
 > yaourt -S razer-driver-dkms razer-daemon python-razer
 
@@ -90,4 +90,6 @@ Además de este listado de efectos, que por cierto son puro chiches :P, se puede
 
 Como conclusión puedo decirles que escribir en teclado mecánico es un placer, y le recomiendo conseguirse uno a toda persona que se pase horas de horas usándolo como es mi caso como programador. Pero ya sea que escribas novelas, seas un *Pro Player* de **LoL** o escribas recetas para un blog; te super recomiendo te consigas uno de estos teclados mecánicos.
 
-Además la travesía para lograr hacer funcionar los millones de colores RGB en el teclado fue muy poco doloroso, gracias a los genios que crearon *razer-drivers*. Funciona sin problemas, y siguen agregando soporte para tener colorcitos en otros dispositivos Razer Chroma, para que disfruten de horas mirando como hace el ciclo de colores y sean unos enfermos hipnotizados de la emoción xD. En forma de agradecimiento, y aprovechando a mi beneficio les hice unos muy pequeños aportes al código y documentación en su repo, espero poder contribuir próximamente más substancialmente. Quien sabe quizás termine haciendo efectos locos, se me ocurren algunos que quisiera como por ejemplo: un perfil para Vim que cambie dependiendo el modo en el que esté, otro que haga flash de colores para distintas notificaciones ya sea desktop o vinculadas al celular, o incluso alguno efecto que siga el ritmo de la música en Spotify o Vlc..ya veremos xD
+Además la travesía para lograr hacer funcionar los millones de colores RGB en el teclado fue muy poco doloroso, gracias a los genios que crearon *razer-drivers*. Funciona sin problemas, y siguen agregando soporte para tener colorcitos en otros dispositivos Razer Chroma. En forma de agradecimiento, y aprovechando a mi beneficio les hice unos muy pequeños aportes al código y documentación en su repo, espero poder contribuir próximamente más substancialmente.
+
+Quien sabe quizás termine haciendo efectos locos, se me ocurren algunos que quisiera como por ejemplo: un perfil para Vim que cambie dependiendo el modo en el que esté, otro que haga flash de colores para distintas notificaciones ya sea desktop o vinculadas al celular, o incluso alguno efecto que siga el ritmo de la música en Spotify o Vlc para que disfruten de horas mirando como hace el ciclo de colores y sean unos enfermos hipnotizados de la emoción como yo..ya veremos xD
