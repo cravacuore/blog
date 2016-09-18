@@ -2,6 +2,7 @@
 layout: post
 title: "Razer Firefly y efectos sincronizados (razer-drivers) - ArchLinux"
 date: 2016-09-15T20:26:28-03:00
+comments: true
 ---
 
 Vinculado al reciente cambio de mi teclado por uno mecánico, como conté [acá](http://cravacuore.com.ar/blog/2016/09/14/razer-blackwidow-chroma-tournament-edition-archlinux.html), vino la idea de cambiar mi *mouse pad* que desde hace muchos años era un [SteelSeries Qck Mini](https://steelseries.com/gaming-mousepads/qck-mini) por uno nuevo un poco más grande. Por comodidad y principalmente para lograr mejores matanzas en mis ocasionales partidas de Urban Terror :D.
