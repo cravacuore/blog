@@ -6,8 +6,8 @@
 </description>
     <link>http://cravacuore.com.ar/blog/</link>
     <atom:link href="http://cravacuore.com.ar/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 20 Sep 2016 13:16:30 -0300</pubDate>
-    <lastBuildDate>Tue, 20 Sep 2016 13:16:30 -0300</lastBuildDate>
+    <pubDate>Tue, 20 Sep 2016 13:33:54 -0300</pubDate>
+    <lastBuildDate>Tue, 20 Sep 2016 13:33:54 -0300</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -147,7 +147,7 @@
 &lt;p&gt;Y se recomienda después agregar tu usuario al grupo &lt;code class=&quot;highlighter-rouge&quot;&gt;plugdev&lt;/code&gt; para completar la instalación, haciendo:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;sudo gpasswd -a &lt;tu_usuario&gt; plugdev&lt;/tu_usuario&gt;&lt;/p&gt;
+  &lt;p&gt;sudo gpasswd -a «tu_usuario» plugdev&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h4 id=&quot;instalar-gui&quot;&gt;Instalar GUI&lt;/h4&gt;
