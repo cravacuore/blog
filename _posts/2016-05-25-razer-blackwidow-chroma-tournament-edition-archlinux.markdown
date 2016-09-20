@@ -49,6 +49,10 @@ O cada uno de los paquetes necesarios por separados, que serían *razer-driver-d
 
 > yaourt -S razer-driver-dkms razer-daemon python-razer
 
+Y se recomienda después agregar tu usuario al grupo `plugdev` para completar la instalación, haciendo:
+
+> sudo gpasswd -a «tu_usuario» plugdev
+
 #### Instalar GUI
 
 Por el momento no tiene ni se recomienda una forma de manipular los efectos desde consola, para lo cual hay que instalar una GUI. Hay dos opciones que son directamente recomendadas en este repo:
