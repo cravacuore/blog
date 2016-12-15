@@ -6,9 +6,48 @@
 </description>
     <link>http://cravacuore.com.ar/blog/</link>
     <atom:link href="http://cravacuore.com.ar/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 16 Oct 2016 20:36:49 -0300</pubDate>
-    <lastBuildDate>Sun, 16 Oct 2016 20:36:49 -0300</lastBuildDate>
+    <pubDate>Thu, 15 Dec 2016 20:15:15 -0300</pubDate>
+    <lastBuildDate>Thu, 15 Dec 2016 20:15:15 -0300</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Pactl - Controlando Pulseaudio Desde Consola</title>
+        <description>&lt;p&gt;En el &lt;a href=&quot;http://cravacuore.com.ar/blog/2016/10/16/pavucontrol-pestaa-predeterminada-al-ser-iniciado.html&quot;&gt;anterior post&lt;/a&gt;, comentaba sobre una comodidad con &lt;em&gt;pavucontrol&lt;/em&gt; para acelerar algo rutinario. Vamos avanzando poco a poco a algo un poco más rápido para esta tarea, la cual de forma ideal quiero automatizarla lo más posible.&lt;/p&gt;
+
+&lt;p&gt;La tarea rutinaria es cambiar los perfiles de la placa “integrada” que me da la salida de *jack 3.5mm” común y la placa USB de mis auriculares Razer Megalodon. Activando y desactivando una u otra respectivamente.&lt;/p&gt;
+
+&lt;p&gt;Bajando un poco de nivel, pasando de lo gráfico a la consola, descubrí que &lt;em&gt;pactl&lt;/em&gt; permite realizar el manejo mediante consola de el servicio de &lt;em&gt;Pulseaudio&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para esto, primero tenemos que saber cuáles son las placas, para esto:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pactl list short cards&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;En mi caso, me muestra lo siguiente:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;0       alsa_card.usb-Razer_Razer_Megalodon-00  module-alsa-card.c
+1       alsa_card.pci-0000_00_1b.0      module-alsa-card.c&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;De ese listado sacamos el número de índice que aparece como primera columna. En mi caso, sólo aplicaría el cambio de perfiles sobre la placa Razer (índice 0). Y cambio su perfil a &lt;em&gt;“Surround 5.1 + Input”&lt;/em&gt; de la siguiente manera:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pactl &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;-card-profile 0 output:analog-surround-51+input:analog-mono&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Y para revertir, simplemente &lt;em&gt;seteo&lt;/em&gt; el perfil como Apagado:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pactl &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;-card-profile 0 off&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Estos comandos los agrego como alias en mi &lt;em&gt;config&lt;/em&gt; de &lt;em&gt;zsh&lt;/em&gt; (~/.zshrc):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ron&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;pactl set-card-profile 0 output:analog-surround-51+input:analog-mono&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;roff&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;pactl set-card-profile 0 off&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Hasta acá voy a avanzar por el momento, ya es mucho más rápido cambiar desde consola mi configuración de audio. El próximo paso sería crear una función para &lt;em&gt;zsh&lt;/em&gt; que sepa el último cambio de configuración y revierta al anterior, y esa función ejecutarla desde un atajo de teclado. Quizás ese sea un próximo &lt;em&gt;post&lt;/em&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 15 Dec 2016 20:08:56 -0300</pubDate>
+        <link>http://cravacuore.com.ar/blog/2016/12/15/pactl-controlando-pulseaudio-desde-consola.html</link>
+        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2016/12/15/pactl-controlando-pulseaudio-desde-consola.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Pavucontrol - Pestaña predeterminada al ser iniciado</title>
@@ -379,30 +418,6 @@ reword m24bjk1 EL commit&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
         <pubDate>Wed, 08 Jun 2016 23:52:56 -0300</pubDate>
         <link>http://cravacuore.com.ar/blog/2016/06/08/firefox-deshabilitar-abrir-url-del-clipboard-con-click-del-medio.html</link>
         <guid isPermaLink="true">http://cravacuore.com.ar/blog/2016/06/08/firefox-deshabilitar-abrir-url-del-clipboard-con-click-del-medio.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Problema SystemD Espera 90 Segundos Para Apagar</title>
-        <description>&lt;p&gt;Dejando de lado los &lt;em&gt;flamewars&lt;/em&gt; respecto a &lt;em&gt;systemd&lt;/em&gt;. Vengo usando &lt;em&gt;systemd&lt;/em&gt; desde que en ArchLinux se adoptó este &lt;em&gt;init&lt;/em&gt; como el “&lt;em&gt;default&lt;/em&gt;” y no tuve mayores problemas. Pero hay un &lt;a href=&quot;https://github.com/systemd/systemd/issues/1615&quot;&gt;bug&lt;/a&gt;, el cual me molesta bastante que al intentar apagar la computadora, me deja esperando 90 segundos sobre un error del estilo &lt;em&gt;“A stop job is running for Session c2 for user…“&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Una forma de solucionar por lo menos para que la espera sea menor y se fuerce el apagado del sistema, es cambiando este tiempo predeterminado de 90 segundos. Para esto modificamos nuestro archivo de configuración &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/systemd/system.conf&lt;/code&gt;, y descomentamos de la sección &lt;code class=&quot;highlighter-rouge&quot;&gt;[Manager]&lt;/code&gt; la propiedad &lt;code class=&quot;highlighter-rouge&quot;&gt;DefaultTimeoutStopSec&lt;/code&gt; y le ponemos el tiempo deseado. En mi caso lo dejé de la siguiente forma:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Manager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#DefaultStandardError=inherit&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#DefaultTimeoutStartSec=90s&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;DefaultTimeoutStopSec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#DefaultRestartSec=100ms&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#DefaultStartLimitInterval=10s&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Quedando así de un tiempo aceptable el apagado del equipo. Mientras se espera que se resuelva este problema.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 17 May 2016 01:22:13 -0300</pubDate>
-        <link>http://cravacuore.com.ar/blog/2016/05/17/problema-systemd-espera-90-segundos-para-apagar.html</link>
-        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2016/05/17/problema-systemd-espera-90-segundos-para-apagar.html</guid>
         
         
       </item>
