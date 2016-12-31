@@ -6,9 +6,24 @@
 </description>
     <link>http://cravacuore.com.ar/blog/</link>
     <atom:link href="http://cravacuore.com.ar/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 15 Dec 2016 20:15:15 -0300</pubDate>
-    <lastBuildDate>Thu, 15 Dec 2016 20:15:15 -0300</lastBuildDate>
+    <pubDate>Sat, 31 Dec 2016 19:17:46 -0300</pubDate>
+    <lastBuildDate>Sat, 31 Dec 2016 19:17:46 -0300</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>[Vim] Búsqueda Múltiple Simultánea</title>
+        <description>&lt;p&gt;Antes que nada, por si no lo saben, Vim es mi editor de texto de preferencia. Ya lo vengo usando hace mucho tiempo, y si hay algo que hay que entender es que siempre hay algo nuevo para aprender y/o mejorar nuestra forma de manejarnos en Vim. Seguramente vaya a hacer varios &lt;em&gt;posts&lt;/em&gt; comentando sobre utilidades, &lt;em&gt;plugins&lt;/em&gt; o &lt;em&gt;tips&lt;/em&gt; para o sobre Vim.&lt;/p&gt;
+
+&lt;p&gt;En este caso, es algo simple. Cuando uno quiere realizar una búsqueda en Vim, simplemente hace &lt;code class=&quot;highlighter-rouge&quot;&gt;/loquebusco&lt;/code&gt;. El &lt;em&gt;tip&lt;/em&gt; que vengo a dar, es cómo buscar más de un término al mismo tiempo y así ir pasando por los distintos encontrados sin tener que hacer dos búsquedas por separado.&lt;/p&gt;
+
+&lt;p&gt;Para esto hacemos: &lt;code class=&quot;highlighter-rouge&quot;&gt;/loquebusco\|otra_cosa&lt;/code&gt; y se pueden concatenar términos sucesivamente.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 31 Dec 2016 19:04:46 -0300</pubDate>
+        <link>http://cravacuore.com.ar/blog/2016/12/31/vim-bsqueda-mltiple-simultanea.html</link>
+        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2016/12/31/vim-bsqueda-mltiple-simultanea.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Pactl - Controlando Pulseaudio Desde Consola</title>
@@ -391,33 +406,6 @@ reword m24bjk1 EL commit&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
         <pubDate>Tue, 14 Jun 2016 12:19:08 -0300</pubDate>
         <link>http://cravacuore.com.ar/blog/2016/06/14/git-gitignore-slo-para-archivos-locales.html</link>
         <guid isPermaLink="true">http://cravacuore.com.ar/blog/2016/06/14/git-gitignore-slo-para-archivos-locales.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>[Firefox] Deshabilitar abrir Url del clipboard con click del medio</title>
-        <description>&lt;p&gt;Ya hacía rato que al estar usando Firefox en la notebook, mientras &lt;em&gt;scrolleaba&lt;/em&gt;, se me abría alguna página que tenía copiada en mi &lt;em&gt;clipboard&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Esto se debía a que si en el &lt;em&gt;pad&lt;/em&gt; hago un &lt;em&gt;tap&lt;/em&gt; con dos dedos separados me lo tomaba como hacer &lt;em&gt;click&lt;/em&gt; del medio, el cual Firefox tiene como predeterminado para abrir en la pestaña actual la &lt;em&gt;url&lt;/em&gt; que tengas copiada en tu &lt;em&gt;clipboard&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Simple y rápido, vamos a:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;about:config&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Buscamos:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;middlemouse.contentLoadURL&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Y cambiamos su valor &lt;em&gt;default&lt;/em&gt; de &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; a &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 08 Jun 2016 23:52:56 -0300</pubDate>
-        <link>http://cravacuore.com.ar/blog/2016/06/08/firefox-deshabilitar-abrir-url-del-clipboard-con-click-del-medio.html</link>
-        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2016/06/08/firefox-deshabilitar-abrir-url-del-clipboard-con-click-del-medio.html</guid>
         
         
       </item>
