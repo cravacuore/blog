@@ -6,15 +6,15 @@
 </description>
     <link>http://localhost:4000/blog/</link>
     <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 15 Feb 2017 12:19:55 -0300</pubDate>
-    <lastBuildDate>Wed, 15 Feb 2017 12:19:55 -0300</lastBuildDate>
+    <pubDate>Wed, 15 Feb 2017 12:22:37 -0300</pubDate>
+    <lastBuildDate>Wed, 15 Feb 2017 12:22:37 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
         <title>Gtk-WARNING - Theme Not Found Warning</title>
         <description>&lt;p&gt;A pesar de ser un simple &lt;em&gt;warning&lt;/em&gt; que se puede desestimar, es algo que es recurrente ver al ejecutar algún programa por consola. Por ejemplo:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Gtk-WARNING &lt;span class=&quot;se&quot;&gt;\*&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;: Unable to locate theme engine &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;module_path: &lt;span class=&quot;s2&quot;&gt;&quot;adwaita&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Gtk-WARNING &lt;span class=&quot;k&quot;&gt;**&lt;/span&gt;: Unable to locate theme engine &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;module_path: &lt;span class=&quot;s2&quot;&gt;&quot;adwaita&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Para solucionar esto, basta con instalar &lt;a href=&quot;https://www.archlinux.org/packages/extra/x86_64/gnome-themes-standard/&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gnome-themes-standard&lt;/code&gt;&lt;/a&gt; que nos brinda justamente eso, los themes standard para las aplicaciones de Gnome. Entre ellos el &lt;em&gt;adwaita&lt;/em&gt;. Una vez instalado no aparece más el molesto &lt;em&gt;warning&lt;/em&gt;.&lt;/p&gt;
 </description>
