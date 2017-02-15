@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>[Git] .gitignore sólo para archivos locales</title>
-  <meta name="description" content="Ignorando archivos localmente">
+  <title>Error De Sonido "SDLAUDIO: SDL_OpenAudioDevice() Failed"</title>
+  <meta name="description" content="Me compré ayer el bundle de juegos “Freedom” de Humble Bundle, principalmente porque la gran mayoría de estos juegos están disponibles nativamente para Linux...">
 
   <link rel="stylesheet" href="/blog/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/blog/2016/06/14/git-gitignore-slo-para-archivos-locales.html">
+  <link rel="canonical" href="http://localhost:4000/blog/2017/02/14/error-de-sonido-sdlaudio-sdl_openaudiodevice-failed.html">
   <link rel="alternate" type="application/rss+xml" title="rawBlog" href="http://localhost:4000/blog/feed.xml">
 </head>
 
@@ -57,16 +57,18 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">[Git] .gitignore sólo para archivos locales</h1>
-    <p class="post-meta"><time datetime="2016-06-14T12:19:08-03:00" itemprop="datePublished">Jun 14, 2016</time></p>
+    <h1 class="post-title" itemprop="name headline">Error De Sonido "SDLAUDIO: SDL_OpenAudioDevice() Failed"</h1>
+    <p class="post-meta"><time datetime="2017-02-14T23:30:43-03:00" itemprop="datePublished">Feb 14, 2017</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <h1 id="ignorando-archivos-localmente">Ignorando archivos localmente</h1>
+    <p>Me compré ayer el <em>bundle</em> de juegos <a href="https://www.humblebundle.com/freedom">“Freedom”</a> de <strong>Humble Bundle</strong>, principalmente porque la gran mayoría de estos juegos están disponibles nativamente para Linux y esa es suficiente razón para comprarlo ;).</p>
 
-<p>Cuando uno trabaja en un proyecto git, se tiene un archivo <code class="highlighter-rouge">.gitignore</code> para que no se versionen ciertos archivos del proyecto. A veces algunos de estos sólo nos incumben localmente para nuestro entorno y no son específicos del proyecto, por ejemplo archivos de configuración del IDE que estemos utilizando. Agregarlos no tiene sentido e ignorarlos a través de esta configuración tampoco sería apropiado.</p>
+<p>Entre estos juegos uno de los que más me interesaba y de los primeros que descargué del <em>bundle</em> fue <a href="http://www.stanleyparable.com/">The Stanley Parable</a>. Al instalarlo y ejecutarlo, lo primero que noté fue la falta de audio, ejecutándolo desde consola me salía el siguiente error:</p>
 
-<p>Para esto podemos hacer uso del archivo <code class="highlighter-rouge">.git/info/exclude</code> dentro de nuestro proyecto. En este se utiliza la misma sintaxis que en el <em>gitignore</em> y sólo se mantiene localmente, evitando así agregar archivos innecesarios de nuestro entorno.</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">SDLAUDIO: SDL_OpenAudioDevice<span class="o">()</span> failed: No such audio device</code></pre></figure>
+
+<p>Haciendo una búsqueda rápida, encontré <a href="https://askubuntu.com/questions/148514/sdl-openaudio-failed-no-available-audio-device-while-starting-psychonauts">esta información</a> que me dió a entender que me faltaba <code class="highlighter-rouge">libpulse</code> (utilizo pulseaudio, no alsa). Para lo cual, instalando <a href="https://www.archlinux.org/packages/multilib/x86_64/lib32-libpulse/"><code class="highlighter-rouge">lib32-libpulse</code></a> resolvió mi problema al instante para mi caso con ArchLinux 64-bit y pulseaudio.</p>
 
   </div>
 
@@ -78,7 +80,7 @@
     <script type="text/javascript">
         var disqus_shortname = 'cravacuore';
         // var disqus_developer = 1; // Comment out when the site is live
-        var disqus_identifier = "/2016/06/14/git-gitignore-slo-para-archivos-locales.html";
+        var disqus_identifier = "/2017/02/14/error-de-sonido-sdlaudio-sdl_openaudiodevice-failed.html";
 
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
