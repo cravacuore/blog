@@ -6,9 +6,35 @@
 </description>
     <link>http://localhost:4000/blog/</link>
     <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 15 Feb 2017 12:22:37 -0300</pubDate>
-    <lastBuildDate>Wed, 15 Feb 2017 12:22:37 -0300</lastBuildDate>
+    <pubDate>Sun, 19 Feb 2017 20:44:11 -0300</pubDate>
+    <lastBuildDate>Sun, 19 Feb 2017 20:44:11 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>[Ranger] Previsualización de Imágenes</title>
+        <description>&lt;p&gt;Ranger es el file manager que más utilizo, seguido de &lt;em&gt;dolphin&lt;/em&gt; para tareas más “complejas”. Es un file manager para la consola, muy rápido y completo que uso desde hace años.&lt;/p&gt;
+
+&lt;p&gt;Reinstalando en la notebook nueva, una funcionalidad de &lt;em&gt;ranger&lt;/em&gt; que todavía me faltaba configurar era la previsualización de imágenes. Para lograr esto en ArchLinux, simplemente realizamos lo siguiente:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pacaur -S ranger w3m imlib2 &lt;span class=&quot;c&quot;&gt;# Instalamos lo necesario (con el gestor que usen, yo utilizo pacaur pero puede ser pacman)&lt;/span&gt;
+ranger                      &lt;span class=&quot;c&quot;&gt;# Abrimos por primera vez ranger para que cree la carpeta default para configuración&lt;/span&gt;
+ranger --copy-config&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;all    &lt;span class=&quot;c&quot;&gt;# esto nos da los archivos default de config de ranger en nuestro home&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Seteamos en ~/.config/ranger/rc.conf para la previsualización&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;set preview_images true&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Eso es todo, y ya deberíamos poder previsualizar las imágenes en ranger como vemos acá.
+&lt;img src=&quot;https://cloud.openmailbox.org/index.php/apps/files_sharing/ajax/publicpreview.php?x=1875&amp;amp;y=1017&amp;amp;a=true&amp;amp;file=ranger-image-preview.png&amp;amp;t=XhfUq69OruU5qjq&amp;amp;scalingup=0&quot; alt=&quot;ranger&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 19 Feb 2017 20:32:30 -0300</pubDate>
+        <link>http://localhost:4000/blog/2017/02/19/ranger-instalacin-con-previsualizacin-de-imgenes.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/02/19/ranger-instalacin-con-previsualizacin-de-imgenes.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Gtk-WARNING - Theme Not Found Warning</title>
@@ -351,39 +377,6 @@ reword m24bjk1 EL commit&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
         <pubDate>Tue, 21 Jun 2016 17:06:50 -0300</pubDate>
         <link>http://localhost:4000/blog/2016/06/21/git-cambiando-mensajes-de-commits-anteriores.html</link>
         <guid isPermaLink="true">http://localhost:4000/blog/2016/06/21/git-cambiando-mensajes-de-commits-anteriores.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>[Django] Upload Multiple FileField</title>
-        <description>&lt;p&gt;Por defecto un &lt;strong&gt;FileField&lt;/strong&gt; de los &lt;em&gt;forms&lt;/em&gt; de Django sólo te deja subir de a un archivo. Si lo que se necesita en tu proyecto es subir varios archivos desde un mismo campo del formulario, ya sea de forma &lt;em&gt;drag&amp;amp;drop&lt;/em&gt; o seleccionando varios en el &lt;em&gt;browser&lt;/em&gt; de archivos manteniendo apretada la tecla &lt;em&gt;Ctrl&lt;/em&gt;. Se puede lograr sin &lt;em&gt;plugins&lt;/em&gt; de la siguiente manera.&lt;/p&gt;
-
-&lt;h3 id=&quot;cambiando-forms&quot;&gt;Cambiando forms&lt;/h3&gt;
-
-&lt;p&gt;En nuestro &lt;em&gt;form&lt;/em&gt;, debemos especificar el campo como un &lt;em&gt;FileField&lt;/em&gt; de la siguiente forma.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;dasa/forms.py&lt;/code&gt;&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DasaForm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;forms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Form&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;lala_field&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;forms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FileField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;forms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ClearableFileInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attrs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'multiple'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;cambiando-views&quot;&gt;Cambiando views&lt;/h3&gt;
-
-&lt;p&gt;Y por el lado de nuestro &lt;em&gt;views&lt;/em&gt;, en el método que se esté utilizando obtenemos la lista de archivos, e iteramos con lo que queramos hacer.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;dasa/views.py&lt;/code&gt;&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;    &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FILES&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getlist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'lala_field'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;form&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is_valid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Do something&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.djangoproject.com/en/1.9/topics/http/file-uploads/#uploading-multiple-files&quot;&gt;Fuente&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Mon, 20 Jun 2016 09:43:30 -0300</pubDate>
-        <link>http://localhost:4000/blog/2016/06/20/django-upload-multiple-filefield.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/06/20/django-upload-multiple-filefield.html</guid>
         
         
       </item>
