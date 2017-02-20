@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Pavucontrol - Pestaña predeterminada al ser iniciado</title>
-  <meta name="description" content="Algo que suelo hacer bastante seguido es abrir pavucontrol para cambiar por dónde escucho el audio, para esto tengo que ir hasta la última pestaña de “Config...">
+  <title>Error - No such file or directory (32-bit binary)</title>
+  <meta name="description" content="Hay momentos en los que un error poco descriptivo te puede hacer golper la cabeza muchas veces contra el escritorio por horas :P. Este fue el caso de un amig...">
 
   <link rel="stylesheet" href="/blog/css/main.css">
-  <link rel="canonical" href="http://cravacuore.com.ar/blog/2016/10/16/pavucontrol-pestaa-predeterminada-al-ser-iniciado.html">
+  <link rel="canonical" href="http://cravacuore.com.ar/blog/2017/02/19/error-no-such-file-or-directory-32-bit-binary.html">
   <link rel="alternate" type="application/rss+xml" title="rawBlog" href="http://cravacuore.com.ar/blog/feed.xml">
 </head>
 
@@ -57,18 +57,20 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Pavucontrol - Pestaña predeterminada al ser iniciado</h1>
-    <p class="post-meta"><time datetime="2016-10-16T20:26:08-03:00" itemprop="datePublished">Oct 16, 2016</time></p>
+    <h1 class="post-title" itemprop="name headline">Error - No such file or directory (32-bit binary)</h1>
+    <p class="post-meta"><time datetime="2017-02-19T21:07:35-03:00" itemprop="datePublished">Feb 19, 2017</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>Algo que suelo hacer bastante seguido es abrir pavucontrol para cambiar por dónde escucho el audio, para esto tengo que ir hasta la última pestaña de “Configuración” y ahí <em>scrollear</em> los perfiles para cada dispositivo de salida.</p>
+    <p>Hay momentos en los que un error poco descriptivo te puede hacer golper la cabeza muchas veces contra el escritorio por horas :P. Este fue el caso de un amigo en un grupo de Telegram, que pidió ayuda porque ya no sabía que pasaba y le tiraba el siguiente error:</p>
 
-<p>Descubrí que para ahorrarme un poquito de tiempo al realizar esta tarea, se puede seleccionar en qué pestaña abre pavucontrol al ser iniciado. Para esto se hace uso del <em>flag</em> ‘–tab’ o abreviado ‘-t’ y el número de la pestaña. En mi caso la que más frecuento es la pestaña de “Configuración” que es la 5ta pestaña, entonces abro pavucontrol de la siguiente manera:</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">/usr/local/bin/bgdc: No such file or directory</code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pavucontrol -t 5</code></pre></figure>
+<p>Quería ejecutar un programa, que estaba en <code class="highlighter-rouge">/usr/local/bin</code> y que como cualquier programa normal debería dejar ejecutarlo. El PATH estaba bien seteado, los permisos de usuario también y después de varias suposiciones de que podría estar mal, se seguía sin llegar a una solución.</p>
 
-<p>En mi caso este comando lo puse reemplazando mi atajo de teclado en plasma para abrir pavucontrol. También se podría crear un alias para pavucontrol reemplazando por lo mismo. Este simple truquito me ahorra un paso, por lo menos hasta el día que le dedique otro rato para semi-automatizar esta tarea mediante <em>script</em>.</p>
+<p>Resulta que el problema era que el binario que se quería ejecutar era de 32-bit, y se estaba intentando correr en ese sistema de 64-bit (lo más normal en la actualidad) sin tener las librerias necesarias de 32-bit para poder lograrlo.</p>
+
+<p>Conclusión, si les tira ese error poco descriptivo de que no encuentra el binario, una gran probabilidad es que sea como este caso. La forma más fácil de saber si un binario es de 32-bit o 64-bit es utilizando <code class="highlighter-rouge">file nombre_binario</code> en la consola y en el <em>output</em> dice si es uno u otro.</p>
 
   </div>
 
@@ -80,7 +82,7 @@
     <script type="text/javascript">
         var disqus_shortname = 'cravacuore';
         // var disqus_developer = 1; // Comment out when the site is live
-        var disqus_identifier = "/2016/10/16/pavucontrol-pestaa-predeterminada-al-ser-iniciado.html";
+        var disqus_identifier = "/2017/02/19/error-no-such-file-or-directory-32-bit-binary.html";
 
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
