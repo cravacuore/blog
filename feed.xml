@@ -4,10 +4,10 @@
     <title>rawBlog</title>
     <description>This is my personal blog space for random ideas, write about software libre, programming, technology, cycling and some other of my passions.
 </description>
-    <link>http://cravacuore.com.ar/blog/</link>
-    <atom:link href="http://cravacuore.com.ar/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Feb 2017 11:39:56 -0300</pubDate>
-    <lastBuildDate>Mon, 20 Feb 2017 11:39:56 -0300</lastBuildDate>
+    <link>http://localhost:4000/blog/</link>
+    <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 05 Sep 2017 17:17:43 -0300</pubDate>
+    <lastBuildDate>Tue, 05 Sep 2017 17:17:43 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -23,8 +23,8 @@
 &lt;p&gt;Conclusión, si les tira ese error poco descriptivo de que no encuentra el binario, una gran probabilidad es que sea como este caso. La forma más fácil de saber si un binario es de 32-bit o 64-bit es utilizando &lt;code class=&quot;highlighter-rouge&quot;&gt;file nombre_binario&lt;/code&gt; en la consola y en el &lt;em&gt;output&lt;/em&gt; dice si es uno u otro.&lt;/p&gt;
 </description>
         <pubDate>Sun, 19 Feb 2017 21:07:35 -0300</pubDate>
-        <link>http://cravacuore.com.ar/blog/2017/02/19/error-no-such-file-or-directory-32-bit-binary.html</link>
-        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2017/02/19/error-no-such-file-or-directory-32-bit-binary.html</guid>
+        <link>http://localhost:4000/blog/2017/02/19/error-no-such-file-or-directory-32-bit-binary.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/02/19/error-no-such-file-or-directory-32-bit-binary.html</guid>
         
         
       </item>
@@ -49,8 +49,8 @@ ranger --copy-config&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;all    &lt;spa
 &lt;img src=&quot;https://cloud.openmailbox.org/index.php/apps/files_sharing/ajax/publicpreview.php?x=1875&amp;amp;y=1017&amp;amp;a=true&amp;amp;file=ranger-image-preview.png&amp;amp;t=XhfUq69OruU5qjq&amp;amp;scalingup=0&quot; alt=&quot;ranger&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 19 Feb 2017 20:32:30 -0300</pubDate>
-        <link>http://cravacuore.com.ar/blog/2017/02/19/ranger-instalacin-con-previsualizacin-de-imgenes.html</link>
-        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2017/02/19/ranger-instalacin-con-previsualizacin-de-imgenes.html</guid>
+        <link>http://localhost:4000/blog/2017/02/19/ranger-instalacin-con-previsualizacin-de-imgenes.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/02/19/ranger-instalacin-con-previsualizacin-de-imgenes.html</guid>
         
         
       </item>
@@ -64,8 +64,8 @@ ranger --copy-config&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;all    &lt;spa
 &lt;p&gt;Para solucionar esto, basta con instalar &lt;a href=&quot;https://www.archlinux.org/packages/extra/x86_64/gnome-themes-standard/&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gnome-themes-standard&lt;/code&gt;&lt;/a&gt; que nos brinda justamente eso, los themes standard para las aplicaciones de Gnome. Entre ellos el &lt;em&gt;adwaita&lt;/em&gt;. Una vez instalado no aparece más el molesto &lt;em&gt;warning&lt;/em&gt;.&lt;/p&gt;
 </description>
         <pubDate>Wed, 15 Feb 2017 12:18:07 -0300</pubDate>
-        <link>http://cravacuore.com.ar/blog/2017/02/15/gtk-warning-theme-not-found-warning.html</link>
-        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2017/02/15/gtk-warning-theme-not-found-warning.html</guid>
+        <link>http://localhost:4000/blog/2017/02/15/gtk-warning-theme-not-found-warning.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/02/15/gtk-warning-theme-not-found-warning.html</guid>
         
         
       </item>
@@ -81,8 +81,8 @@ ranger --copy-config&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;all    &lt;spa
 &lt;p&gt;Haciendo una búsqueda rápida, encontré &lt;a href=&quot;https://askubuntu.com/questions/148514/sdl-openaudio-failed-no-available-audio-device-while-starting-psychonauts&quot;&gt;esta información&lt;/a&gt; que me dió a entender que me faltaba &lt;code class=&quot;highlighter-rouge&quot;&gt;libpulse&lt;/code&gt; (utilizo pulseaudio, no alsa). Para lo cual, instalando &lt;a href=&quot;https://www.archlinux.org/packages/multilib/x86_64/lib32-libpulse/&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;lib32-libpulse&lt;/code&gt;&lt;/a&gt; resolvió mi problema al instante para mi caso con ArchLinux 64-bit y pulseaudio.&lt;/p&gt;
 </description>
         <pubDate>Tue, 14 Feb 2017 23:30:43 -0300</pubDate>
-        <link>http://cravacuore.com.ar/blog/2017/02/14/error-de-sonido-sdlaudio-sdl_openaudiodevice-failed.html</link>
-        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2017/02/14/error-de-sonido-sdlaudio-sdl_openaudiodevice-failed.html</guid>
+        <link>http://localhost:4000/blog/2017/02/14/error-de-sonido-sdlaudio-sdl_openaudiodevice-failed.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/02/14/error-de-sonido-sdlaudio-sdl_openaudiodevice-failed.html</guid>
         
         
       </item>
@@ -96,8 +96,8 @@ ranger --copy-config&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;all    &lt;spa
 &lt;p&gt;Para esto hacemos: &lt;code class=&quot;highlighter-rouge&quot;&gt;/loquebusco\|otra_cosa&lt;/code&gt; y se pueden concatenar términos sucesivamente.&lt;/p&gt;
 </description>
         <pubDate>Sat, 31 Dec 2016 19:04:46 -0300</pubDate>
-        <link>http://cravacuore.com.ar/blog/2016/12/31/vim-bsqueda-mltiple-simultanea.html</link>
-        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2016/12/31/vim-bsqueda-mltiple-simultanea.html</guid>
+        <link>http://localhost:4000/blog/2016/12/31/vim-bsqueda-mltiple-simultanea.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2016/12/31/vim-bsqueda-mltiple-simultanea.html</guid>
         
         
       </item>
@@ -135,8 +135,8 @@ ranger --copy-config&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;all    &lt;spa
 &lt;p&gt;Hasta acá voy a avanzar por el momento, ya es mucho más rápido cambiar desde consola mi configuración de audio. El próximo paso sería crear una función para &lt;em&gt;zsh&lt;/em&gt; que sepa el último cambio de configuración y revierta al anterior, y esa función ejecutarla desde un atajo de teclado. Quizás ese sea un próximo &lt;em&gt;post&lt;/em&gt;.&lt;/p&gt;
 </description>
         <pubDate>Thu, 15 Dec 2016 20:08:56 -0300</pubDate>
-        <link>http://cravacuore.com.ar/blog/2016/12/15/pactl-controlando-pulseaudio-desde-consola.html</link>
-        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2016/12/15/pactl-controlando-pulseaudio-desde-consola.html</guid>
+        <link>http://localhost:4000/blog/2016/12/15/pactl-controlando-pulseaudio-desde-consola.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2016/12/15/pactl-controlando-pulseaudio-desde-consola.html</guid>
         
         
       </item>
@@ -152,8 +152,8 @@ ranger --copy-config&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;all    &lt;spa
 &lt;p&gt;En mi caso este comando lo puse reemplazando mi atajo de teclado en plasma para abrir pavucontrol. También se podría crear un alias para pavucontrol reemplazando por lo mismo. Este simple truquito me ahorra un paso, por lo menos hasta el día que le dedique otro rato para semi-automatizar esta tarea mediante &lt;em&gt;script&lt;/em&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sun, 16 Oct 2016 20:26:08 -0300</pubDate>
-        <link>http://cravacuore.com.ar/blog/2016/10/16/pavucontrol-pestaa-predeterminada-al-ser-iniciado.html</link>
-        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2016/10/16/pavucontrol-pestaa-predeterminada-al-ser-iniciado.html</guid>
+        <link>http://localhost:4000/blog/2016/10/16/pavucontrol-pestaa-predeterminada-al-ser-iniciado.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2016/10/16/pavucontrol-pestaa-predeterminada-al-ser-iniciado.html</guid>
         
         
       </item>
@@ -169,8 +169,8 @@ ranger --copy-config&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;all    &lt;spa
 &lt;p&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/disable-ctrl-q-shortcut/&quot;&gt;Disable Ctrl-Q Shortcut&lt;/a&gt;, más descriptivo que su propio nombre imposible. Al que hizo este simple &lt;em&gt;addon&lt;/em&gt; para simplificarle la vida a los usuario de Firefox, lo adoro. Ahora al que se le ocurrió poner el atajo para cerrar una pestaña directamente al lado del de cerrar todo, te reservaron un lugarcito especial en el infierno :P.&lt;/p&gt;
 </description>
         <pubDate>Sun, 18 Sep 2016 18:35:44 -0300</pubDate>
-        <link>http://cravacuore.com.ar/blog/2016/09/18/firefox-addon-para-deshabilitar-ctrl-q.html</link>
-        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2016/09/18/firefox-addon-para-deshabilitar-ctrl-q.html</guid>
+        <link>http://localhost:4000/blog/2016/09/18/firefox-addon-para-deshabilitar-ctrl-q.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2016/09/18/firefox-addon-para-deshabilitar-ctrl-q.html</guid>
         
         
       </item>
@@ -224,8 +224,8 @@ ranger --copy-config&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;all    &lt;spa
 &lt;p&gt;El &lt;em&gt;pad&lt;/em&gt; Razer Firefly queda en magnífica combinación con el teclado, aún con los efectos limitados. Me costó acostumbrarme a la nueva textura del &lt;em&gt;pad&lt;/em&gt; pasando del anterior de tipo tela (&lt;em&gt;cloth&lt;/em&gt;; de hecho ahora Razer está por sacar una edición de este mismo &lt;em&gt;pad&lt;/em&gt; pero con tela), pero resultó ser muy cómodo y el ser un poco más grande me dejó bajar la sensibilidad del mouse para tener más control sobre la mira para pegar esos &lt;em&gt;super 360 no scope headshots&lt;/em&gt; en el Urban Terror xD.&lt;/p&gt;
 </description>
         <pubDate>Thu, 15 Sep 2016 20:26:28 -0300</pubDate>
-        <link>http://cravacuore.com.ar/blog/2016/09/15/razer-firefly-y-efectos-sincronizados-razer-drivers.html</link>
-        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2016/09/15/razer-firefly-y-efectos-sincronizados-razer-drivers.html</guid>
+        <link>http://localhost:4000/blog/2016/09/15/razer-firefly-y-efectos-sincronizados-razer-drivers.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2016/09/15/razer-firefly-y-efectos-sincronizados-razer-drivers.html</guid>
         
         
       </item>
@@ -281,6 +281,8 @@ ranger --copy-config&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;all    &lt;spa
 &lt;h3 id=&quot;instalando&quot;&gt;Instalando&lt;/h3&gt;
 
 &lt;p&gt;Anteriormente se tenía que hacer un clon del repo e instalar cada paquete a mano, además de encontrar e instalar todas las dependencias necesarias por cada uno. Ahora para ArchLinux está en &lt;strong&gt;AUR&lt;/strong&gt; (wiiii :D), así que simplemente buscamos el paquete &lt;em&gt;razer-driver-meta&lt;/em&gt; que nos instala todo lo necesario.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Edit: cerca de Septiembre del 2017 cambiaron el nombre del proyecto a openrazer, el paquete se llama openrazer-meta&lt;/code&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;yaourt -S razer-driver-meta&lt;/p&gt;
@@ -350,8 +352,8 @@ sudo ./install/install.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p&gt;Quien sabe quizás termine haciendo efectos locos, se me ocurren algunos que quisiera como por ejemplo: un perfil para Vim que cambie dependiendo el modo en el que esté, otro que haga flash de colores para distintas notificaciones ya sea desktop o vinculadas al celular, o incluso alguno efecto que siga el ritmo de la música en Spotify o Vlc para que disfruten de horas mirando como hace el ciclo de colores y sean unos enfermos hipnotizados de la emoción como yo..ya veremos xD&lt;/p&gt;
 </description>
         <pubDate>Wed, 14 Sep 2016 18:30:53 -0300</pubDate>
-        <link>http://cravacuore.com.ar/blog/2016/09/14/razer-blackwidow-chroma-tournament-edition-archlinux.html</link>
-        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2016/09/14/razer-blackwidow-chroma-tournament-edition-archlinux.html</guid>
+        <link>http://localhost:4000/blog/2016/09/14/razer-blackwidow-chroma-tournament-edition-archlinux.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2016/09/14/razer-blackwidow-chroma-tournament-edition-archlinux.html</guid>
         
         
       </item>
