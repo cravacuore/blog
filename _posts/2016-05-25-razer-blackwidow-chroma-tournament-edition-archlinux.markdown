@@ -43,6 +43,8 @@ La cual tiene una [página](https://terrycain.github.io/razer-drivers/) donde se
 
 Anteriormente se tenía que hacer un clon del repo e instalar cada paquete a mano, además de encontrar e instalar todas las dependencias necesarias por cada uno. Ahora para ArchLinux está en **AUR** (wiiii :D), así que simplemente buscamos el paquete *razer-driver-meta* que nos instala todo lo necesario.
 
+`Edit: cerca de Septiembre del 2017 cambiaron el nombre del proyecto a openrazer, el paquete se llama ahora openrazer-meta`
+
 > yaourt -S razer-driver-meta
 
 O cada uno de los paquetes necesarios por separados, que serían *razer-driver-dkms*, *razer-daemon*, *python-razer* también desde **AUR**.
