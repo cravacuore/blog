@@ -6,9 +6,22 @@
 </description>
     <link>http://localhost:4000/blog/</link>
     <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 05 Sep 2017 17:17:43 -0300</pubDate>
-    <lastBuildDate>Tue, 05 Sep 2017 17:17:43 -0300</lastBuildDate>
+    <pubDate>Wed, 06 Sep 2017 20:46:49 -0300</pubDate>
+    <lastBuildDate>Wed, 06 Sep 2017 20:46:49 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Bug Fix - Tomate Tu Tiempo Firefox</title>
+        <description>&lt;p&gt;Me entero por medio de &lt;a href=&quot;https://www.phoronix.com/scan.php?page=news_item&amp;amp;px=Firefox-Middle-Click-Bug&quot;&gt;Phoronix&lt;/a&gt; que la molestia que tenía con Firefox de abrir &lt;em&gt;links&lt;/em&gt; con el click del medio, el cual siempre resolvía como puse en este &lt;a href=&quot;http://cravacuore.com.ar/blog/2016/06/08/firefox-deshabilitar-abrir-url-del-clipboard-con-click-del-medio.html&quot;&gt;post&lt;/a&gt;, era tratado como un &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=366945&quot;&gt;bug&lt;/a&gt;. Uno que fue agregado hace unos muy poquitos 11 años y recién ahora pasa a ser solucionado.&lt;/p&gt;
+
+&lt;p&gt;No era el único entonces que tenía este problema. Y la moraleja, es que no hay que perder fe a que un &lt;em&gt;bug&lt;/em&gt; sea resuelto..aunque haya que esperar 11 años :P.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 06 Sep 2017 20:43:25 -0300</pubDate>
+        <link>http://localhost:4000/blog/2017/09/06/bug-fix-tomate-tu-tiempo-firefox.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/09/06/bug-fix-tomate-tu-tiempo-firefox.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Error - No such file or directory (32-bit binary)</title>
@@ -226,134 +239,6 @@ ranger --copy-config&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;all    &lt;spa
         <pubDate>Thu, 15 Sep 2016 20:26:28 -0300</pubDate>
         <link>http://localhost:4000/blog/2016/09/15/razer-firefly-y-efectos-sincronizados-razer-drivers.html</link>
         <guid isPermaLink="true">http://localhost:4000/blog/2016/09/15/razer-firefly-y-efectos-sincronizados-razer-drivers.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Razer BlackWidow Chroma Tournament Edition - ArchLinux</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;Nota: tenía la intención de hacer este &lt;em&gt;post&lt;/em&gt; ni bien conseguí el teclado, pero pasó el tiempo y no lo escribí (quedó en borradores desde el 25/05 e.e). De hecho mucho de lo que escribí lo voy a borrar porque la herramienta de las que les voy a hablar ya simplificó mucho su forma de instalarla y usarla.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Hace rato que venía mirando con cariño los teclados mecánicos, en particular dos modelos:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.wasdkeyboards.com/index.php/products/code-keyboard/code-87-key-mechanical-keyboard.html&quot;&gt;WASD Code&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;retroiluminado blanco&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;switches Cherry MX Clear&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;10-keyless&lt;/em&gt; (sin &lt;em&gt;numpad&lt;/em&gt;)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.razerzone.com/gaming-keyboards-keypads/razer-blackwidow-tournament-edition-chroma#clicky&quot;&gt;Razer BlackWidow Chroma Tournament Edition&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;retroiluminación RGB “Chroma”&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;switches Razer Green&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;10-keyless&lt;/em&gt; (sin &lt;em&gt;numpad&lt;/em&gt; = “Tournament Edition”)&lt;/li&gt;
-      &lt;li&gt;trae un estuche, para llevarlo a tus más arduas batallas en Lan Party xD.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Hace unos meses pude conseguir uno. En particular este fue, como lo dice el título, un &lt;em&gt;Razer BlackWidow Chroma Tournament Edition&lt;/em&gt; con los &lt;em&gt;switches Razer Green&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://cloud.openmailbox.org/index.php/apps/files_sharing/ajax/publicpreview.php?x=1299&amp;amp;y=770&amp;amp;a=true&amp;amp;file=razer-keyboard-wave-effect.jpg&amp;amp;t=SduLVmIYbQgSfBe&amp;amp;scalingup=0&quot; alt=&quot;razer-keyboard&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;La experiencia de un teclado mecánico era algo que tenía que probar y este fue el reemplazo de mi querido y muy hermoso &lt;a href=&quot;http://www.razerzone.com/gaming-keyboards-keypads/razer-lycosa-mirror&quot;&gt;Razer Lycosa Mirror&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Desde ya puedo comentar que la experiencia de escribir en este nuevo teclado es simplemente genial, el teclado tiene el tamaño que yo considero ideal y un peso considerable que hace pensar en un antiguo teclado IBM.&lt;/p&gt;
-
-&lt;p&gt;Algo que puede o no gustarte es el sonido al teclear, a mí me encanta xD. Estos &lt;em&gt;switches&lt;/em&gt; son un equivalente a unos &lt;em&gt;Cherry MX Blue&lt;/em&gt; pero con una actuación al presionarlos un poco más ligera (por lo que pude leer).&lt;/p&gt;
-
-&lt;h2 id=&quot;colores&quot;&gt;Colores&lt;/h2&gt;
-
-&lt;p&gt;El gran tema de este &lt;em&gt;post&lt;/em&gt; es lograr hacer funcionar los efectos de colores que trae este teclado en ArchLinux, una tarea que pensé que iba a ser mucho más sencilla (de hecho al momento de publicar este &lt;em&gt;post&lt;/em&gt; ya es mucho más sencilla :P).&lt;/p&gt;
-
-&lt;p&gt;Ya había tomado el recaudo de verificar si era factible el poder controlar estas opciones desde Linux antes de realizar la compra, encontrando la siguiente herramienta:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/terrycain/razer-drivers&quot;&gt;https://github.com/terrycain/razer-drivers&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;La cual tiene una &lt;a href=&quot;https://terrycain.github.io/razer-drivers/&quot;&gt;página&lt;/a&gt; donde se listan los dispositivos que actualmente soporta entre otra información.&lt;/p&gt;
-
-&lt;h3 id=&quot;instalando&quot;&gt;Instalando&lt;/h3&gt;
-
-&lt;p&gt;Anteriormente se tenía que hacer un clon del repo e instalar cada paquete a mano, además de encontrar e instalar todas las dependencias necesarias por cada uno. Ahora para ArchLinux está en &lt;strong&gt;AUR&lt;/strong&gt; (wiiii :D), así que simplemente buscamos el paquete &lt;em&gt;razer-driver-meta&lt;/em&gt; que nos instala todo lo necesario.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Edit: cerca de Septiembre del 2017 cambiaron el nombre del proyecto a openrazer, el paquete se llama openrazer-meta&lt;/code&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;yaourt -S razer-driver-meta&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;O cada uno de los paquetes necesarios por separados, que serían &lt;em&gt;razer-driver-dkms&lt;/em&gt;, &lt;em&gt;razer-daemon&lt;/em&gt;, &lt;em&gt;python-razer&lt;/em&gt; también desde &lt;strong&gt;AUR&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;yaourt -S razer-driver-dkms razer-daemon python-razer&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Y se recomienda después agregar tu usuario al grupo &lt;code class=&quot;highlighter-rouge&quot;&gt;plugdev&lt;/code&gt; para completar la instalación, haciendo:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;sudo gpasswd -a «tu_usuario» plugdev&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=&quot;instalar-gui&quot;&gt;Instalar GUI&lt;/h4&gt;
-
-&lt;p&gt;Por el momento no tiene ni se recomienda una forma de manipular los efectos desde consola, para lo cual hay que instalar una GUI. Hay dos opciones que son directamente recomendadas en este repo:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/GabMus/razerCommander&quot;&gt;razerCommander&lt;/a&gt;: hecha con GTK, es simple y funciona bastante bien. Había empezado a utilizar esta, de hecho incluso empecé a contribuir con algunos arreglos en el código, pero me terminé decantando por la que les nombro siguiente. Este tiene la ventaja de que también se encuentra vía &lt;strong&gt;AUR&lt;/strong&gt; para los usuarios de ArchLinux:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;yaourt -S razerCommander&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://cloud.openmailbox.org/index.php/apps/files_sharing/ajax/publicpreview.php?x=1299&amp;amp;y=770&amp;amp;a=true&amp;amp;file=razer-gui-razerCommander.png&amp;amp;t=3SYH3rE6eo9ulpj&amp;amp;scalingup=0&quot; alt=&quot;razerCommander&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/lah7/polychromatic&quot;&gt;Polychromatic&lt;/a&gt;: esta me parece está un poco más completa. Además de incluir un &lt;em&gt;applet&lt;/em&gt; para el &lt;em&gt;traybar&lt;/em&gt; desde donde controlar los efectos, la interfaz me parece un poco más cómoda y limpia. A su vez con esta última en particular me lista bien en caso de tener otros dispositivos Razer Chroma, cosa que no me funcionaba hasta el momento con razerCommander.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone https://github.com/lah7/polychromatic.git
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;polychromatic
-git checkout stable
-sudo ./install/install.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://cloud.openmailbox.org/index.php/apps/files_sharing/ajax/publicpreview.php?x=1299&amp;amp;y=770&amp;amp;a=true&amp;amp;file=razer-gui-polychromatic-controller.png&amp;amp;t=PFNnwRkG1NnpWY8&amp;amp;scalingup=0&quot; alt=&quot;Polychromatic&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Ambas funcionan correctamente, y dejan hacer lo deseado. Incluso crear nuevos perfiles &lt;em&gt;custom&lt;/em&gt;. Depende de gustos personales, alguna característica particular, o la comodidad de que esté en &lt;strong&gt;AUR&lt;/strong&gt; (caso de razerCommander) el que te decidas por una o la otra.&lt;/p&gt;
-
-&lt;h3 id=&quot;efectos&quot;&gt;Efectos&lt;/h3&gt;
-
-&lt;p&gt;Al momento de publicar este &lt;em&gt;post&lt;/em&gt; tenemos disponibles los siguientes efectos:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Spectrum&lt;/em&gt;: hace un barrido lento cambiando de colores.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Wave&lt;/em&gt;: hace una ‘ola’ de colores a lo largo del teclado, se puede elegir que vaya de derecha a izquierda o de forma inversa.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Reactive&lt;/em&gt;: este ‘reacciona’ al tocar cada tecla y se ilumina para después disfuminarse, se puede elegir el color con el que se hace este efecto y 3 niveles de velocidad del efecto.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Breath&lt;/em&gt;: este hace un efecto en el que se prende lentamente de un color y se apaga lentamente. Se pueden elegir para que cicle entre 2 colores a elegir o que cambie de color de forma aleatoria.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Ripple&lt;/em&gt;: hace un efecto como si tiráramos una piedra al agua al apretar cada tecla desde esa tecla y hacia afuera. Se puede elegir un color o que cambie aleatoriamente cada vez que se aprieta una tecla.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Static&lt;/em&gt;: simplemente deja de un solo color todo prendido.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;None&lt;/em&gt;: sin efecto, todo apagado.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Además de este listado de efectos, que por cierto son puro chiches :P, se puede elegir la intensidad de la retroiluminación y se pueden crear perfiles decidiendo el color de cada tecla en particular.&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusión&quot;&gt;Conclusión&lt;/h2&gt;
-
-&lt;p&gt;Como conclusión puedo decirles que escribir en teclado mecánico es un placer, y le recomiendo conseguirse uno a toda persona que se pase horas de horas usándolo como es mi caso como programador. Pero ya sea que escribas novelas, seas un &lt;em&gt;Pro Player&lt;/em&gt; de &lt;strong&gt;LoL&lt;/strong&gt; o escribas recetas para un blog; te super recomiendo te consigas uno de estos teclados mecánicos.&lt;/p&gt;
-
-&lt;p&gt;Además la travesía para lograr hacer funcionar los millones de colores RGB en el teclado fue muy poco doloroso, gracias a los genios que crearon &lt;em&gt;razer-drivers&lt;/em&gt;. Funciona sin problemas, y siguen agregando soporte para tener colorcitos en otros dispositivos Razer Chroma. En forma de agradecimiento, y aprovechando a mi beneficio les hice unos muy pequeños aportes al código y documentación en su repo, espero poder contribuir próximamente más substancialmente.&lt;/p&gt;
-
-&lt;p&gt;Quien sabe quizás termine haciendo efectos locos, se me ocurren algunos que quisiera como por ejemplo: un perfil para Vim que cambie dependiendo el modo en el que esté, otro que haga flash de colores para distintas notificaciones ya sea desktop o vinculadas al celular, o incluso alguno efecto que siga el ritmo de la música en Spotify o Vlc para que disfruten de horas mirando como hace el ciclo de colores y sean unos enfermos hipnotizados de la emoción como yo..ya veremos xD&lt;/p&gt;
-</description>
-        <pubDate>Wed, 14 Sep 2016 18:30:53 -0300</pubDate>
-        <link>http://localhost:4000/blog/2016/09/14/razer-blackwidow-chroma-tournament-edition-archlinux.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/09/14/razer-blackwidow-chroma-tournament-edition-archlinux.html</guid>
         
         
       </item>
