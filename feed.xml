@@ -6,9 +6,26 @@
 </description>
     <link>http://localhost:4000/blog/</link>
     <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 06 Sep 2017 20:46:49 -0300</pubDate>
-    <lastBuildDate>Wed, 06 Sep 2017 20:46:49 -0300</lastBuildDate>
+    <pubDate>Mon, 11 Sep 2017 19:23:15 -0300</pubDate>
+    <lastBuildDate>Mon, 11 Sep 2017 19:23:15 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>[Workaround] Problema de líneas horizontales en Konsole</title>
+        <description>&lt;p&gt;En la consola de plasma &lt;a href=&quot;https://www.kde.org/applications/system/konsole/&quot;&gt;Konsole&lt;/a&gt;, tuve un problema durante bastante tiempo y no le dí mayor importancia hasta que me decidí por arreglarlo.&lt;/p&gt;
+
+&lt;p&gt;El problema es que al escribir, mover el cursor o seleccionar texto en la consola me aparecían líneas horizontales a lo largo de la terminal que aparecían y desaparecían. Pensé que era cuestión de la fuente, o el &lt;em&gt;theme&lt;/em&gt; que estaba usando.&lt;/p&gt;
+
+&lt;p&gt;Resulta que es un &lt;a href=&quot;https://bugs.kde.org/show_bug.cgi?id=373232&quot;&gt;bug&lt;/a&gt; de Konsole que tiene con el escalado de la &lt;em&gt;UI&lt;/em&gt; en Plasma. De modo que si modifica el escalado en Plasma, surge este problema. Yo había modificado el escalado a ‘1.1’ al empezar a utilizar Plasma en mi notebook.&lt;/p&gt;
+
+&lt;p&gt;Como &lt;em&gt;workaround&lt;/em&gt; se puede poner el escalado por &lt;em&gt;default&lt;/em&gt; en &lt;strong&gt;1&lt;/strong&gt;. Para esto vamos a ‘Displays’ buscamos ‘Scale display’ y cambiamos el valor a ‘1’. Aplicamos los cambios, y reiniciamos ‘X’ o el sistema por completo.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 11 Sep 2017 19:16:08 -0300</pubDate>
+        <link>http://localhost:4000/blog/2017/09/11/konsole-horizontal-lines-problem.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/09/11/konsole-horizontal-lines-problem.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Bug Fix - Tomate Tu Tiempo Firefox</title>
@@ -184,61 +201,6 @@ ranger --copy-config&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;all    &lt;spa
         <pubDate>Sun, 18 Sep 2016 18:35:44 -0300</pubDate>
         <link>http://localhost:4000/blog/2016/09/18/firefox-addon-para-deshabilitar-ctrl-q.html</link>
         <guid isPermaLink="true">http://localhost:4000/blog/2016/09/18/firefox-addon-para-deshabilitar-ctrl-q.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Razer Firefly y efectos sincronizados (razer-drivers) - ArchLinux</title>
-        <description>&lt;p&gt;Vinculado al reciente cambio de mi teclado por uno mecánico, como conté &lt;a href=&quot;http://cravacuore.com.ar/blog/2016/09/14/razer-blackwidow-chroma-tournament-edition-archlinux.html&quot;&gt;acá&lt;/a&gt;, vino la idea de cambiar mi &lt;em&gt;mouse pad&lt;/em&gt; que desde hace muchos años era un &lt;a href=&quot;https://steelseries.com/gaming-mousepads/qck-mini&quot;&gt;SteelSeries Qck Mini&lt;/a&gt; por uno nuevo un poco más grande. Por comodidad y principalmente para lograr mejores matanzas en mis ocasionales partidas de Urban Terror :D.&lt;/p&gt;
-
-&lt;p&gt;Así fue como empecé a buscar el reemplazo ideal, y dado mi anterior compra &lt;em&gt;Razer&lt;/em&gt; con el teclado Chroma (RGB retroiluminado. a.k.a. colorcitos locos) me encontré con su &lt;em&gt;mouse pad&lt;/em&gt; &lt;a href=&quot;http://www.razerzone.com/gaming-mouse-mats/razer-firefly&quot;&gt;Razer Firefly&lt;/a&gt; también de la línea &lt;em&gt;Chroma&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://cloud.openmailbox.org/index.php/apps/files_sharing/ajax/publicpreview.php?x=1875&amp;amp;y=1052&amp;amp;a=true&amp;amp;file=razer-firefly.jpg&amp;amp;t=R211Kf4JxA2Giky&amp;amp;scalingup=0&quot; alt=&quot;razer-firefly&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Tan lindo como se ve, como notan lo terminé adquiriendo :P. Pero sin olvidar antes de revisar si tenía soporte por parte de &lt;a href=&quot;https://github.com/terrycain/razer-drivers&quot;&gt;razer-drivers&lt;/a&gt; que también usé para lograr los efectos colorinches en mi teclado.&lt;/p&gt;
-
-&lt;h3 id=&quot;sincronización-de-efectos&quot;&gt;Sincronización de efectos&lt;/h3&gt;
-
-&lt;p&gt;Un pequeño detalle era que se puedan sincronizar estos efectos para que trabajen al mismo tiempo. Después de dar algunas vueltas, terminó siendo bastante simple. Hay que fijarnos que en el archivo de configuración &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.razer-service/razer.conf&lt;/code&gt; en nuestro &lt;em&gt;HOME&lt;/em&gt; tenga la siguiente línea:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;sync_effects_enabled = True&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Como ven, tiene que quedar en True para habilitar la sincronización entre dispositivos. Aunque debería estar habilitada por &lt;em&gt;default&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;problemas-con-gui&quot;&gt;Problemas con GUI&lt;/h3&gt;
-
-&lt;p&gt;El único problema que me encontré fue con &lt;a href=&quot;https://github.com/GabMus/razerCommander&quot;&gt;razerCommander&lt;/a&gt;, una de las dos &lt;em&gt;GUI&lt;/em&gt; que mencioné en el &lt;a href=&quot;http://cravacuore.com.ar/blog/2016/09/14/razer-blackwidow-chroma-tournament-edition-archlinux.html&quot;&gt;post previo&lt;/a&gt;. En este no me tomaba mis dos dispositivos en el listado, por lo tanto no podía seleccionarle un efecto particular para en este caso el &lt;em&gt;mouse pad&lt;/em&gt;. Sin embargo, al estar sincronizados el efecto que elegía para el teclado se hacía sincronizado con el mismo.&lt;/p&gt;
-
-&lt;p&gt;Por otro lado, con &lt;a href=&quot;https://github.com/lah7/polychromatic&quot;&gt;Polychromatic&lt;/a&gt; se me listaban ambos dispositivos como pueden ver en la siguiente imagen.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://cloud.openmailbox.org/index.php/apps/files_sharing/ajax/publicpreview.php?x=1875&amp;amp;y=1052&amp;amp;a=true&amp;amp;file=polychromatic-devices-list.png&amp;amp;t=14ZTg698Xb1sKwS&amp;amp;scalingup=0&quot; alt=&quot;polychromatic-devices-list&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Pero si bien funciona correctamente los efectos sólo son sincronizados cuando aplico el efecto deseado como si fuese sólo para el teclado, si elijo desde la pestaña de Razer Firefly este sólo se aplica para el este y no es sincronizado.&lt;/p&gt;
-
-&lt;h3 id=&quot;efectos&quot;&gt;Efectos&lt;/h3&gt;
-
-&lt;p&gt;En cuanto a los efectos, estos quedan un poco más limitados si queremos que sean sincronizados, volviendo al listado que comenté en el post anterior:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Spectrum&lt;/em&gt;: funciona de mil maravillas y es uno de mis favoritos para tener sincronizado.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Wave&lt;/em&gt;: también funciona correctamente pasando del teclado y siguiendo por el &lt;em&gt;pad&lt;/em&gt; desde el borde superior izquierdo haciendo rotación inversa a las agujas del reloj (en el caso de que el efecto sea en dirección derecha o ‘Right’).&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Reactive&lt;/em&gt;: este no me funcionó, se supone debería hacer el efecto para el &lt;em&gt;pad&lt;/em&gt; cuando apretamos algo con el &lt;em&gt;mouse&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Breath&lt;/em&gt;: este funciona correctamente, pero al elegir los colores tanto para uno o dos colores de este efecto. En el caso de ‘Random’ el color no es sincronizado sino que sólo el efecto es sincronizado pero cada dispositivo hace un color aleatorio diferente. Estoy intentando agregar un modo que sea ‘Dual Random’ donde los colores aleatorios se repliquen sincronizadamente.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Ripple&lt;/em&gt;: este efecto no hace reacción alguna en el &lt;em&gt;mouse pad&lt;/em&gt; al apretar una tecla ni con click del mouse. Me gustaría que continúe el barrido que hace este efecto desde una tecla pasando por el borde del &lt;em&gt;mouse pad&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Static&lt;/em&gt;: funciona correctamente sin problemas.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;None&lt;/em&gt;: Idem.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;conclusión&quot;&gt;Conclusión&lt;/h3&gt;
-
-&lt;p&gt;El &lt;em&gt;pad&lt;/em&gt; Razer Firefly queda en magnífica combinación con el teclado, aún con los efectos limitados. Me costó acostumbrarme a la nueva textura del &lt;em&gt;pad&lt;/em&gt; pasando del anterior de tipo tela (&lt;em&gt;cloth&lt;/em&gt;; de hecho ahora Razer está por sacar una edición de este mismo &lt;em&gt;pad&lt;/em&gt; pero con tela), pero resultó ser muy cómodo y el ser un poco más grande me dejó bajar la sensibilidad del mouse para tener más control sobre la mira para pegar esos &lt;em&gt;super 360 no scope headshots&lt;/em&gt; en el Urban Terror xD.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 15 Sep 2016 20:26:28 -0300</pubDate>
-        <link>http://localhost:4000/blog/2016/09/15/razer-firefly-y-efectos-sincronizados-razer-drivers.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/09/15/razer-firefly-y-efectos-sincronizados-razer-drivers.html</guid>
         
         
       </item>
