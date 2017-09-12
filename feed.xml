@@ -6,9 +6,109 @@
 </description>
     <link>http://localhost:4000/blog/</link>
     <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 11 Sep 2017 19:23:15 -0300</pubDate>
-    <lastBuildDate>Mon, 11 Sep 2017 19:23:15 -0300</lastBuildDate>
+    <pubDate>Tue, 12 Sep 2017 09:30:51 -0300</pubDate>
+    <lastBuildDate>Tue, 12 Sep 2017 09:30:51 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Chattr - Archivo No Editable (Read-only)</title>
+        <description>&lt;p&gt;Si se quiere &lt;em&gt;settear&lt;/em&gt; un archivo como &lt;em&gt;read-only&lt;/em&gt;, para que este no pueda ser modificado. Se puede hacer uso de &lt;code class=&quot;highlighter-rouge&quot;&gt;chattr&lt;/code&gt; de la siguiente manera:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  &lt;span class=&quot;c&quot;&gt;# chattr +i /path/to/file&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Y para revertirlo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  &lt;span class=&quot;c&quot;&gt;# chattr -i /path/to/file&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Muy útil cuando cambiamos alguna &lt;em&gt;setting&lt;/em&gt; de un programa y queremos que quede de forma permanente sin que sea sobrescrita por el programa mismo.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 12 Sep 2017 09:30:51 -0300</pubDate>
+        <link>http://localhost:4000/blog/2017/09/12/chattr-archivo-no-editable-read-only.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/09/12/chattr-archivo-no-editable-read-only.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>[Javascript] Toggle Icon Class - cambiar ícono con click sobre botón</title>
+        <description>&lt;p&gt;Buscando una manera simple de cambiar un ícono por otro en un botón al hacer click sobre este en
+classList.toggle&lt;/p&gt;
+
+&lt;p&gt;https://github.com/cravacuore/cravacuore.github.io/commit/fb05c94ccab030ac6cd0de6d6bd825e9df1f5062&lt;/p&gt;
+
+&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/API/Element/classList#Methods&lt;/p&gt;
+
+&lt;p&gt;Lo usé en el ícono de play en /music. music.js&lt;/p&gt;
+</description>
+        <pubDate>Tue, 12 Sep 2017 09:30:12 -0300</pubDate>
+        <link>http://localhost:4000/blog/2017/09/12/toggle-icon-class-plain-javascript.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/09/12/toggle-icon-class-plain-javascript.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Configurando Radio Control TurnigyX9 Para Usar en Juego Liftoff</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;liftoff - game - settings
+joystick on plasma
+antimicro -&amp;gt; Game Controller Mapping (Left + Right Axis) -&amp;gt; Copy SDL2 Code
+sdl2 to file -&amp;gt; ~/.steam/steam/steamapps/common/Liftoff/mycontroller.txt
+Steam -&amp;gt; Liftoff (left click) -&amp;gt; Properties -&amp;gt; General -&amp;gt; Set Launch Options -&amp;gt; mycontroller.txt
+~/.config/unity3d/LuGus\ Studios/Liftoff/prefs -&amp;gt; Fullscreen Mode = 0
+Preset Controller -&amp;gt; PS4 controller
+Manual Config -&amp;gt; Invert channels -&amp;gt; trim on controller
+https://steamcommunity.com/app/296300/discussions/3/2741975115082837251/#c2741975115082938610
+https://steamcommunity.com/sharedfiles/filedetails/?id=923085376&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 11 Sep 2017 20:23:20 -0300</pubDate>
+        <link>http://localhost:4000/blog/2017/09/11/configurando-radio-control-turnigyx9-para-usar-en-juego-liftoff.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/09/11/configurando-radio-control-turnigyx9-para-usar-en-juego-liftoff.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>[Workaround] Unity Blank Screen at Start</title>
+        <description>&lt;p&gt;Este problema me aparece con varios juegos hechos sobre &lt;a href=&quot;https://unity3d.com/&quot;&gt;Unity3d&lt;/a&gt;. Básicamente al iniciar en &lt;em&gt;fullscreen&lt;/em&gt; la pantalla queda totalmente negra, en algunos casos se puede escuchar el audio dando a notar que de todas formas está iniciando.&lt;/p&gt;
+
+&lt;p&gt;Como &lt;em&gt;workaround&lt;/em&gt; sobre este problema se puede hacer lo siguiente:&lt;/p&gt;
+
+&lt;p&gt;Primero localizamos la carpeta con las configuraciones de Unity sobre la aplicación que queremos arreglar, deberíamos encontrarla en &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.config/unity3d/app-que-buscamos&lt;/code&gt;. En esta carpeta deberíamos encontrar un archivo llamado &lt;code class=&quot;highlighter-rouge&quot;&gt;prefs&lt;/code&gt;. Entonces con el ejemplo anterior, la ruta sería &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.config/unity3d/app-que-buscamos/prefs&lt;/code&gt;. El contenido de dicho archivo tendría que ser similar a esto:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  &amp;lt;unity_prefs &lt;span class=&quot;nv&quot;&gt;version_major&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1&quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;version_minor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1&quot;&lt;/span&gt;&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Screenmanager Is Fullscreen mode&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&amp;gt;1&amp;lt;/pref&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Screenmanager Resolution Height&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&amp;gt;1080&amp;lt;/pref&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Screenmanager Resolution Width&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&amp;gt;1920&amp;lt;/pref&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;UnityGraphicsQuality&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&amp;gt;3&amp;lt;/pref&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;UnitySelectMonitor&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&amp;gt;0&amp;lt;/pref&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;unity.cloud_userid&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&amp;gt; ... &amp;lt;/pref&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;unity.player_session_background_time&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&amp;gt; ... &amp;lt;/pref&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;unity.player_session_elapsed_time&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&amp;gt; ... &amp;lt;/pref&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;unity.player_sessionid&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&amp;gt; ... &amp;lt;/pref&amp;gt;
+  &amp;lt;/unity_prefs&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Recomendado hacer un copia del archivo, en mi caso hago la copia en la misma carpeta llamándolo &lt;code class=&quot;highlighter-rouge&quot;&gt;prefs.bkp&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Lo que nos interesa modificar (sobre el archivo original) es la línea de &lt;code class=&quot;highlighter-rouge&quot;&gt;Fullscreen mode&lt;/code&gt;, poniéndole como valor &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Screenmanager Is Fullscreen mode&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&amp;gt;0&amp;lt;/pref&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Una vez modificado y guardado, procedemos a abrir la aplicación.&lt;/p&gt;
+
+&lt;p&gt;De forma opcional, podemos modificar los valores de &lt;code class=&quot;highlighter-rouge&quot;&gt;Resolution Height&lt;/code&gt; y &lt;code class=&quot;highlighter-rouge&quot;&gt;Resolution Width&lt;/code&gt; para que coincidan con la resolución de nuestro monitor. Por ejemplo si tenemos una pantalla fullHD, los valores serían 1080 y 1920 respectivamente.&lt;/p&gt;
+
+&lt;p&gt;Es muy probable que al cerrar e iniciar nuevamente la aplicación, estos valores que modificamos sean sobrescritos automáticamente. Tendríamos que volver a modificar nuevamente siguiendo los mismos pasos o podemos poner el archivo &lt;code class=&quot;highlighter-rouge&quot;&gt;prefs&lt;/code&gt; en modo de sólo lectura, esto último lo podemos lograr haciendo uso de chattr como les explico en este otro &lt;em&gt;post&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;TODO: add chattr blog post link&lt;/p&gt;
+</description>
+        <pubDate>Mon, 11 Sep 2017 20:20:08 -0300</pubDate>
+        <link>http://localhost:4000/blog/2017/09/11/workaround-unity-blank-screen-at-start.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/09/11/workaround-unity-blank-screen-at-start.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>[Workaround] Problema de líneas horizontales en Konsole</title>
@@ -41,6 +141,63 @@
       </item>
     
       <item>
+        <title>Sass With Jekyll</title>
+        <description>&lt;p&gt;https://jekyllrb.com/docs/assets/&lt;/p&gt;
+
+&lt;p&gt;sass –watch sass/:css/&lt;/p&gt;
+
+&lt;p&gt;sass/_partial.sass&lt;/p&gt;
+
+&lt;p&gt;@import _partial&lt;/p&gt;
+</description>
+        <pubDate>Wed, 06 Sep 2017 20:22:47 -0300</pubDate>
+        <link>http://localhost:4000/blog/2017/09/06/sass-with-jekyll.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/09/06/sass-with-jekyll.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Little Racers Streets Fix</title>
+        <description>&lt;p&gt;https://steamcommunity.com/app/262690/discussions/0/358416600605446480/?ctp=4#c1291816569120425810&lt;/p&gt;
+
+&lt;p&gt;sudo pacman -S sdl2_mixer
+cd “$HOME/.local/share/Steam/steamapps/common/Little Racers STREET/lib64”
+mkdir ../bak64/
+mv libSDL2_mixer-2.0.so.0 ../bak64/
+ln -s /usr/lib/libSDL2_mixer-2.0.so.0 ./&lt;/p&gt;
+</description>
+        <pubDate>Sat, 26 Aug 2017 20:52:27 -0300</pubDate>
+        <link>http://localhost:4000/blog/2017/08/26/little-racers-streets-fix.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/08/26/little-racers-streets-fix.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>QDBUS + Plasma Shortcut</title>
+        <description>&lt;p&gt;About qdbus. With plasma custom shortcut (show how to)&lt;/p&gt;
+
+&lt;p&gt;Search d-bus functions&lt;/p&gt;
+
+&lt;p&gt;Example:
+qdbus org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+dbus-send –print-reply –dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Pause
+qdbus org.razer /org/razer/device/ST1637V00300237 razer.device.misc.getDeviceType&lt;/p&gt;
+
+&lt;p&gt;Remote application: org.razer
+Remote object: /org/razer/device/ST1637V00300237
+Function: razer.device.misc.getDeviceType
+Arguments (Optional): None&lt;/p&gt;
+</description>
+        <pubDate>Tue, 27 Jun 2017 19:50:20 -0300</pubDate>
+        <link>http://localhost:4000/blog/2017/06/27/qdbus-plasma-shortcut.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/06/27/qdbus-plasma-shortcut.html</guid>
+        
+        
+      </item>
+    
+      <item>
         <title>Error - No such file or directory (32-bit binary)</title>
         <description>&lt;p&gt;Hay momentos en los que un error poco descriptivo te puede hacer golper la cabeza muchas veces contra el escritorio por horas :P. Este fue el caso de un amigo en un grupo de Telegram, que pidió ayuda porque ya no sabía que pasaba y le tiraba el siguiente error:&lt;/p&gt;
 
@@ -55,152 +212,6 @@
         <pubDate>Sun, 19 Feb 2017 21:07:35 -0300</pubDate>
         <link>http://localhost:4000/blog/2017/02/19/error-no-such-file-or-directory-32-bit-binary.html</link>
         <guid isPermaLink="true">http://localhost:4000/blog/2017/02/19/error-no-such-file-or-directory-32-bit-binary.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>[Ranger] Previsualización de Imágenes</title>
-        <description>&lt;p&gt;Ranger es el file manager que más utilizo, seguido de &lt;em&gt;dolphin&lt;/em&gt; para tareas más “complejas”. Es un file manager para la consola, muy rápido y completo que uso desde hace años.&lt;/p&gt;
-
-&lt;p&gt;Reinstalando en la notebook nueva, una funcionalidad de &lt;em&gt;ranger&lt;/em&gt; que todavía me faltaba configurar era la previsualización de imágenes. Para lograr esto en ArchLinux, simplemente realizamos lo siguiente:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pacaur -S ranger w3m imlib2 &lt;span class=&quot;c&quot;&gt;# Instalamos lo necesario (con el gestor que usen, yo utilizo pacaur pero puede ser pacman)&lt;/span&gt;
-ranger                      &lt;span class=&quot;c&quot;&gt;# Abrimos por primera vez ranger para que cree la carpeta default para configuración&lt;/span&gt;
-ranger --copy-config&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;all    &lt;span class=&quot;c&quot;&gt;# esto nos da los archivos default de config de ranger en nuestro home&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Seteamos en ~/.config/ranger/rc.conf para la previsualización&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;set preview_images true&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Eso es todo, y ya deberíamos poder previsualizar las imágenes en ranger como vemos acá.
-&lt;img src=&quot;https://cloud.openmailbox.org/index.php/apps/files_sharing/ajax/publicpreview.php?x=1875&amp;amp;y=1017&amp;amp;a=true&amp;amp;file=ranger-image-preview.png&amp;amp;t=XhfUq69OruU5qjq&amp;amp;scalingup=0&quot; alt=&quot;ranger&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 19 Feb 2017 20:32:30 -0300</pubDate>
-        <link>http://localhost:4000/blog/2017/02/19/ranger-instalacin-con-previsualizacin-de-imgenes.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2017/02/19/ranger-instalacin-con-previsualizacin-de-imgenes.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Gtk-WARNING - Theme Not Found Warning</title>
-        <description>&lt;p&gt;A pesar de ser un simple &lt;em&gt;warning&lt;/em&gt; que se puede desestimar, es algo que es recurrente ver al ejecutar algún programa por consola. Por ejemplo:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Gtk-WARNING &lt;span class=&quot;k&quot;&gt;**&lt;/span&gt;: Unable to locate theme engine &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;module_path: &lt;span class=&quot;s2&quot;&gt;&quot;adwaita&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Para solucionar esto, basta con instalar &lt;a href=&quot;https://www.archlinux.org/packages/extra/x86_64/gnome-themes-standard/&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gnome-themes-standard&lt;/code&gt;&lt;/a&gt; que nos brinda justamente eso, los themes standard para las aplicaciones de Gnome. Entre ellos el &lt;em&gt;adwaita&lt;/em&gt;. Una vez instalado no aparece más el molesto &lt;em&gt;warning&lt;/em&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 15 Feb 2017 12:18:07 -0300</pubDate>
-        <link>http://localhost:4000/blog/2017/02/15/gtk-warning-theme-not-found-warning.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2017/02/15/gtk-warning-theme-not-found-warning.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Error De Sonido &quot;SDLAUDIO: SDL_OpenAudioDevice() Failed&quot;</title>
-        <description>&lt;p&gt;Me compré ayer el &lt;em&gt;bundle&lt;/em&gt; de juegos &lt;a href=&quot;https://www.humblebundle.com/freedom&quot;&gt;“Freedom”&lt;/a&gt; de &lt;strong&gt;Humble Bundle&lt;/strong&gt;, principalmente porque la gran mayoría de estos juegos están disponibles nativamente para Linux y esa es suficiente razón para comprarlo ;).&lt;/p&gt;
-
-&lt;p&gt;Entre estos juegos uno de los que más me interesaba y de los primeros que descargué del &lt;em&gt;bundle&lt;/em&gt; fue &lt;a href=&quot;http://www.stanleyparable.com/&quot;&gt;The Stanley Parable&lt;/a&gt;. Al instalarlo y ejecutarlo, lo primero que noté fue la falta de audio, ejecutándolo desde consola me salía el siguiente error:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;SDLAUDIO: SDL_OpenAudioDevice&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; failed: No such audio device&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Haciendo una búsqueda rápida, encontré &lt;a href=&quot;https://askubuntu.com/questions/148514/sdl-openaudio-failed-no-available-audio-device-while-starting-psychonauts&quot;&gt;esta información&lt;/a&gt; que me dió a entender que me faltaba &lt;code class=&quot;highlighter-rouge&quot;&gt;libpulse&lt;/code&gt; (utilizo pulseaudio, no alsa). Para lo cual, instalando &lt;a href=&quot;https://www.archlinux.org/packages/multilib/x86_64/lib32-libpulse/&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;lib32-libpulse&lt;/code&gt;&lt;/a&gt; resolvió mi problema al instante para mi caso con ArchLinux 64-bit y pulseaudio.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 14 Feb 2017 23:30:43 -0300</pubDate>
-        <link>http://localhost:4000/blog/2017/02/14/error-de-sonido-sdlaudio-sdl_openaudiodevice-failed.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2017/02/14/error-de-sonido-sdlaudio-sdl_openaudiodevice-failed.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>[Vim] Búsqueda Múltiple Simultánea</title>
-        <description>&lt;p&gt;Antes que nada, por si no lo saben, Vim es mi editor de texto de preferencia. Ya lo vengo usando hace mucho tiempo, y si hay algo que hay que entender es que siempre hay algo nuevo para aprender y/o mejorar nuestra forma de manejarnos en Vim. Seguramente vaya a hacer varios &lt;em&gt;posts&lt;/em&gt; comentando sobre utilidades, &lt;em&gt;plugins&lt;/em&gt; o &lt;em&gt;tips&lt;/em&gt; para o sobre Vim.&lt;/p&gt;
-
-&lt;p&gt;En este caso, es algo simple. Cuando uno quiere realizar una búsqueda en Vim, simplemente hace &lt;code class=&quot;highlighter-rouge&quot;&gt;/loquebusco&lt;/code&gt;. El &lt;em&gt;tip&lt;/em&gt; que vengo a dar, es cómo buscar más de un término al mismo tiempo y así ir pasando por los distintos encontrados sin tener que hacer dos búsquedas por separado.&lt;/p&gt;
-
-&lt;p&gt;Para esto hacemos: &lt;code class=&quot;highlighter-rouge&quot;&gt;/loquebusco\|otra_cosa&lt;/code&gt; y se pueden concatenar términos sucesivamente.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 31 Dec 2016 19:04:46 -0300</pubDate>
-        <link>http://localhost:4000/blog/2016/12/31/vim-bsqueda-mltiple-simultanea.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/12/31/vim-bsqueda-mltiple-simultanea.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Pactl - Controlando Pulseaudio Desde Consola</title>
-        <description>&lt;p&gt;En el &lt;a href=&quot;http://cravacuore.com.ar/blog/2016/10/16/pavucontrol-pestaa-predeterminada-al-ser-iniciado.html&quot;&gt;anterior post&lt;/a&gt;, comentaba sobre una comodidad con &lt;em&gt;pavucontrol&lt;/em&gt; para acelerar algo rutinario. Vamos avanzando poco a poco a algo un poco más rápido para esta tarea, la cual de forma ideal quiero automatizarla lo más posible.&lt;/p&gt;
-
-&lt;p&gt;La tarea rutinaria es cambiar los perfiles de la placa “integrada” que me da la salida de *jack 3.5mm” común y la placa USB de mis auriculares Razer Megalodon. Activando y desactivando una u otra respectivamente.&lt;/p&gt;
-
-&lt;p&gt;Bajando un poco de nivel, pasando de lo gráfico a la consola, descubrí que &lt;em&gt;pactl&lt;/em&gt; permite realizar el manejo mediante consola de el servicio de &lt;em&gt;Pulseaudio&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Para esto, primero tenemos que saber cuáles son las placas, para esto:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pactl list short cards&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;En mi caso, me muestra lo siguiente:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;0       alsa_card.usb-Razer_Razer_Megalodon-00  module-alsa-card.c
-1       alsa_card.pci-0000_00_1b.0      module-alsa-card.c&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;De ese listado sacamos el número de índice que aparece como primera columna. En mi caso, sólo aplicaría el cambio de perfiles sobre la placa Razer (índice 0). Y cambio su perfil a &lt;em&gt;“Surround 5.1 + Input”&lt;/em&gt; de la siguiente manera:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pactl &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;-card-profile 0 output:analog-surround-51+input:analog-mono&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Y para revertir, simplemente &lt;em&gt;seteo&lt;/em&gt; el perfil como Apagado:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pactl &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;-card-profile 0 off&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Estos comandos los agrego como alias en mi &lt;em&gt;config&lt;/em&gt; de &lt;em&gt;zsh&lt;/em&gt; (~/.zshrc):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ron&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;pactl set-card-profile 0 output:analog-surround-51+input:analog-mono&quot;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;roff&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;pactl set-card-profile 0 off&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Hasta acá voy a avanzar por el momento, ya es mucho más rápido cambiar desde consola mi configuración de audio. El próximo paso sería crear una función para &lt;em&gt;zsh&lt;/em&gt; que sepa el último cambio de configuración y revierta al anterior, y esa función ejecutarla desde un atajo de teclado. Quizás ese sea un próximo &lt;em&gt;post&lt;/em&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 15 Dec 2016 20:08:56 -0300</pubDate>
-        <link>http://localhost:4000/blog/2016/12/15/pactl-controlando-pulseaudio-desde-consola.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/12/15/pactl-controlando-pulseaudio-desde-consola.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Pavucontrol - Pestaña predeterminada al ser iniciado</title>
-        <description>&lt;p&gt;Algo que suelo hacer bastante seguido es abrir pavucontrol para cambiar por dónde escucho el audio, para esto tengo que ir hasta la última pestaña de “Configuración” y ahí &lt;em&gt;scrollear&lt;/em&gt; los perfiles para cada dispositivo de salida.&lt;/p&gt;
-
-&lt;p&gt;Descubrí que para ahorrarme un poquito de tiempo al realizar esta tarea, se puede seleccionar en qué pestaña abre pavucontrol al ser iniciado. Para esto se hace uso del &lt;em&gt;flag&lt;/em&gt; ‘–tab’ o abreviado ‘-t’ y el número de la pestaña. En mi caso la que más frecuento es la pestaña de “Configuración” que es la 5ta pestaña, entonces abro pavucontrol de la siguiente manera:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pavucontrol -t 5&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;En mi caso este comando lo puse reemplazando mi atajo de teclado en plasma para abrir pavucontrol. También se podría crear un alias para pavucontrol reemplazando por lo mismo. Este simple truquito me ahorra un paso, por lo menos hasta el día que le dedique otro rato para semi-automatizar esta tarea mediante &lt;em&gt;script&lt;/em&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 16 Oct 2016 20:26:08 -0300</pubDate>
-        <link>http://localhost:4000/blog/2016/10/16/pavucontrol-pestaa-predeterminada-al-ser-iniciado.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/10/16/pavucontrol-pestaa-predeterminada-al-ser-iniciado.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>[Firefox] Addon para Deshabilitar Ctrl+q</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;TL;DR -&amp;gt; &lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/disable-ctrl-q-shortcut/&quot;&gt;Addon&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Simple y cortito. Super mega harto de al querer cerrar una pestaña en Firefox haciendo uso de su atajo &lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl+w&lt;/code&gt; y apretar por error &lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl+q&lt;/code&gt;, lo cual tan amablemente te cierra todo el navegador con tus otras 50+ pestañas de otras cuestiones, pegarle al escritorio, refunfuñar y recuperar tu sesión (con suerte); me decidí a encontrarle una solución a este recurrente problema con el que vivía. Resultó ser mucho más fácil y rápido de lo que esperaba, un buen samaritano que se le ocurrió hacer un &lt;em&gt;addon&lt;/em&gt; que hace justo lo necesario (y no más, nada más) deshabilitar este horrendo atajo de “ctrl+q”.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/disable-ctrl-q-shortcut/&quot;&gt;Disable Ctrl-Q Shortcut&lt;/a&gt;, más descriptivo que su propio nombre imposible. Al que hizo este simple &lt;em&gt;addon&lt;/em&gt; para simplificarle la vida a los usuario de Firefox, lo adoro. Ahora al que se le ocurrió poner el atajo para cerrar una pestaña directamente al lado del de cerrar todo, te reservaron un lugarcito especial en el infierno :P.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 18 Sep 2016 18:35:44 -0300</pubDate>
-        <link>http://localhost:4000/blog/2016/09/18/firefox-addon-para-deshabilitar-ctrl-q.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/09/18/firefox-addon-para-deshabilitar-ctrl-q.html</guid>
         
         
       </item>
