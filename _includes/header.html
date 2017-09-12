@@ -14,6 +14,10 @@
       </a>
 
       <div class="trigger">
+        <div class="search">
+          <input type="text" id="search-input" placeholder="Búsqueda..">
+        </div>
+
         {% for my_page in site.pages %}
           {% if my_page.title %}
           <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
@@ -21,7 +25,12 @@
         {% endfor %}
       </div>
     </nav>
-
   </div>
+
+  <div class="search-results">
+    <ul id="results-container"></ul>
+  </div>
+
+  {% include search.html %}
 
 </header>

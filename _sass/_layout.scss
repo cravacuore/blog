@@ -42,6 +42,14 @@
         }
     }
 
+    .search {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    .search-results{
+    }
+
     @include media-query($on-palm) {
         position: absolute;
         top: 9px;
