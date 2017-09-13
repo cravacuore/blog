@@ -6,9 +6,38 @@
 </description>
     <link>http://localhost:4000/blog/</link>
     <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 12 Sep 2017 13:12:18 -0300</pubDate>
-    <lastBuildDate>Tue, 12 Sep 2017 13:12:18 -0300</lastBuildDate>
+    <pubDate>Wed, 13 Sep 2017 01:38:28 -0300</pubDate>
+    <lastBuildDate>Wed, 13 Sep 2017 01:38:28 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>[Javascript] Toggle Icon Class - cambiar ícono con click sobre botón</title>
+        <description>&lt;p&gt;Buscando una manera simple de cambiar un ícono por otro al hacer click sobre un botón, haciendo uso Javascript solamente (sin JQuery). Encontré sobre &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Element/classList#Methods&quot;&gt;classList&lt;/a&gt;, en particular &lt;code class=&quot;highlighter-rouge&quot;&gt;classList.toggle&lt;/code&gt; que justamente nos permite agregar o quitar una propiedad de un elemento.&lt;/p&gt;
+
+&lt;p&gt;En este caso estaba jugando para cambiar un ícono de &lt;a href=&quot;http://fontawesome.io/&quot;&gt;FontAwesome&lt;/a&gt; de &lt;em&gt;Play/Pause&lt;/em&gt; en esta &lt;a href=&quot;http://cravacuore.com.ar/music&quot;&gt;sección&lt;/a&gt; de mi página.&lt;/p&gt;
+
+&lt;p&gt;Entonces simplemente encontrando mi elemento y usando &lt;em&gt;toggle&lt;/em&gt; pude quitar la clase de “play” y agregar la clase de “pause”.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;icon&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'icon'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;classList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toggle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'fa-pause'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;classList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toggle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'fa-play'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Como quiero que esto ocurra cuando hago click, lo agrego como evento de &lt;em&gt;click&lt;/em&gt; al botón.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'play-button'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'click'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;icon&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'icon'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;classList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toggle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'fa-pause'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;classList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toggle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'fa-play'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Pueden ver los cambios completos hechos en este &lt;a href=&quot;https://github.com/cravacuore/cravacuore.github.io/commit/fb05c94ccab030ac6cd0de6d6bd825e9df1f5062&quot;&gt;&lt;em&gt;commit&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 13 Sep 2017 01:31:09 -0300</pubDate>
+        <link>http://localhost:4000/blog/2017/09/13/toggle-icon-class-plain-javascript.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/09/13/toggle-icon-class-plain-javascript.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Chattr - Archivo No Editable (Read-only)</title>
@@ -186,23 +215,6 @@ ranger --copy-config&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;all    &lt;spa
         <pubDate>Thu, 15 Dec 2016 20:08:56 -0300</pubDate>
         <link>http://localhost:4000/blog/2016/12/15/pactl-controlando-pulseaudio-desde-consola.html</link>
         <guid isPermaLink="true">http://localhost:4000/blog/2016/12/15/pactl-controlando-pulseaudio-desde-consola.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Pavucontrol - Pestaña predeterminada al ser iniciado</title>
-        <description>&lt;p&gt;Algo que suelo hacer bastante seguido es abrir pavucontrol para cambiar por dónde escucho el audio, para esto tengo que ir hasta la última pestaña de “Configuración” y ahí &lt;em&gt;scrollear&lt;/em&gt; los perfiles para cada dispositivo de salida.&lt;/p&gt;
-
-&lt;p&gt;Descubrí que para ahorrarme un poquito de tiempo al realizar esta tarea, se puede seleccionar en qué pestaña abre pavucontrol al ser iniciado. Para esto se hace uso del &lt;em&gt;flag&lt;/em&gt; ‘–tab’ o abreviado ‘-t’ y el número de la pestaña. En mi caso la que más frecuento es la pestaña de “Configuración” que es la 5ta pestaña, entonces abro pavucontrol de la siguiente manera:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pavucontrol -t 5&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;En mi caso este comando lo puse reemplazando mi atajo de teclado en plasma para abrir pavucontrol. También se podría crear un alias para pavucontrol reemplazando por lo mismo. Este simple truquito me ahorra un paso, por lo menos hasta el día que le dedique otro rato para semi-automatizar esta tarea mediante &lt;em&gt;script&lt;/em&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 16 Oct 2016 20:26:08 -0300</pubDate>
-        <link>http://localhost:4000/blog/2016/10/16/pavucontrol-pestaa-predeterminada-al-ser-iniciado.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/10/16/pavucontrol-pestaa-predeterminada-al-ser-iniciado.html</guid>
         
         
       </item>
