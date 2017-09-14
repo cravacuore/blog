@@ -6,9 +6,48 @@
 </description>
     <link>http://localhost:4000/blog/</link>
     <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 13 Sep 2017 01:38:28 -0300</pubDate>
-    <lastBuildDate>Wed, 13 Sep 2017 01:38:28 -0300</lastBuildDate>
+    <pubDate>Thu, 14 Sep 2017 16:16:04 -0300</pubDate>
+    <lastBuildDate>Thu, 14 Sep 2017 16:16:04 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>[Workaround] Pantalla negra al iniciar aplicación hecha en Unity</title>
+        <description>&lt;p&gt;Este problema me aparece con varios juegos hechos sobre &lt;a href=&quot;https://unity3d.com/&quot;&gt;Unity3d&lt;/a&gt;. Básicamente al iniciar en &lt;em&gt;fullscreen&lt;/em&gt; la pantalla queda totalmente negra, en algunos casos se puede escuchar el audio dando a notar que de todas formas está iniciando.&lt;/p&gt;
+
+&lt;p&gt;Como &lt;em&gt;workaround&lt;/em&gt; sobre este problema se puede hacer lo siguiente:&lt;/p&gt;
+
+&lt;p&gt;Primero localizamos la carpeta con las configuraciones de Unity sobre la aplicación que queremos arreglar, deberíamos encontrarla en &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.config/unity3d/app-que-buscamos&lt;/code&gt;. En esta carpeta deberíamos encontrar un archivo llamado &lt;code class=&quot;highlighter-rouge&quot;&gt;prefs&lt;/code&gt;. Entonces con el ejemplo anterior, la ruta sería &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.config/unity3d/app-que-buscamos/prefs&lt;/code&gt;. El contenido de dicho archivo tendría que ser similar a esto:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  &amp;lt;unity_prefs &lt;span class=&quot;nv&quot;&gt;version_major&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1&quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;version_minor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1&quot;&lt;/span&gt;&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Screenmanager Is Fullscreen mode&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&amp;gt;1&amp;lt;/pref&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Screenmanager Resolution Height&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&amp;gt;1080&amp;lt;/pref&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Screenmanager Resolution Width&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&amp;gt;1920&amp;lt;/pref&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;UnityGraphicsQuality&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&amp;gt;3&amp;lt;/pref&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;UnitySelectMonitor&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&amp;gt;0&amp;lt;/pref&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;unity.cloud_userid&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&amp;gt; ... &amp;lt;/pref&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;unity.player_session_background_time&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&amp;gt; ... &amp;lt;/pref&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;unity.player_session_elapsed_time&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&amp;gt; ... &amp;lt;/pref&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;unity.player_sessionid&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&amp;gt; ... &amp;lt;/pref&amp;gt;
+  &amp;lt;/unity_prefs&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Recomendado hacer un copia del archivo, en mi caso hago la copia en la misma carpeta llamándolo &lt;code class=&quot;highlighter-rouge&quot;&gt;prefs.bkp&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Lo que nos interesa modificar (sobre el archivo original) es la línea de &lt;code class=&quot;highlighter-rouge&quot;&gt;Fullscreen mode&lt;/code&gt;, poniéndole como valor &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Screenmanager Is Fullscreen mode&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&amp;gt;0&amp;lt;/pref&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Una vez modificado y guardado, procedemos a abrir la aplicación.&lt;/p&gt;
+
+&lt;p&gt;De forma opcional, podemos modificar los valores de &lt;code class=&quot;highlighter-rouge&quot;&gt;Resolution Height&lt;/code&gt; y &lt;code class=&quot;highlighter-rouge&quot;&gt;Resolution Width&lt;/code&gt; para que coincidan con la resolución de nuestro monitor. Por ejemplo si tenemos una pantalla fullHD, los valores serían 1080 y 1920 respectivamente.&lt;/p&gt;
+
+&lt;p&gt;Es muy probable que al cerrar e iniciar nuevamente la aplicación, estos valores que modificamos sean sobrescritos automáticamente. Tendríamos que volver a modificar nuevamente siguiendo los mismos pasos o podemos poner el archivo &lt;code class=&quot;highlighter-rouge&quot;&gt;prefs&lt;/code&gt; en modo de sólo lectura, esto último lo podemos lograr haciendo uso de chattr como les explico en &lt;a href=&quot;http://cravacuore.com.ar/blog/2017/09/12/chattr-archivo-no-editable-read-only.html&quot;&gt;este otro &lt;em&gt;post&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 14 Sep 2017 16:15:58 -0300</pubDate>
+        <link>http://localhost:4000/blog/2017/09/14/workaround-unity-blank-screen-at-start.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/09/14/workaround-unity-blank-screen-at-start.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>[Javascript] Toggle Icon Class - cambiar ícono con click sobre botón</title>
@@ -176,45 +215,6 @@ ranger --copy-config&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;all    &lt;spa
         <pubDate>Sat, 31 Dec 2016 19:04:46 -0300</pubDate>
         <link>http://localhost:4000/blog/2016/12/31/vim-bsqueda-mltiple-simultanea.html</link>
         <guid isPermaLink="true">http://localhost:4000/blog/2016/12/31/vim-bsqueda-mltiple-simultanea.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Pactl - Controlando Pulseaudio Desde Consola</title>
-        <description>&lt;p&gt;En el &lt;a href=&quot;http://cravacuore.com.ar/blog/2016/10/16/pavucontrol-pestaa-predeterminada-al-ser-iniciado.html&quot;&gt;anterior post&lt;/a&gt;, comentaba sobre una comodidad con &lt;em&gt;pavucontrol&lt;/em&gt; para acelerar algo rutinario. Vamos avanzando poco a poco a algo un poco más rápido para esta tarea, la cual de forma ideal quiero automatizarla lo más posible.&lt;/p&gt;
-
-&lt;p&gt;La tarea rutinaria es cambiar los perfiles de la placa “integrada” que me da la salida de *jack 3.5mm” común y la placa USB de mis auriculares Razer Megalodon. Activando y desactivando una u otra respectivamente.&lt;/p&gt;
-
-&lt;p&gt;Bajando un poco de nivel, pasando de lo gráfico a la consola, descubrí que &lt;em&gt;pactl&lt;/em&gt; permite realizar el manejo mediante consola de el servicio de &lt;em&gt;Pulseaudio&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Para esto, primero tenemos que saber cuáles son las placas, para esto:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pactl list short cards&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;En mi caso, me muestra lo siguiente:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;0       alsa_card.usb-Razer_Razer_Megalodon-00  module-alsa-card.c
-1       alsa_card.pci-0000_00_1b.0      module-alsa-card.c&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;De ese listado sacamos el número de índice que aparece como primera columna. En mi caso, sólo aplicaría el cambio de perfiles sobre la placa Razer (índice 0). Y cambio su perfil a &lt;em&gt;“Surround 5.1 + Input”&lt;/em&gt; de la siguiente manera:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pactl &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;-card-profile 0 output:analog-surround-51+input:analog-mono&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Y para revertir, simplemente &lt;em&gt;seteo&lt;/em&gt; el perfil como Apagado:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pactl &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;-card-profile 0 off&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Estos comandos los agrego como alias en mi &lt;em&gt;config&lt;/em&gt; de &lt;em&gt;zsh&lt;/em&gt; (~/.zshrc):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ron&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;pactl set-card-profile 0 output:analog-surround-51+input:analog-mono&quot;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;roff&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;pactl set-card-profile 0 off&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Hasta acá voy a avanzar por el momento, ya es mucho más rápido cambiar desde consola mi configuración de audio. El próximo paso sería crear una función para &lt;em&gt;zsh&lt;/em&gt; que sepa el último cambio de configuración y revierta al anterior, y esa función ejecutarla desde un atajo de teclado. Quizás ese sea un próximo &lt;em&gt;post&lt;/em&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 15 Dec 2016 20:08:56 -0300</pubDate>
-        <link>http://localhost:4000/blog/2016/12/15/pactl-controlando-pulseaudio-desde-consola.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/12/15/pactl-controlando-pulseaudio-desde-consola.html</guid>
         
         
       </item>
