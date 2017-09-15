@@ -6,9 +6,29 @@
 </description>
     <link>http://localhost:4000/blog/</link>
     <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Sep 2017 16:16:04 -0300</pubDate>
-    <lastBuildDate>Thu, 14 Sep 2017 16:16:04 -0300</lastBuildDate>
+    <pubDate>Fri, 15 Sep 2017 15:47:31 -0300</pubDate>
+    <lastBuildDate>Fri, 15 Sep 2017 15:47:31 -0300</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>[Workaround] Little Racers Streets crash on linux</title>
+        <description>&lt;p&gt;Al querer iniciar el juego &lt;a href=&quot;http://store.steampowered.com/app/262690/Little_Racers_STREET/&quot;&gt;Little Racers Streets&lt;/a&gt; desde Steam (que por cierto es muy divertido), me tiraba un error similar a esto &lt;code class=&quot;highlighter-rouge&quot;&gt;An error ocurred: An exception was thrown by the type initializer for System.Drawing.GDIPlus&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Encontré la solución &lt;a href=&quot;https://steamcommunity.com/app/262690/discussions/0/358416600605446480/?ctp=4#c1291816569120425810&quot;&gt;acá&lt;/a&gt;, usando ArchLinux hacemos los siguiente:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  sudo pacman -S sdl2_mixer
+  &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/.local/share/Steam/steamapps/common/Little Racers STREET/lib64&quot;&lt;/span&gt;
+  mkdir ../bak64/
+  mv libSDL2_mixer-2.0.so.0 ../bak64/
+  ln -s /usr/lib/libSDL2_mixer-2.0.so.0 ./&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Fri, 15 Sep 2017 15:46:32 -0300</pubDate>
+        <link>http://localhost:4000/blog/2017/09/15/little-racers-streets-fix.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/09/15/little-racers-streets-fix.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>[Workaround] Pantalla negra al iniciar aplicación hecha en Unity</title>
@@ -200,21 +220,6 @@ ranger --copy-config&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;all    &lt;spa
         <pubDate>Tue, 14 Feb 2017 23:30:43 -0300</pubDate>
         <link>http://localhost:4000/blog/2017/02/14/error-de-sonido-sdlaudio-sdl_openaudiodevice-failed.html</link>
         <guid isPermaLink="true">http://localhost:4000/blog/2017/02/14/error-de-sonido-sdlaudio-sdl_openaudiodevice-failed.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>[Vim] Búsqueda Múltiple Simultánea</title>
-        <description>&lt;p&gt;Antes que nada, por si no lo saben, Vim es mi editor de texto de preferencia. Ya lo vengo usando hace mucho tiempo, y si hay algo que hay que entender es que siempre hay algo nuevo para aprender y/o mejorar nuestra forma de manejarnos en Vim. Seguramente vaya a hacer varios &lt;em&gt;posts&lt;/em&gt; comentando sobre utilidades, &lt;em&gt;plugins&lt;/em&gt; o &lt;em&gt;tips&lt;/em&gt; para o sobre Vim.&lt;/p&gt;
-
-&lt;p&gt;En este caso, es algo simple. Cuando uno quiere realizar una búsqueda en Vim, simplemente hace &lt;code class=&quot;highlighter-rouge&quot;&gt;/loquebusco&lt;/code&gt;. El &lt;em&gt;tip&lt;/em&gt; que vengo a dar, es cómo buscar más de un término al mismo tiempo y así ir pasando por los distintos encontrados sin tener que hacer dos búsquedas por separado.&lt;/p&gt;
-
-&lt;p&gt;Para esto hacemos: &lt;code class=&quot;highlighter-rouge&quot;&gt;/loquebusco\|otra_cosa&lt;/code&gt; y se pueden concatenar términos sucesivamente.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 31 Dec 2016 19:04:46 -0300</pubDate>
-        <link>http://localhost:4000/blog/2016/12/31/vim-bsqueda-mltiple-simultanea.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/12/31/vim-bsqueda-mltiple-simultanea.html</guid>
         
         
       </item>
