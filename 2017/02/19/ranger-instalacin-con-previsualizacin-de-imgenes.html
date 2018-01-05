@@ -98,9 +98,9 @@
 
 <p>Reinstalando en la notebook nueva, una funcionalidad de <em>ranger</em> que todavía me faltaba configurar era la previsualización de imágenes. Para lograr esto en ArchLinux, simplemente realizamos lo siguiente:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pacaur -S ranger w3m imlib2 <span class="c"># Instalamos lo necesario (con el gestor que usen, yo utilizo pacaur pero puede ser pacman)</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pacaur <span class="nt">-S</span> ranger w3m imlib2 <span class="c"># Instalamos lo necesario (con el gestor que usen, yo utilizo pacaur pero puede ser pacman)</span>
 ranger                      <span class="c"># Abrimos por primera vez ranger para que cree la carpeta default para configuración</span>
-ranger --copy-config<span class="o">=</span>all    <span class="c"># esto nos da los archivos default de config de ranger en nuestro home</span></code></pre></figure>
+ranger <span class="nt">--copy-config</span><span class="o">=</span>all    <span class="c"># esto nos da los archivos default de config de ranger en nuestro home</span></code></pre></figure>
 
 <p>Seteamos en ~/.config/ranger/rc.conf para la previsualización</p>
 

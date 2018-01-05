@@ -100,23 +100,23 @@
 
 <p>Primero localizamos la carpeta con las configuraciones de Unity sobre la aplicación que queremos arreglar, deberíamos encontrarla en <code class="highlighter-rouge">~/.config/unity3d/app-que-buscamos</code>. En esta carpeta deberíamos encontrar un archivo llamado <code class="highlighter-rouge">prefs</code>. Entonces con el ejemplo anterior, la ruta sería <code class="highlighter-rouge">~/.config/unity3d/app-que-buscamos/prefs</code>. El contenido de dicho archivo tendría que ser similar a esto:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  &lt;unity_prefs <span class="nv">version_major</span><span class="o">=</span><span class="s2">"1"</span> <span class="nv">version_minor</span><span class="o">=</span><span class="s2">"1"</span>&gt;
-    &lt;pref <span class="nv">name</span><span class="o">=</span><span class="s2">"Screenmanager Is Fullscreen mode"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"int"</span>&gt;1&lt;/pref&gt;
-    &lt;pref <span class="nv">name</span><span class="o">=</span><span class="s2">"Screenmanager Resolution Height"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"int"</span>&gt;1080&lt;/pref&gt;
-    &lt;pref <span class="nv">name</span><span class="o">=</span><span class="s2">"Screenmanager Resolution Width"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"int"</span>&gt;1920&lt;/pref&gt;
-    &lt;pref <span class="nv">name</span><span class="o">=</span><span class="s2">"UnityGraphicsQuality"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"int"</span>&gt;3&lt;/pref&gt;
-    &lt;pref <span class="nv">name</span><span class="o">=</span><span class="s2">"UnitySelectMonitor"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"int"</span>&gt;0&lt;/pref&gt;
-    &lt;pref <span class="nv">name</span><span class="o">=</span><span class="s2">"unity.cloud_userid"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"string"</span>&gt; ... &lt;/pref&gt;
-    &lt;pref <span class="nv">name</span><span class="o">=</span><span class="s2">"unity.player_session_background_time"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"string"</span>&gt; ... &lt;/pref&gt;
-    &lt;pref <span class="nv">name</span><span class="o">=</span><span class="s2">"unity.player_session_elapsed_time"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"string"</span>&gt; ... &lt;/pref&gt;
-    &lt;pref <span class="nv">name</span><span class="o">=</span><span class="s2">"unity.player_sessionid"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"string"</span>&gt; ... &lt;/pref&gt;
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  &lt;unity_prefs <span class="nv">version_major</span><span class="o">=</span><span class="s2">"1"</span> <span class="nv">version_minor</span><span class="o">=</span><span class="s2">"1"</span><span class="o">&gt;</span>
+    &lt;pref <span class="nv">name</span><span class="o">=</span><span class="s2">"Screenmanager Is Fullscreen mode"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"int"</span><span class="o">&gt;</span>1&lt;/pref&gt;
+    &lt;pref <span class="nv">name</span><span class="o">=</span><span class="s2">"Screenmanager Resolution Height"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"int"</span><span class="o">&gt;</span>1080&lt;/pref&gt;
+    &lt;pref <span class="nv">name</span><span class="o">=</span><span class="s2">"Screenmanager Resolution Width"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"int"</span><span class="o">&gt;</span>1920&lt;/pref&gt;
+    &lt;pref <span class="nv">name</span><span class="o">=</span><span class="s2">"UnityGraphicsQuality"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"int"</span><span class="o">&gt;</span>3&lt;/pref&gt;
+    &lt;pref <span class="nv">name</span><span class="o">=</span><span class="s2">"UnitySelectMonitor"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"int"</span><span class="o">&gt;</span>0&lt;/pref&gt;
+    &lt;pref <span class="nv">name</span><span class="o">=</span><span class="s2">"unity.cloud_userid"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"string"</span><span class="o">&gt;</span> ... &lt;/pref&gt;
+    &lt;pref <span class="nv">name</span><span class="o">=</span><span class="s2">"unity.player_session_background_time"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"string"</span><span class="o">&gt;</span> ... &lt;/pref&gt;
+    &lt;pref <span class="nv">name</span><span class="o">=</span><span class="s2">"unity.player_session_elapsed_time"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"string"</span><span class="o">&gt;</span> ... &lt;/pref&gt;
+    &lt;pref <span class="nv">name</span><span class="o">=</span><span class="s2">"unity.player_sessionid"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"string"</span><span class="o">&gt;</span> ... &lt;/pref&gt;
   &lt;/unity_prefs&gt;</code></pre></figure>
 
 <p>Recomendado hacer un copia del archivo, en mi caso hago la copia en la misma carpeta llamándolo <code class="highlighter-rouge">prefs.bkp</code>.</p>
 
 <p>Lo que nos interesa modificar (sobre el archivo original) es la línea de <code class="highlighter-rouge">Fullscreen mode</code>, poniéndole como valor <code class="highlighter-rouge">0</code>:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    &lt;pref <span class="nv">name</span><span class="o">=</span><span class="s2">"Screenmanager Is Fullscreen mode"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"int"</span>&gt;0&lt;/pref&gt;</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    &lt;pref <span class="nv">name</span><span class="o">=</span><span class="s2">"Screenmanager Is Fullscreen mode"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"int"</span><span class="o">&gt;</span>0&lt;/pref&gt;</code></pre></figure>
 
 <p>Una vez modificado y guardado, procedemos a abrir la aplicación.</p>
 

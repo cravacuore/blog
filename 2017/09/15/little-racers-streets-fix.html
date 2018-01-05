@@ -98,11 +98,11 @@
 
 <p>Encontré la solución <a href="https://steamcommunity.com/app/262690/discussions/0/358416600605446480/?ctp=4#c1291816569120425810">acá</a>, usando ArchLinux hacemos los siguiente:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  sudo pacman -S sdl2_mixer
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  <span class="nb">sudo </span>pacman <span class="nt">-S</span> sdl2_mixer
   <span class="nb">cd</span> <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.local/share/Steam/steamapps/common/Little Racers STREET/lib64"</span>
-  mkdir ../bak64/
-  mv libSDL2_mixer-2.0.so.0 ../bak64/
-  ln -s /usr/lib/libSDL2_mixer-2.0.so.0 ./</code></pre></figure>
+  <span class="nb">mkdir</span> ../bak64/
+  <span class="nb">mv </span>libSDL2_mixer-2.0.so.0 ../bak64/
+  <span class="nb">ln</span> <span class="nt">-s</span> /usr/lib/libSDL2_mixer-2.0.so.0 ./</code></pre></figure>
 
 
   </div>

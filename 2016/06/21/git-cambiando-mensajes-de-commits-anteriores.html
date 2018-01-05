@@ -98,17 +98,17 @@
 
 <p>Una de las utilidades que uso muy seguido al querer hacer un pequeño cambio que me olvidé hacer en el último <em>commit</em> es:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git commit --amend</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git commit <span class="nt">--amend</span></code></pre></figure>
 
 <p>Este comando me deja pisar el último <em>commit</em> que realicé con uno nuevo. Ya sea para agregar algún cambio, o si simplemente quiero cambiar el mensaje de ese <em>commit</em>. Si todavía no hice un <em>push</em> de los cambios eso es todo, si por el contrario ya lo realizamos, vamos a tener que forzarlo haciendo:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git push --force</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git push <span class="nt">--force</span></code></pre></figure>
 
 <h2 id="y-si-quiero-cambiar-los-mensajes-de-los-últimos-3-commits">¿Y si quiero cambiar los mensajes de los últimos 3 commits?</h2>
 
 <p>En mi caso, me había confundido con el número de <em>issue</em> al que hacía referencia en el mensaje de los últimos 3 <em>commits</em>. Esto lo pude corregir haciendo uso de <code class="highlighter-rouge">rebase</code> de la siguiente forma:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git rebase -i HEAD~4</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git rebase <span class="nt">-i</span> HEAD~4</code></pre></figure>
 
 <p>Nos da un listado con los últimos 4 <em>commits</em>, con la siguiente pinta:</p>
 

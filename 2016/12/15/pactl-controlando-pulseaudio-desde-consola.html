@@ -111,11 +111,11 @@
 
 <p>De ese listado sacamos el número de índice que aparece como primera columna. En mi caso, sólo aplicaría el cambio de perfiles sobre la placa Razer (índice 0). Y cambio su perfil a <em>“Surround 5.1 + Input”</em> de la siguiente manera:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pactl <span class="nb">set</span>-card-profile 0 output:analog-surround-51+input:analog-mono</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pactl set-card-profile 0 output:analog-surround-51+input:analog-mono</code></pre></figure>
 
 <p>Y para revertir, simplemente <em>seteo</em> el perfil como Apagado:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pactl <span class="nb">set</span>-card-profile 0 off</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pactl set-card-profile 0 off</code></pre></figure>
 
 <p>Estos comandos los agrego como alias en mi <em>config</em> de <em>zsh</em> (~/.zshrc):</p>
 

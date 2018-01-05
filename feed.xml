@@ -6,9 +6,28 @@
 </description>
     <link>http://localhost:4000/blog/</link>
     <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 15 Sep 2017 15:47:31 -0300</pubDate>
-    <lastBuildDate>Fri, 15 Sep 2017 15:47:31 -0300</lastBuildDate>
-    <generator>Jekyll v3.4.0</generator>
+    <pubDate>Fri, 05 Jan 2018 20:18:27 -0300</pubDate>
+    <lastBuildDate>Fri, 05 Jan 2018 20:18:27 -0300</lastBuildDate>
+    <generator>Jekyll v3.7.0</generator>
+    
+      <item>
+        <title>Zeal - Documentación Offline</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://zealdocs.org/&quot;&gt;Zeal&lt;/a&gt; es una gran utilidad que nos permite tener a mano una gran cantidad de documentación de distintos lenguajes y/o frameworks de los más utilizados de forma &lt;em&gt;offline&lt;/em&gt;. Esto nos da la posibilidad de consultar documentación cuando no tenemos conexión a internet, contamos con una lenta conexión o un plan de datos limitado.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.fastimage.net/images/2018/01/05/Screenshot_20180105_201117.png&quot; alt=&quot;Zeal&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Esta utilidad la vengo utilizando con regularidad por la simple comodidad de ni tener que buscar la página online de la documentación sobre lo que esté trabajando, permitiéndome simplemente abrir Zeal con un atajo de teclado (Super + z, en mi caso) y buscar lo necesario. Sin lugar a dudas pasó a ser de gran ayuda al querer adelantar trabajo mientras estoy en algún viaje de colectivo de larga distancia donde por tramos ni tenemos conexión 3g (ni 2g, ni Edge :P).&lt;/p&gt;
+
+&lt;p&gt;Los Sets de documentación son obtenidos gracias a otra utilidad llamada &lt;a href=&quot;https://kapeli.com/dash&quot;&gt;Dash&lt;/a&gt; (en la cual está inspirada Zeal misma) que cumple similares funcionalidades pero es exclusivo del ecosistema de Apple. No tenemos la documentación de todo lo que se nos pase por la cabeza, pero hay una gran variedad y lo más utilizado de seguro lo encontramos. Y si no encontrás ese que tanto querés que todo el mundo utilice aunque por el momento seas uno de esos 100 en el mundo, hay &lt;a href=&quot;https://kapeli.com/docsets&quot;&gt;formas de poder generar y aportar los &lt;em&gt;docsets&lt;/em&gt;&lt;/a&gt; necesarios para que tanto los usuarios de Dash como de Zeal los tengan a su disposición.&lt;/p&gt;
+
+&lt;p&gt;Se la recomiendo a todo desarrollador para tener a mano la documentación de ese último nuevo &lt;em&gt;framework&lt;/em&gt; en el que tocó trabajar.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 05 Jan 2018 19:52:07 -0300</pubDate>
+        <link>http://localhost:4000/blog/2018/01/05/zeal-documentacin-offline.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2018/01/05/zeal-documentacin-offline.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>[Workaround] Little Racers Streets crash on linux</title>
@@ -16,11 +35,11 @@
 
 &lt;p&gt;Encontré la solución &lt;a href=&quot;https://steamcommunity.com/app/262690/discussions/0/358416600605446480/?ctp=4#c1291816569120425810&quot;&gt;acá&lt;/a&gt;, usando ArchLinux hacemos los siguiente:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  sudo pacman -S sdl2_mixer
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;pacman &lt;span class=&quot;nt&quot;&gt;-S&lt;/span&gt; sdl2_mixer
   &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/.local/share/Steam/steamapps/common/Little Racers STREET/lib64&quot;&lt;/span&gt;
-  mkdir ../bak64/
-  mv libSDL2_mixer-2.0.so.0 ../bak64/
-  ln -s /usr/lib/libSDL2_mixer-2.0.so.0 ./&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+  &lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; ../bak64/
+  &lt;span class=&quot;nb&quot;&gt;mv &lt;/span&gt;libSDL2_mixer-2.0.so.0 ../bak64/
+  &lt;span class=&quot;nb&quot;&gt;ln&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; /usr/lib/libSDL2_mixer-2.0.so.0 ./&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
         <pubDate>Fri, 15 Sep 2017 15:46:32 -0300</pubDate>
@@ -38,23 +57,23 @@
 
 &lt;p&gt;Primero localizamos la carpeta con las configuraciones de Unity sobre la aplicación que queremos arreglar, deberíamos encontrarla en &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.config/unity3d/app-que-buscamos&lt;/code&gt;. En esta carpeta deberíamos encontrar un archivo llamado &lt;code class=&quot;highlighter-rouge&quot;&gt;prefs&lt;/code&gt;. Entonces con el ejemplo anterior, la ruta sería &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.config/unity3d/app-que-buscamos/prefs&lt;/code&gt;. El contenido de dicho archivo tendría que ser similar a esto:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  &amp;lt;unity_prefs &lt;span class=&quot;nv&quot;&gt;version_major&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1&quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;version_minor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1&quot;&lt;/span&gt;&amp;gt;
-    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Screenmanager Is Fullscreen mode&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&amp;gt;1&amp;lt;/pref&amp;gt;
-    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Screenmanager Resolution Height&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&amp;gt;1080&amp;lt;/pref&amp;gt;
-    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Screenmanager Resolution Width&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&amp;gt;1920&amp;lt;/pref&amp;gt;
-    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;UnityGraphicsQuality&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&amp;gt;3&amp;lt;/pref&amp;gt;
-    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;UnitySelectMonitor&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&amp;gt;0&amp;lt;/pref&amp;gt;
-    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;unity.cloud_userid&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&amp;gt; ... &amp;lt;/pref&amp;gt;
-    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;unity.player_session_background_time&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&amp;gt; ... &amp;lt;/pref&amp;gt;
-    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;unity.player_session_elapsed_time&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&amp;gt; ... &amp;lt;/pref&amp;gt;
-    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;unity.player_sessionid&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&amp;gt; ... &amp;lt;/pref&amp;gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  &amp;lt;unity_prefs &lt;span class=&quot;nv&quot;&gt;version_major&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1&quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;version_minor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Screenmanager Is Fullscreen mode&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;1&amp;lt;/pref&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Screenmanager Resolution Height&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;1080&amp;lt;/pref&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Screenmanager Resolution Width&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;1920&amp;lt;/pref&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;UnityGraphicsQuality&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;3&amp;lt;/pref&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;UnitySelectMonitor&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;0&amp;lt;/pref&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;unity.cloud_userid&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; ... &amp;lt;/pref&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;unity.player_session_background_time&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; ... &amp;lt;/pref&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;unity.player_session_elapsed_time&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; ... &amp;lt;/pref&amp;gt;
+    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;unity.player_sessionid&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; ... &amp;lt;/pref&amp;gt;
   &amp;lt;/unity_prefs&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Recomendado hacer un copia del archivo, en mi caso hago la copia en la misma carpeta llamándolo &lt;code class=&quot;highlighter-rouge&quot;&gt;prefs.bkp&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Lo que nos interesa modificar (sobre el archivo original) es la línea de &lt;code class=&quot;highlighter-rouge&quot;&gt;Fullscreen mode&lt;/code&gt;, poniéndole como valor &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Screenmanager Is Fullscreen mode&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&amp;gt;0&amp;lt;/pref&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Screenmanager Is Fullscreen mode&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;0&amp;lt;/pref&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Una vez modificado y guardado, procedemos a abrir la aplicación.&lt;/p&gt;
 
@@ -172,9 +191,9 @@
 
 &lt;p&gt;Reinstalando en la notebook nueva, una funcionalidad de &lt;em&gt;ranger&lt;/em&gt; que todavía me faltaba configurar era la previsualización de imágenes. Para lograr esto en ArchLinux, simplemente realizamos lo siguiente:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pacaur -S ranger w3m imlib2 &lt;span class=&quot;c&quot;&gt;# Instalamos lo necesario (con el gestor que usen, yo utilizo pacaur pero puede ser pacman)&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pacaur &lt;span class=&quot;nt&quot;&gt;-S&lt;/span&gt; ranger w3m imlib2 &lt;span class=&quot;c&quot;&gt;# Instalamos lo necesario (con el gestor que usen, yo utilizo pacaur pero puede ser pacman)&lt;/span&gt;
 ranger                      &lt;span class=&quot;c&quot;&gt;# Abrimos por primera vez ranger para que cree la carpeta default para configuración&lt;/span&gt;
-ranger --copy-config&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;all    &lt;span class=&quot;c&quot;&gt;# esto nos da los archivos default de config de ranger en nuestro home&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+ranger &lt;span class=&quot;nt&quot;&gt;--copy-config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;all    &lt;span class=&quot;c&quot;&gt;# esto nos da los archivos default de config de ranger en nuestro home&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Seteamos en ~/.config/ranger/rc.conf para la previsualización&lt;/p&gt;
 
@@ -203,23 +222,6 @@ ranger --copy-config&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;all    &lt;spa
         <pubDate>Wed, 15 Feb 2017 12:18:07 -0300</pubDate>
         <link>http://localhost:4000/blog/2017/02/15/gtk-warning-theme-not-found-warning.html</link>
         <guid isPermaLink="true">http://localhost:4000/blog/2017/02/15/gtk-warning-theme-not-found-warning.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Error De Sonido &quot;SDLAUDIO: SDL_OpenAudioDevice() Failed&quot;</title>
-        <description>&lt;p&gt;Me compré ayer el &lt;em&gt;bundle&lt;/em&gt; de juegos &lt;a href=&quot;https://www.humblebundle.com/freedom&quot;&gt;“Freedom”&lt;/a&gt; de &lt;strong&gt;Humble Bundle&lt;/strong&gt;, principalmente porque la gran mayoría de estos juegos están disponibles nativamente para Linux y esa es suficiente razón para comprarlo ;).&lt;/p&gt;
-
-&lt;p&gt;Entre estos juegos uno de los que más me interesaba y de los primeros que descargué del &lt;em&gt;bundle&lt;/em&gt; fue &lt;a href=&quot;http://www.stanleyparable.com/&quot;&gt;The Stanley Parable&lt;/a&gt;. Al instalarlo y ejecutarlo, lo primero que noté fue la falta de audio, ejecutándolo desde consola me salía el siguiente error:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;SDLAUDIO: SDL_OpenAudioDevice&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; failed: No such audio device&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Haciendo una búsqueda rápida, encontré &lt;a href=&quot;https://askubuntu.com/questions/148514/sdl-openaudio-failed-no-available-audio-device-while-starting-psychonauts&quot;&gt;esta información&lt;/a&gt; que me dió a entender que me faltaba &lt;code class=&quot;highlighter-rouge&quot;&gt;libpulse&lt;/code&gt; (utilizo pulseaudio, no alsa). Para lo cual, instalando &lt;a href=&quot;https://www.archlinux.org/packages/multilib/x86_64/lib32-libpulse/&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;lib32-libpulse&lt;/code&gt;&lt;/a&gt; resolvió mi problema al instante para mi caso con ArchLinux 64-bit y pulseaudio.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 14 Feb 2017 23:30:43 -0300</pubDate>
-        <link>http://localhost:4000/blog/2017/02/14/error-de-sonido-sdlaudio-sdl_openaudiodevice-failed.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2017/02/14/error-de-sonido-sdlaudio-sdl_openaudiodevice-failed.html</guid>
         
         
       </item>
