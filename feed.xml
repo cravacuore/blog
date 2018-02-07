@@ -6,9 +6,44 @@
 </description>
     <link>http://localhost:4000/blog/</link>
     <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 06 Feb 2018 20:44:12 -0300</pubDate>
-    <lastBuildDate>Tue, 06 Feb 2018 20:44:12 -0300</lastBuildDate>
+    <pubDate>Wed, 07 Feb 2018 10:56:38 -0300</pubDate>
+    <lastBuildDate>Wed, 07 Feb 2018 10:56:38 -0300</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
+    
+      <item>
+        <title>[Fix] GoPro Hero 4 Session WiFi Problem</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Warning: esta solución me dió resultado a mí, pero quizás no sea tu caso. Queda bajo tu responsabilidad cualquier efecto provocado por seguir esta guía correcta o incorrectamente.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Mi GoPro Hero 4 Session no prendía la conexión por WiFi, la cual nos permite hacer uso de la &lt;em&gt;app&lt;/em&gt; en el celular que entre otras cosas nos da acceso a algunas opciones que desde la propia GoPro no se pueden cambiar. Dejando limitada sus funcionalidades.&lt;/p&gt;
+
+&lt;p&gt;Después de más de un año de indignación, tras intentar pedir ayuda a Soporte Técnico de GoPro, que me respondía sin leer atentamente todo lo que le explicaba que ya había probado, seguía con un problema que hasta ahora parecía sin solución.&lt;/p&gt;
+
+&lt;p&gt;Un error que parece algo recurrente para varios clientes de este producto, para lo cual proponían básicamente dos “soluciones” actualizar el firmware de la GoPro a su última versión (lo cuál obviamente intenté sin solución alguna) o mandarles el producto en caso de que todavía esté bajo garantía para que te lo reemplazen por uno nuevo, lo cual me era imposible ya que mi compra fue fuera del país hace tiempo, quedando fuera de garantía. Poco soporte ya para un producto que queda fuera del interés de GoPro al haber lanzado ya las versiones 5 y 6 de la línea.&lt;/p&gt;
+
+&lt;p&gt;Investigando alternativas encontré este &lt;a href=&quot;https://github.com/KonradIT/goprowifihack&quot;&gt;repo en GitHub&lt;/a&gt; que habría un camino posible. Ligado a eso me encontré con un &lt;a href=&quot;https://community.gopro.com/t5/Cameras/Hero4-Session-wifi-not-turning-on/td-p/3886/highlight/true/page/12&quot;&gt;post&lt;/a&gt; en el foro de GoPro, donde el 25 de Diciembre del 2017, recién alguien encontró una posible solución. Este propone con la SD limpia, crear los siguiente 2 archivos:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;no_shutdown.txt&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;2_mode=0&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cal.txt&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;_tapp factory_reset&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Prendemos la GoPro como si fuésemos a grabar algo, y a los pocos segundos en el &lt;em&gt;display&lt;/em&gt; debería aparecer &lt;code class=&quot;highlighter-rouge&quot;&gt;Factory Sett. Restored&lt;/code&gt; y hace unos &lt;em&gt;flash&lt;/em&gt; con los &lt;em&gt;led&lt;/em&gt; de color azul. Una vez hecho el reseteado, sacamos la SD, eliminamos los archivos creados dejando la SD limpia nuevamente y volvemos a poner la SD. Una vez prendida ya debería funcionar con normalidad, al apretar la conexión por &lt;code class=&quot;highlighter-rouge&quot;&gt;App&lt;/code&gt; debería ya darnos el &lt;em&gt;pin&lt;/em&gt; para conectar con el celular. Eureka!&lt;/p&gt;
+
+&lt;p&gt;Probado en mi GoPro Hero 4 Session con versión de &lt;em&gt;firmware&lt;/em&gt; v02.00.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 06 Feb 2018 21:55:13 -0300</pubDate>
+        <link>http://localhost:4000/blog/2018/02/06/fix-gopro-hero-4-session-wifi-problem.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2018/02/06/fix-gopro-hero-4-session-wifi-problem.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Trizen - Alternativa Al 'Descontinuado' Pacaur</title>
@@ -208,32 +243,6 @@
         <pubDate>Sun, 19 Feb 2017 21:07:35 -0300</pubDate>
         <link>http://localhost:4000/blog/2017/02/19/error-no-such-file-or-directory-32-bit-binary.html</link>
         <guid isPermaLink="true">http://localhost:4000/blog/2017/02/19/error-no-such-file-or-directory-32-bit-binary.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>[Ranger] Previsualización de Imágenes</title>
-        <description>&lt;p&gt;Ranger es el file manager que más utilizo, seguido de &lt;em&gt;dolphin&lt;/em&gt; para tareas más “complejas”. Es un file manager para la consola, muy rápido y completo que uso desde hace años.&lt;/p&gt;
-
-&lt;p&gt;Reinstalando en la notebook nueva, una funcionalidad de &lt;em&gt;ranger&lt;/em&gt; que todavía me faltaba configurar era la previsualización de imágenes. Para lograr esto en ArchLinux, simplemente realizamos lo siguiente:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pacaur &lt;span class=&quot;nt&quot;&gt;-S&lt;/span&gt; ranger w3m imlib2 &lt;span class=&quot;c&quot;&gt;# Instalamos lo necesario (con el gestor que usen, yo utilizo pacaur pero puede ser pacman)&lt;/span&gt;
-ranger                      &lt;span class=&quot;c&quot;&gt;# Abrimos por primera vez ranger para que cree la carpeta default para configuración&lt;/span&gt;
-ranger &lt;span class=&quot;nt&quot;&gt;--copy-config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;all    &lt;span class=&quot;c&quot;&gt;# esto nos da los archivos default de config de ranger en nuestro home&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Seteamos en ~/.config/ranger/rc.conf para la previsualización&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;set preview_images true&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Eso es todo, y ya deberíamos poder previsualizar las imágenes en ranger como vemos acá.
-&lt;img src=&quot;https://cloud.openmailbox.org/index.php/apps/files_sharing/ajax/publicpreview.php?x=1875&amp;amp;y=1017&amp;amp;a=true&amp;amp;file=ranger-image-preview.png&amp;amp;t=XhfUq69OruU5qjq&amp;amp;scalingup=0&quot; alt=&quot;ranger&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 19 Feb 2017 20:32:30 -0300</pubDate>
-        <link>http://localhost:4000/blog/2017/02/19/ranger-instalacin-con-previsualizacin-de-imgenes.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2017/02/19/ranger-instalacin-con-previsualizacin-de-imgenes.html</guid>
         
         
       </item>
