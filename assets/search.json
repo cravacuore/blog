@@ -1,11 +1,51 @@
 [
   
     {
+      "title"    : "Lector de Huella en Thinkpad X1 Carbon 4th Gen",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/blog/2018/03/23/lector-de-huella-en-thinkpad-x1-carbon-4th-gen.html",
+      "date"     : "2018-03-23 21:00:59 -0300"
+    } ,
+  
+    {
+      "title"    : "Tmuxinator - fast tmux setups",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/blog/2018/03/19/tmuxinator-fast-tmux-setups.html",
+      "date"     : "2018-03-19 20:29:40 -0300"
+    } ,
+  
+    {
       "title"    : "[Fix] GoPro Hero 4 Session WiFi Problem",
       "category" : "",
       "tags"     : "",
       "url"      : "/blog/2018/02/06/fix-gopro-hero-4-session-wifi-problem.html",
       "date"     : "2018-02-06 21:55:13 -0300"
+    } ,
+  
+    {
+      "title"    : "Shortcuts Are Life, Shortcuts for Everything",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/blog/2018/01/15/shortcuts-are-life-shortcuts-for-everything.html",
+      "date"     : "2018-01-15 13:10:29 -0300"
+    } ,
+  
+    {
+      "title"    : "Ubicar Server Local desde otros dispositivos en la red local",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/blog/2018/01/15/ubicar-server-local-desde-otros-dispositivos-en-la-red-local.html",
+      "date"     : "2018-01-15 12:18:18 -0300"
+    } ,
+  
+    {
+      "title"    : "Browser-sync - Server Local Sincronizado",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/blog/2018/01/15/browser-sync-server-local-sincronizado.html",
+      "date"     : "2018-01-15 12:07:00 -0300"
     } ,
   
     {
@@ -22,6 +62,14 @@
       "tags"     : "",
       "url"      : "/blog/2018/01/05/zeal-documentacin-offline.html",
       "date"     : "2018-01-05 19:52:07 -0300"
+    } ,
+  
+    {
+      "title"    : "Example",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/blog/2017/12/05/example.html",
+      "date"     : "2017-12-05 12:09:20 -0300"
     } ,
   
     {
@@ -105,6 +153,30 @@
     } ,
   
     {
+      "title"    : "Error en Binario De 32bit en Sistema De 64bits",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/blog/2017/02/01/error-en-binario-de-32bit-en-sistema-de-64bits.html",
+      "date"     : "2017-02-01 21:54:12 -0300"
+    } ,
+  
+    {
+      "title"    : "Gitignore Local Global",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/blog/2017/02/01/gitignore-local-global.html",
+      "date"     : "2017-02-01 21:52:05 -0300"
+    } ,
+  
+    {
+      "title"    : "Pdo Php Error",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/blog/2017/01/19/pdo-php-error.html",
+      "date"     : "2017-01-19 20:33:38 -0300"
+    } ,
+  
+    {
       "title"    : "[Vim] Búsqueda Múltiple Simultánea",
       "category" : "",
       "tags"     : "",
@@ -150,6 +222,14 @@
       "tags"     : "",
       "url"      : "/blog/2016/09/14/razer-blackwidow-chroma-tournament-edition-archlinux.html",
       "date"     : "2016-09-14 18:30:53 -0300"
+    } ,
+  
+    {
+      "title"    : "TDD - Barco Con Agujeros (Analogía)",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/blog/2016/08/23/tdd-barco-con-agujeros-analoga.html",
+      "date"     : "2016-08-23 19:40:54 -0300"
     } ,
   
     {
@@ -209,11 +289,43 @@
     } ,
   
     {
+      "title"    : "Como Crear Tu Propia Página Usando Github Pages",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/blog/2016/05/14/como-crear-tu-propia-pgina-usando-github-pages.html",
+      "date"     : "2016-05-14 00:23:37 -0300"
+    } ,
+  
+    {
       "title"    : "[Django] MultipleSelectField y su filtrado",
       "category" : "",
       "tags"     : "",
       "url"      : "/blog/2016/05/13/django-multipleselectfield-y-su-filtrado.html",
       "date"     : "2016-05-13 17:51:59 -0300"
+    } ,
+  
+    {
+      "title"    : "Mi Historia Con Los Videojuegos",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/blog/2016/04/30/mi-historia-con-los-videojuegos.html",
+      "date"     : "2016-04-30 08:54:23 -0300"
+    } ,
+  
+    {
+      "title"    : "Sobre DDG Y Sus Bangs",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/blog/2016/04/30/sobre-ddg-y-sus-bangs.html",
+      "date"     : "2016-04-30 08:54:06 -0300"
+    } ,
+  
+    {
+      "title"    : "Cierta Gente No Merece Conocer Linux",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/blog/2016/04/30/cierta-gente-no-merece-conocer-linux.html",
+      "date"     : "2016-04-30 08:53:45 -0300"
     } ,
   
     {
@@ -230,6 +342,14 @@
       "tags"     : "",
       "url"      : "/blog/2016/04/05/opciones-de-escritorio-plasma-5.html",
       "date"     : "2016-04-05 23:37:46 -0300"
+    } ,
+  
+    {
+      "title"    : "Rsync - Copiando Archivos Inteligentemente",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/blog/2016/01/02/rsync-copiando-archivos-inteligentemente.html",
+      "date"     : "2016-01-02 21:07:57 -0300"
     } ,
   
     {

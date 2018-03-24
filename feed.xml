@@ -6,9 +6,145 @@
 </description>
     <link>http://localhost:4000/blog/</link>
     <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 07 Feb 2018 10:56:38 -0300</pubDate>
-    <lastBuildDate>Wed, 07 Feb 2018 10:56:38 -0300</lastBuildDate>
+    <pubDate>Fri, 23 Mar 2018 21:02:21 -0300</pubDate>
+    <lastBuildDate>Fri, 23 Mar 2018 21:02:21 -0300</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
+    
+      <item>
+        <title>Lector de Huella en Thinkpad X1 Carbon 4th Gen</title>
+        <description>&lt;p&gt;Lo único que no funcionaba en mi X1 sobre linux era el lector de huella, un lujo que era prescindible. Hace tiempo que venía siguiendo el progreso sobre este &lt;a href=&quot;https://github.com/nmikhailov/Validity90/&quot;&gt;repo&lt;/a&gt; que intentaba tener un driver funcional para Linux haciendo ingeniería inversa sobre el lector.&lt;/p&gt;
+
+&lt;p&gt;Hace poco, armó un prototipo y pidió feedback sobre el mismo. A todo esto otro usuario, armó un &lt;a href=&quot;https://github.com/3v1n0/libfprint&quot;&gt;driver&lt;/a&gt; sobre &lt;a href=&quot;https://github.com/freedesktop/libfprint&quot;&gt;fprint&lt;/a&gt; en base a este prototipo dando soporte a este lector de huellas.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Warning: seguir estos pasos es bajo tu responsabilidad, los mismos me funcionaron específicamente sobre mi X1 Carbon 4th gen con Archlinux. Además de ser sobre un prototipo, un driver propiamente desarrollado está en los planes de esta misma gente para un futuro.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Estos son los pasos que seguí para lograr hacerlo funcionar, en base a lo &lt;a href=&quot;https://gitter.im/Validity90/Lobby?at=5a9ed978f3f6d24c6844244a&quot;&gt;escrito&lt;/a&gt; por el usuario &lt;a href=&quot;https://github.com/vKnmnn&quot;&gt;@vKnmnn&lt;/a&gt; en el &lt;a href=&quot;https://gitter.im/Validity90/Lobby&quot;&gt;Gitter&lt;/a&gt; sobre el prototipo de &lt;a href=&quot;https://github.com/nmikhailov&quot;&gt;@nmikhailov&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Instalar &lt;a href=&quot;https://aur.archlinux.org/packages/libfprint-vfs0090-git/&quot;&gt;libfprint-vfs0090-git&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Editar &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/pam.d/system-auth&lt;/code&gt;, agregando &lt;code class=&quot;highlighter-rouge&quot;&gt;pam_fprintd.so&lt;/code&gt; antes de &lt;code class=&quot;highlighter-rouge&quot;&gt;pam_unix.so&lt;/code&gt;. Quedando:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;..]
+auth sufficient pam_fprintd.so
+auth required   pam_unix.so
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;..]&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Esto habilita a usar sudo con huella.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Si usás sddm como tu &lt;em&gt;display manager&lt;/em&gt; como yo, editamos&lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/pam.d/sddm&lt;/code&gt; agregando &lt;code class=&quot;highlighter-rouge&quot;&gt;pam_fprintd.so&lt;/code&gt; como primer línea de &lt;code class=&quot;highlighter-rouge&quot;&gt;auth&lt;/code&gt;. Quedando:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  auth sufficient pam_fprintd.so
+  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;..]&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Esto nos habilita a utilizar la huella en el &lt;em&gt;login&lt;/em&gt; apretando &lt;em&gt;enter&lt;/em&gt; sobre el campo vacío de contraseña previamente a utilizar la huella.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;En el prototipo todavía no se puede hacer la ‘inicialización’ de las huellas. Por lo tanto desde un windows, ya sea en disco o en una máquina virtual:
+    &lt;ul&gt;
+      &lt;li&gt;si estamos en una virtual, hay que habilitar el dispositivo &lt;em&gt;usb&lt;/em&gt; del lector para lograr verlo en la virtual&lt;/li&gt;
+      &lt;li&gt;si no detecta el dispositivo, buscamos el driver para windows en la página de Lenovo. Yo instalé &lt;a href=&quot;https://download.lenovo.com/pccbbs/mobiles/n1cgn05w.exe&quot;&gt;este&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;vamos a Settings -&amp;gt; Users -&amp;gt; Log-in options
+        &lt;ul&gt;
+          &lt;li&gt;Agregamos un PIN&lt;/li&gt;
+          &lt;li&gt;Y en la sección Windows Hello -&amp;gt; agregamos una huella (no hace falta agregar más que una cualquiera, es sólo para inicializar el lector)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Volviendo a nuestro linux
+    &lt;ul&gt;
+      &lt;li&gt;registramos nuestras huellas haciendo:
+        &lt;blockquote&gt;
+          &lt;p&gt;for finger in {left,right}-{thumb,{index,middle,ring,little}-finger}; do fprintd-enroll -f “$finger” “$USER”; done&lt;/p&gt;
+        &lt;/blockquote&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Nos va a pedir dedo por dedo, y registra 5 veces cada uno antes de pasar al siguiente.&lt;/li&gt;
+          &lt;li&gt;Podemos poner en todos los dedos a registrar un único o unos pocos, repitiendo en los que no nos interese.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Ahora haciendo uso de &lt;em&gt;sudo&lt;/em&gt; o al intentar loguearse por sddm, nos pide una huella y el lector se enciende.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Enjoy. Me voy a mantener al tanto para cuando saquen el &lt;em&gt;driver&lt;/em&gt; definitivo.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 23 Mar 2018 21:00:59 -0300</pubDate>
+        <link>http://localhost:4000/blog/2018/03/23/lector-de-huella-en-thinkpad-x1-carbon-4th-gen.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2018/03/23/lector-de-huella-en-thinkpad-x1-carbon-4th-gen.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Tmuxinator - fast tmux setups</title>
+        <description>&lt;p&gt;Ya hace tiempo que venía utilizando &lt;a href=&quot;https://github.com/tmux/tmux&quot;&gt;Tmux&lt;/a&gt; como ‘&lt;em&gt;terminal multiplexer&lt;/em&gt;’, tanto para trabajo como otras tareas habituales. Algo que me molestaba era que ante cualquier reinicio perdía el ‘estado’ de mis sesiones de &lt;em&gt;tmux&lt;/em&gt;. Por lo tanto, tenía que volver a crear mis N sesiones y en cada una abrir las múltiples aplicaciones, servicios y en entornos de desarrollo teniendo en cuenta también de ‘entrar’ al &lt;em&gt;virtualenv&lt;/em&gt; correpondiente del proyecto en cada &lt;em&gt;tab&lt;/em&gt; dentro de &lt;em&gt;tmux&lt;/em&gt;, algo engorroso de hacer.&lt;/p&gt;
+
+&lt;p&gt;Previamente había utilizado los &lt;em&gt;plugins&lt;/em&gt; de &lt;em&gt;tmux&lt;/em&gt; &lt;a href=&quot;https://github.com/tmux-plugins/tmux-resurrect&quot;&gt;tmux-resurrect&lt;/a&gt; y &lt;a href=&quot;https://github.com/tmux-plugins/tmux-continuum&quot;&gt;tmux-continuum&lt;/a&gt; con los cuales me guardaba automáticamente el estado de las sesiones cada tanto, y ante un reinicio este me creaba todas las sesiones anteriormente creadas con los &lt;em&gt;tabs&lt;/em&gt; y paneles correspondientes, pero con esto no mantenía ni las &lt;em&gt;apps&lt;/em&gt;, ni servicios, ni los &lt;em&gt;virtualenv&lt;/em&gt; ejecutados.&lt;/p&gt;
+
+&lt;p&gt;Y hace poco me encontré con &lt;a href=&quot;https://andrewbrookins.com/tech/instant-django-dev-environments-with-tmux-tmuxinator-and-virtualenvwrapper/&quot;&gt;este post&lt;/a&gt; que me iluminó de la existencia de &lt;a href=&quot;https://github.com/tmuxinator/tmuxinator&quot;&gt;Tmuxinator&lt;/a&gt; contenida en una gema Ruby, este me resuelve en mayor medida lo que venía necesitando. Prácticamente este te deja crear una &lt;em&gt;config&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;.yml&lt;/code&gt; donde defino la creación de sesiones ‘&lt;em&gt;custom&lt;/em&gt;’ en &lt;em&gt;tmux&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;instalación-y-configuración&quot;&gt;Instalación y configuración&lt;/h3&gt;
+
+&lt;p&gt;Siguiendo los pasos de instalación y configuración en el mismo &lt;a href=&quot;https://github.com/tmuxinator/tmuxinator#installation&quot;&gt;repo&lt;/a&gt;. (Warning: los resultados y pasos efectuados son en mi entorno con Archlinux, estos pueden variar)&lt;/p&gt;
+
+&lt;h4 id=&quot;instalación&quot;&gt;Instalación&lt;/h4&gt;
+
+&lt;p&gt;Primero instalamos la gema:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;tmuxinator&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;consola&quot;&gt;Consola&lt;/h4&gt;
+
+&lt;p&gt;Hay que asegurarse que tengamos definida la variable de editor &lt;em&gt;default&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;$EDITOR&lt;/code&gt;. En mi caso usando &lt;em&gt;zsh&lt;/em&gt;, en la &lt;em&gt;config&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt; la tengo definida como &lt;code class=&quot;highlighter-rouge&quot;&gt;export EDITOR=&quot;vim&quot;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;tmux&quot;&gt;Tmux&lt;/h4&gt;
+
+&lt;p&gt;Tmuxinator funciona para versiones de 1.8 en adelante, exceptuando la versión 2.5. Vemos la versión haciendo en consola &lt;code class=&quot;highlighter-rouge&quot;&gt;tmux -V&lt;/code&gt; en mi caso me devuelve &lt;code class=&quot;highlighter-rouge&quot;&gt;tmux 2.6&lt;/code&gt;.
+Además si utilizamos en nuestra &lt;em&gt;config&lt;/em&gt; de &lt;em&gt;tmux&lt;/em&gt; (/etc/tmux.conf) la opción &lt;code class=&quot;highlighter-rouge&quot;&gt;base-index&lt;/code&gt; distinta a la &lt;em&gt;default&lt;/em&gt; (que es 0) también hay que setear &lt;code class=&quot;highlighter-rouge&quot;&gt;pane-base-index&lt;/code&gt;.
+En mi caso:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-g&lt;/span&gt; base-index 1
+set-window-option &lt;span class=&quot;nt&quot;&gt;-g&lt;/span&gt; pane-base-index 1&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;completion&quot;&gt;Completion&lt;/h4&gt;
+
+&lt;p&gt;Para conseguir autocompletado de los comandos de &lt;em&gt;tmuxinator&lt;/em&gt; en la consola, hay que hacer un &lt;em&gt;source&lt;/em&gt; sobre los que correspondan a tu &lt;em&gt;shell&lt;/em&gt;. En mi caso, haciendo uso de &lt;em&gt;zsh&lt;/em&gt; en &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt; encuentro el archivo de &lt;em&gt;completion&lt;/em&gt; haciendo &lt;code class=&quot;highlighter-rouge&quot;&gt;source ~/.gem/ruby/2.5.0/gems/tmuxinator-0.10.1/completion/tmuxinator.zsh&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;ahora-cómo-lo-uso&quot;&gt;Ahora ¿cómo lo uso?&lt;/h3&gt;
+
+&lt;p&gt;Para crear una nueva &lt;em&gt;config&lt;/em&gt; de &lt;em&gt;tmuxinator&lt;/em&gt;, simplemente hacemos:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;tmuxinator new foobar&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Esto nos crea un nueva &lt;em&gt;config&lt;/em&gt; en &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.config/tmuxinator/foobar.yml&lt;/code&gt; con contenido de ejemplo para completar.&lt;/p&gt;
+
+&lt;p&gt;#TODO&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;tmuxinator list&lt;/li&gt;
+  &lt;li&gt;tmuxinator copy old new&lt;/li&gt;
+  &lt;li&gt;tmuxinator delete foobar&lt;/li&gt;
+  &lt;li&gt;tmuxinator doctor&lt;/li&gt;
+  &lt;li&gt;tmuxinator debug foobar&lt;/li&gt;
+  &lt;li&gt;ejemplo de config&lt;/li&gt;
+  &lt;li&gt;django dev env&lt;/li&gt;
+  &lt;li&gt;root dir&lt;/li&gt;
+  &lt;li&gt;on_project_first_start&lt;/li&gt;
+  &lt;li&gt;pre_window&lt;/li&gt;
+  &lt;li&gt;startup_window&lt;/li&gt;
+  &lt;li&gt;windows&lt;/li&gt;
+  &lt;li&gt;ctrl + a : kill-session &lt;CR&gt; (restart when changing branch on project, as said on reference post)&lt;/CR&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 19 Mar 2018 20:29:40 -0300</pubDate>
+        <link>http://localhost:4000/blog/2018/03/19/tmuxinator-fast-tmux-setups.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2018/03/19/tmuxinator-fast-tmux-setups.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>[Fix] GoPro Hero 4 Session WiFi Problem</title>
@@ -41,6 +177,170 @@
         <pubDate>Tue, 06 Feb 2018 21:55:13 -0300</pubDate>
         <link>http://localhost:4000/blog/2018/02/06/fix-gopro-hero-4-session-wifi-problem.html</link>
         <guid isPermaLink="true">http://localhost:4000/blog/2018/02/06/fix-gopro-hero-4-session-wifi-problem.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Shortcuts Are Life, Shortcuts for Everything</title>
+        <description>&lt;p&gt;A lo largo de los años, sin notarlo pero claramente de forma exponencial, me fuí convirtiendo en un amante irrefutable de los &lt;em&gt;shortcuts&lt;/em&gt; de teclado. La memoria muscular al realizar ciertas actividades, me hace sentir totalmente desubicado cuando intento hacer prácticamente cualquier cosa en una máquina ajena en la cuál no tengo mi extensa colección de &lt;em&gt;shortcuts&lt;/em&gt;. En este &lt;em&gt;post&lt;/em&gt; pretendo documentar algunas de mis costumbres en el caso de que a otro enfermito como yo le interese :P.&lt;/p&gt;
+
+&lt;p&gt;Entonces ‘Shortcuts for Everything’, pero ¿por dónde empezamos?.&lt;/p&gt;
+
+&lt;h3 id=&quot;plasma&quot;&gt;Plasma&lt;/h3&gt;
+
+&lt;p&gt;En mi &lt;em&gt;workstation&lt;/em&gt; (no únicamente, pero al menos especialmente) reina Linux (GNU/Linux para los fanas) desde hace años. Y en los últimos años mi DE (desktop environment) por defecto pasó a ser Plasma 5 (antiguamente llamada KDE), gracias a su gran personalización los &lt;em&gt;shortcuts&lt;/em&gt; son fácilmente configurables.&lt;/p&gt;
+
+&lt;p&gt;#TODO  imagenes?&lt;/p&gt;
+
+&lt;h1 id=&quot;todo-completar&quot;&gt;TODO Completar&lt;/h1&gt;
+&lt;p&gt;Principalmente para:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Abrir programas que utilizo a diario
+    &lt;ul&gt;
+      &lt;li&gt;Firefox: Ctrl + Alt + F&lt;/li&gt;
+      &lt;li&gt;Spotify:&lt;/li&gt;
+      &lt;li&gt;Telegram&lt;/li&gt;
+      &lt;li&gt;Screens (config plasma)&lt;/li&gt;
+      &lt;li&gt;Ranger:&lt;/li&gt;
+      &lt;li&gt;Dolphin&lt;/li&gt;
+      &lt;li&gt;Pavucontrol (audio config)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Virtual desktops
+    &lt;ul&gt;
+      &lt;li&gt;Principal: Ctrl + Shift + H&lt;/li&gt;
+      &lt;li&gt;Hidden: Ctrl + Shift + L&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Manejo de ventanas
+    &lt;ul&gt;
+      &lt;li&gt;Maximizar&lt;/li&gt;
+      &lt;li&gt;Minimizar&lt;/li&gt;
+      &lt;li&gt;Medias pantallas verticales
+        &lt;ul&gt;
+          &lt;li&gt;Derecha&lt;/li&gt;
+          &lt;li&gt;Izquierda&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Cuartos de pantalla
+        &lt;ul&gt;
+          &lt;li&gt;Derecho superior&lt;/li&gt;
+          &lt;li&gt;Derecho inferior&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Enviar a otro escritorio virtual
+        &lt;ul&gt;
+          &lt;li&gt;a Principal&lt;/li&gt;
+          &lt;li&gt;a Hidden&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Screenshots (Spectacle)
+    &lt;ul&gt;
+      &lt;li&gt;Full screen&lt;/li&gt;
+      &lt;li&gt;Active window&lt;/li&gt;
+      &lt;li&gt;Select area&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;todo-video-demostración-o-gif&quot;&gt;TODO video demostración o gif&lt;/h1&gt;
+
+&lt;p&gt;No nos olvidemos de shortcuts en ciertos programas (voy a nombrar algunos de los que más utilizo)&lt;/p&gt;
+
+&lt;h1 id=&quot;todo-completar-1&quot;&gt;TODO completar&lt;/h1&gt;
+&lt;p&gt;Konsole (en realidad estos son de &lt;em&gt;bash&lt;/em&gt; o &lt;em&gt;zsh&lt;/em&gt;)&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Search in history: ctrl + r&lt;/li&gt;
+  &lt;li&gt;Delete word: ctrl + w&lt;/li&gt;
+  &lt;li&gt;Delete line&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Vim, sobre &lt;em&gt;vim&lt;/em&gt; no me voy a extender en este &lt;em&gt;post&lt;/em&gt; ya que debería hacer uno entero sólo sobre &lt;em&gt;Vim&lt;/em&gt;. Pueden ver mi &lt;em&gt;config&lt;/em&gt; en mi &lt;a href=&quot;&quot;&gt;&lt;em&gt;gist&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Tmux, acá básicamente cambio sólo el &lt;em&gt;prefix&lt;/em&gt; por default de &lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl + b&lt;/code&gt; a &lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl + a&lt;/code&gt; que es mucho más cómodo (por lo menos para mí). El resto de los &lt;em&gt;shortcuts&lt;/em&gt; es en base a el &lt;em&gt;plugin&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;tmux-pain-control&lt;/code&gt; que pueden encontrar &lt;a href=&quot;&quot;&gt;acá&lt;/a&gt;. El resto de mi &lt;em&gt;config&lt;/em&gt; sobre &lt;em&gt;tmux&lt;/em&gt; y los &lt;em&gt;plugins&lt;/em&gt; que utilizo (no referentes a &lt;em&gt;shortcuts&lt;/em&gt;, también tengo que hacer un &lt;em&gt;post&lt;/em&gt; sobre tmux) lo encuentran en &lt;a href=&quot;&quot;&gt;este gist&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;En Firefox pueden utilizar los atajos básicos, como:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Nueva pestaña&lt;/li&gt;
+  &lt;li&gt;Cerrar pestaña&lt;/li&gt;
+  &lt;li&gt;Nueva ventana&lt;/li&gt;
+  &lt;li&gt;Abrir ventana incógnito&lt;/li&gt;
+  &lt;li&gt;Seleccionar barra de navegación&lt;/li&gt;
+  &lt;li&gt;Pestañas
+    &lt;ul&gt;
+      &lt;li&gt;Siguiente&lt;/li&gt;
+      &lt;li&gt;Anterior&lt;/li&gt;
+      &lt;li&gt;Primera, segunda, etc (Alt + &lt;número&gt;)&lt;/número&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Pero si además ya trabajan con Vim (aunque no es necesario), entonces es una gran comodidad utilizar un plugin que nos ofrezca &lt;em&gt;shortcuts&lt;/em&gt; ‘vim-like’, como por ejemplo &lt;a href=&quot;&quot;&gt;Vimium&lt;/a&gt; teniendo &lt;em&gt;shortcuts&lt;/em&gt; que nos permiten navegar mucho más rápido por la &lt;em&gt;web&lt;/em&gt; incluso sin usar el &lt;em&gt;mouse&lt;/em&gt; casi por completo.&lt;/p&gt;
+
+&lt;h1 id=&quot;todo---agregar-imagen-de-listado-del-help-de-plugin-vimium&quot;&gt;TODO - agregar imagen de listado del help de plugin Vimium&lt;/h1&gt;
+
+&lt;p&gt;Además agrego algunos &lt;em&gt;shortcuts&lt;/em&gt; haciendo uso de &lt;code class=&quot;highlighter-rouge&quot;&gt;qdbus&lt;/code&gt; para hacer llamadas a ciertas funcionalidades, por ejemplo para controlar Spotify:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Play / Pause&lt;/li&gt;
+  &lt;li&gt;Siguiente / Anterior canción
+  # TODO - imagen configuración shortcut qdbus en ‘Global shortcuts’ de plasma
+También se podría controlar por ejemplo el brillo de tus periféricos Razer
+  # TODO - qdbus razer-drivers&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Mon, 15 Jan 2018 13:10:29 -0300</pubDate>
+        <link>http://localhost:4000/blog/2018/01/15/shortcuts-are-life-shortcuts-for-everything.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2018/01/15/shortcuts-are-life-shortcuts-for-everything.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Ubicar Server Local desde otros dispositivos en la red local</title>
+        <description>&lt;p&gt;Una práctica útil para encontrar un &lt;em&gt;server&lt;/em&gt; local en la red, es levantar dicho &lt;em&gt;server&lt;/em&gt; en el &lt;em&gt;host&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;0.0.0.0&lt;/code&gt; de esta forma podemos verlo apuntando desde otro dispositivo a la &lt;em&gt;ip&lt;/em&gt; de la máquina que lo hostea.&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo entonces, si nuestra &lt;em&gt;ip&lt;/em&gt; es &lt;code class=&quot;highlighter-rouge&quot;&gt;192.168.1.24&lt;/code&gt; ingresamos desde el otro dispositivo a esa &lt;em&gt;ip&lt;/em&gt; con el puerto asignado por el &lt;em&gt;server&lt;/em&gt; (por ejemplo puede ser: 192.168.1.24:8000)&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Esto funciona por:
+  #TODO
+    poner links temas de network&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Mon, 15 Jan 2018 12:18:18 -0300</pubDate>
+        <link>http://localhost:4000/blog/2018/01/15/ubicar-server-local-desde-otros-dispositivos-en-la-red-local.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2018/01/15/ubicar-server-local-desde-otros-dispositivos-en-la-red-local.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Browser-sync - Server Local Sincronizado</title>
+        <description>&lt;p&gt;Esta utilidad nos permite levantar un &lt;em&gt;server&lt;/em&gt; de forma local mientras hacemos un desarrollo. Pero una de las particularidades que más me interesan es el &lt;em&gt;scroll&lt;/em&gt; de la pantalla sincronizado entre todas las instancias. De esta forma, si abrimos el server de forma local en distintos navegadores, podemos scrollear simultáneamente en todos estos.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.browsersync.io/&quot;&gt;Browser-sync&lt;/a&gt; nos permite simplemente levantar un &lt;em&gt;server&lt;/em&gt; y definir con qué archivos dentro de nuestro entorno de trabajo se hace &lt;em&gt;trigger&lt;/em&gt; para la actualización automática del &lt;em&gt;server&lt;/em&gt;. Haciendo uso del &lt;em&gt;flag&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;--files&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  browser-sync start &lt;span class=&quot;nt&quot;&gt;--server&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--files&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;file1, folder/file2, files/*.extension&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Además si levantamos este server en el puerto indicado, como explico en &lt;a href=&quot;&quot;&gt;este otro post&lt;/a&gt; podemos ver nuestros cambios en varios otros dispositivos conectados a la red. Entonces usaríamos algo de este estilo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  browser-sync start &lt;span class=&quot;nt&quot;&gt;--server&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--files&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;index.html, css/*.css&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--host&lt;/span&gt; 0.0.0.0&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;De esta forma podemos tener un dispositivo móvil en nuestro escritorio viendo los cambios, para tener referencia en caso de que estemos haciendo, por ejemplo, una &lt;em&gt;web responsive&lt;/em&gt; y ver los cambios sincronizados mientras hacemos &lt;em&gt;scroll&lt;/em&gt; tan sólo en el navegador de nuestro &lt;em&gt;workstation&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Es una utilidad &lt;em&gt;nodeJS&lt;/em&gt;, así que pueden instalarla haciendo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-g&lt;/span&gt; browser-sync&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Esto es todo lo que particularmente uso de la herramienta en la mayoría de los casos, pero tiene más utilidades. Pueden ver más buscando en &lt;code class=&quot;highlighter-rouge&quot;&gt;browser-sync -h&lt;/code&gt; y &lt;code class=&quot;highlighter-rouge&quot;&gt;browser-sync &amp;lt;command&amp;gt; --help&lt;/code&gt; (por ejemplo &lt;code class=&quot;highlighter-rouge&quot;&gt;browser-sync start --help&lt;/code&gt;).&lt;/p&gt;
+</description>
+        <pubDate>Mon, 15 Jan 2018 12:07:00 -0300</pubDate>
+        <link>http://localhost:4000/blog/2018/01/15/browser-sync-server-local-sincronizado.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2018/01/15/browser-sync-server-local-sincronizado.html</guid>
         
         
       </item>
@@ -92,6 +392,57 @@
       </item>
     
       <item>
+        <title>Example</title>
+        <description>&lt;p&gt;&lt;del&gt;Lala&lt;/del&gt;&lt;/p&gt;
+
+&lt;details&gt;&lt;summary&gt;Boostnote is a notepad corresponding to markdown notation, which is a tool for organizing and sharing information.&lt;/summary&gt;
+- Features - &lt;br /&gt;
+· Search function to find memos in one shot
+· Supports markdown notation &lt;br /&gt;
+· Support for Mac, Windows, Linux, iOS, Android &lt;br /&gt;
+· Export and import to Plain text (.txt), Markdown (.md) format &lt;br /&gt;
+· Supports PDF saving &lt;br /&gt;
+· Can be used offline &lt;br /&gt;
+· Synchronize to dropbox etc. with setting &lt;br /&gt;
+· Supports theme colors and numerous fonts &lt;br /&gt;
+&lt;/details&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;sjdfasjdfsljd&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Fruits&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Price&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Apple&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;1$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Grapes&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;4$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Orange&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;2$&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+</description>
+        <pubDate>Tue, 05 Dec 2017 12:09:20 -0300</pubDate>
+        <link>http://localhost:4000/blog/2017/12/05/example.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/12/05/example.html</guid>
+        
+        
+      </item>
+    
+      <item>
         <title>[Workaround] Little Racers Streets crash on linux</title>
         <description>&lt;p&gt;Al querer iniciar el juego &lt;a href=&quot;http://store.steampowered.com/app/262690/Little_Racers_STREET/&quot;&gt;Little Racers Streets&lt;/a&gt; desde Steam (que por cierto es muy divertido), me tiraba un error similar a esto &lt;code class=&quot;highlighter-rouge&quot;&gt;An error ocurred: An exception was thrown by the type initializer for System.Drawing.GDIPlus&lt;/code&gt;.&lt;/p&gt;
 
@@ -107,142 +458,6 @@
         <pubDate>Fri, 15 Sep 2017 15:46:32 -0300</pubDate>
         <link>http://localhost:4000/blog/2017/09/15/little-racers-streets-fix.html</link>
         <guid isPermaLink="true">http://localhost:4000/blog/2017/09/15/little-racers-streets-fix.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>[Workaround] Pantalla negra al iniciar aplicación hecha en Unity</title>
-        <description>&lt;p&gt;Este problema me aparece con varios juegos hechos sobre &lt;a href=&quot;https://unity3d.com/&quot;&gt;Unity3d&lt;/a&gt;. Básicamente al iniciar en &lt;em&gt;fullscreen&lt;/em&gt; la pantalla queda totalmente negra, en algunos casos se puede escuchar el audio dando a notar que de todas formas está iniciando.&lt;/p&gt;
-
-&lt;p&gt;Como &lt;em&gt;workaround&lt;/em&gt; sobre este problema se puede hacer lo siguiente:&lt;/p&gt;
-
-&lt;p&gt;Primero localizamos la carpeta con las configuraciones de Unity sobre la aplicación que queremos arreglar, deberíamos encontrarla en &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.config/unity3d/app-que-buscamos&lt;/code&gt;. En esta carpeta deberíamos encontrar un archivo llamado &lt;code class=&quot;highlighter-rouge&quot;&gt;prefs&lt;/code&gt;. Entonces con el ejemplo anterior, la ruta sería &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.config/unity3d/app-que-buscamos/prefs&lt;/code&gt;. El contenido de dicho archivo tendría que ser similar a esto:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  &amp;lt;unity_prefs &lt;span class=&quot;nv&quot;&gt;version_major&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1&quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;version_minor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Screenmanager Is Fullscreen mode&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;1&amp;lt;/pref&amp;gt;
-    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Screenmanager Resolution Height&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;1080&amp;lt;/pref&amp;gt;
-    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Screenmanager Resolution Width&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;1920&amp;lt;/pref&amp;gt;
-    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;UnityGraphicsQuality&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;3&amp;lt;/pref&amp;gt;
-    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;UnitySelectMonitor&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;0&amp;lt;/pref&amp;gt;
-    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;unity.cloud_userid&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; ... &amp;lt;/pref&amp;gt;
-    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;unity.player_session_background_time&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; ... &amp;lt;/pref&amp;gt;
-    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;unity.player_session_elapsed_time&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; ... &amp;lt;/pref&amp;gt;
-    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;unity.player_sessionid&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; ... &amp;lt;/pref&amp;gt;
-  &amp;lt;/unity_prefs&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Recomendado hacer un copia del archivo, en mi caso hago la copia en la misma carpeta llamándolo &lt;code class=&quot;highlighter-rouge&quot;&gt;prefs.bkp&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Lo que nos interesa modificar (sobre el archivo original) es la línea de &lt;code class=&quot;highlighter-rouge&quot;&gt;Fullscreen mode&lt;/code&gt;, poniéndole como valor &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &amp;lt;pref &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Screenmanager Is Fullscreen mode&quot;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;int&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;0&amp;lt;/pref&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Una vez modificado y guardado, procedemos a abrir la aplicación.&lt;/p&gt;
-
-&lt;p&gt;De forma opcional, podemos modificar los valores de &lt;code class=&quot;highlighter-rouge&quot;&gt;Resolution Height&lt;/code&gt; y &lt;code class=&quot;highlighter-rouge&quot;&gt;Resolution Width&lt;/code&gt; para que coincidan con la resolución de nuestro monitor. Por ejemplo si tenemos una pantalla fullHD, los valores serían 1080 y 1920 respectivamente.&lt;/p&gt;
-
-&lt;p&gt;Es muy probable que al cerrar e iniciar nuevamente la aplicación, estos valores que modificamos sean sobrescritos automáticamente. Tendríamos que volver a modificar nuevamente siguiendo los mismos pasos o podemos poner el archivo &lt;code class=&quot;highlighter-rouge&quot;&gt;prefs&lt;/code&gt; en modo de sólo lectura, esto último lo podemos lograr haciendo uso de chattr como les explico en &lt;a href=&quot;http://cravacuore.com.ar/blog/2017/09/12/chattr-archivo-no-editable-read-only.html&quot;&gt;este otro &lt;em&gt;post&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 14 Sep 2017 16:15:58 -0300</pubDate>
-        <link>http://localhost:4000/blog/2017/09/14/workaround-unity-blank-screen-at-start.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2017/09/14/workaround-unity-blank-screen-at-start.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>[Javascript] Toggle Icon Class - cambiar ícono con click sobre botón</title>
-        <description>&lt;p&gt;Buscando una manera simple de cambiar un ícono por otro al hacer click sobre un botón, haciendo uso Javascript solamente (sin JQuery). Encontré sobre &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Element/classList#Methods&quot;&gt;classList&lt;/a&gt;, en particular &lt;code class=&quot;highlighter-rouge&quot;&gt;classList.toggle&lt;/code&gt; que justamente nos permite agregar o quitar una propiedad de un elemento.&lt;/p&gt;
-
-&lt;p&gt;En este caso estaba jugando para cambiar un ícono de &lt;a href=&quot;http://fontawesome.io/&quot;&gt;FontAwesome&lt;/a&gt; de &lt;em&gt;Play/Pause&lt;/em&gt; en esta &lt;a href=&quot;http://cravacuore.com.ar/music&quot;&gt;sección&lt;/a&gt; de mi página.&lt;/p&gt;
-
-&lt;p&gt;Entonces simplemente encontrando mi elemento y usando &lt;em&gt;toggle&lt;/em&gt; pude quitar la clase de “play” y agregar la clase de “pause”.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;icon&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'icon'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;classList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toggle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'fa-pause'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;classList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toggle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'fa-play'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Como quiero que esto ocurra cuando hago click, lo agrego como evento de &lt;em&gt;click&lt;/em&gt; al botón.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'play-button'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'click'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;icon&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'icon'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;classList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toggle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'fa-pause'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;classList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toggle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'fa-play'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Pueden ver los cambios completos hechos en este &lt;a href=&quot;https://github.com/cravacuore/cravacuore.github.io/commit/fb05c94ccab030ac6cd0de6d6bd825e9df1f5062&quot;&gt;&lt;em&gt;commit&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 13 Sep 2017 01:31:09 -0300</pubDate>
-        <link>http://localhost:4000/blog/2017/09/13/toggle-icon-class-plain-javascript.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2017/09/13/toggle-icon-class-plain-javascript.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Chattr - Archivo No Editable (Read-only)</title>
-        <description>&lt;p&gt;Si se quiere &lt;em&gt;settear&lt;/em&gt; un archivo como &lt;em&gt;read-only&lt;/em&gt;, para que este no pueda ser modificado. Se puede hacer uso de &lt;code class=&quot;highlighter-rouge&quot;&gt;chattr&lt;/code&gt; de la siguiente manera:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  &lt;span class=&quot;c&quot;&gt;# chattr +i /path/to/file&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Y para revertirlo:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  &lt;span class=&quot;c&quot;&gt;# chattr -i /path/to/file&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Muy útil cuando cambiamos alguna &lt;em&gt;setting&lt;/em&gt; de un programa y queremos que quede de forma permanente sin que sea sobrescrita por el programa mismo.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 12 Sep 2017 09:31:52 -0300</pubDate>
-        <link>http://localhost:4000/blog/2017/09/12/chattr-archivo-no-editable-read-only.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2017/09/12/chattr-archivo-no-editable-read-only.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>[Workaround] Problema de líneas horizontales en Konsole</title>
-        <description>&lt;p&gt;En la consola de plasma &lt;a href=&quot;https://www.kde.org/applications/system/konsole/&quot;&gt;Konsole&lt;/a&gt;, tuve un problema durante bastante tiempo y no le dí mayor importancia hasta que me decidí por arreglarlo.&lt;/p&gt;
-
-&lt;p&gt;El problema es que al escribir, mover el cursor o seleccionar texto en la consola me aparecían líneas horizontales a lo largo de la terminal que aparecían y desaparecían. Pensé que era cuestión de la fuente, o el &lt;em&gt;theme&lt;/em&gt; que estaba usando.&lt;/p&gt;
-
-&lt;p&gt;Resulta que es un &lt;a href=&quot;https://bugs.kde.org/show_bug.cgi?id=373232&quot;&gt;bug&lt;/a&gt; de Konsole que tiene con el escalado de la &lt;em&gt;UI&lt;/em&gt; en Plasma. De modo que si modifica el escalado en Plasma, surge este problema. Yo había modificado el escalado a ‘1.1’ al empezar a utilizar Plasma en mi notebook.&lt;/p&gt;
-
-&lt;p&gt;Como &lt;em&gt;workaround&lt;/em&gt; se puede poner el escalado por &lt;em&gt;default&lt;/em&gt; en &lt;strong&gt;1&lt;/strong&gt;. Para esto vamos a ‘Displays’ buscamos ‘Scale display’ y cambiamos el valor a ‘1’. Aplicamos los cambios, y reiniciamos ‘X’ o el sistema por completo.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 11 Sep 2017 19:16:08 -0300</pubDate>
-        <link>http://localhost:4000/blog/2017/09/11/konsole-horizontal-lines-problem.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2017/09/11/konsole-horizontal-lines-problem.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Bug Fix - Tomate Tu Tiempo Firefox</title>
-        <description>&lt;p&gt;Me entero por medio de &lt;a href=&quot;https://www.phoronix.com/scan.php?page=news_item&amp;amp;px=Firefox-Middle-Click-Bug&quot;&gt;Phoronix&lt;/a&gt; que la molestia que tenía con Firefox de abrir &lt;em&gt;links&lt;/em&gt; con el click del medio, el cual siempre resolvía como puse en este &lt;a href=&quot;http://cravacuore.com.ar/blog/2016/06/08/firefox-deshabilitar-abrir-url-del-clipboard-con-click-del-medio.html&quot;&gt;post&lt;/a&gt;, era tratado como un &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=366945&quot;&gt;bug&lt;/a&gt;. Uno que fue agregado hace unos muy poquitos 11 años y recién ahora pasa a ser solucionado.&lt;/p&gt;
-
-&lt;p&gt;No era el único entonces que tenía este problema. Y la moraleja, es que no hay que perder fe a que un &lt;em&gt;bug&lt;/em&gt; sea resuelto..aunque haya que esperar 11 años :P.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 06 Sep 2017 20:43:25 -0300</pubDate>
-        <link>http://localhost:4000/blog/2017/09/06/bug-fix-tomate-tu-tiempo-firefox.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2017/09/06/bug-fix-tomate-tu-tiempo-firefox.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Error - No such file or directory (32-bit binary)</title>
-        <description>&lt;p&gt;Hay momentos en los que un error poco descriptivo te puede hacer golper la cabeza muchas veces contra el escritorio por horas :P. Este fue el caso de un amigo en un grupo de Telegram, que pidió ayuda porque ya no sabía que pasaba y le tiraba el siguiente error:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/usr/local/bin/bgdc: No such file or directory&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Quería ejecutar un programa, que estaba en &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/local/bin&lt;/code&gt; y que como cualquier programa normal debería dejar ejecutarlo. El PATH estaba bien seteado, los permisos de usuario también y después de varias suposiciones de que podría estar mal, se seguía sin llegar a una solución.&lt;/p&gt;
-
-&lt;p&gt;Resulta que el problema era que el binario que se quería ejecutar era de 32-bit, y se estaba intentando correr en ese sistema de 64-bit (lo más normal en la actualidad) sin tener las librerias necesarias de 32-bit para poder lograrlo.&lt;/p&gt;
-
-&lt;p&gt;Conclusión, si les tira ese error poco descriptivo de que no encuentra el binario, una gran probabilidad es que sea como este caso. La forma más fácil de saber si un binario es de 32-bit o 64-bit es utilizando &lt;code class=&quot;highlighter-rouge&quot;&gt;file nombre_binario&lt;/code&gt; en la consola y en el &lt;em&gt;output&lt;/em&gt; dice si es uno u otro.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 19 Feb 2017 21:07:35 -0300</pubDate>
-        <link>http://localhost:4000/blog/2017/02/19/error-no-such-file-or-directory-32-bit-binary.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2017/02/19/error-no-such-file-or-directory-32-bit-binary.html</guid>
         
         
       </item>
