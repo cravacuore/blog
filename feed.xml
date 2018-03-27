@@ -6,9 +6,117 @@
 </description>
     <link>http://cravacuore.com.ar/blog/</link>
     <atom:link href="http://cravacuore.com.ar/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 24 Mar 2018 03:09:37 -0300</pubDate>
-    <lastBuildDate>Sat, 24 Mar 2018 03:09:37 -0300</lastBuildDate>
+    <pubDate>Tue, 27 Mar 2018 12:51:38 -0300</pubDate>
+    <lastBuildDate>Tue, 27 Mar 2018 12:51:38 -0300</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
+    
+      <item>
+        <title>Tmuxinator - fast tmux setups</title>
+        <description>&lt;p&gt;Ya hace tiempo que venía utilizando &lt;a href=&quot;https://github.com/tmux/tmux&quot;&gt;Tmux&lt;/a&gt; como ‘&lt;em&gt;terminal multiplexer&lt;/em&gt;’, tanto para trabajo como otras tareas habituales. Algo que me molestaba era que ante cualquier reinicio perdía el ‘estado’ de mis sesiones de &lt;em&gt;tmux&lt;/em&gt;. Por lo tanto, tenía que volver a crear mis &lt;em&gt;N&lt;/em&gt; sesiones y en cada una abrir las múltiples aplicaciones, servicios y entornos de desarrollo teniendo en cuenta también de activar el &lt;em&gt;virtualenv&lt;/em&gt; correspondiente a cada proyecto en cada &lt;em&gt;tab&lt;/em&gt; dentro de &lt;em&gt;tmux&lt;/em&gt;, algo engorroso de hacer.&lt;/p&gt;
+
+&lt;p&gt;Previamente había utilizado los &lt;em&gt;plugins&lt;/em&gt; de &lt;em&gt;tmux&lt;/em&gt;: &lt;a href=&quot;https://github.com/tmux-plugins/tmux-resurrect&quot;&gt;tmux-resurrect&lt;/a&gt; y &lt;a href=&quot;https://github.com/tmux-plugins/tmux-continuum&quot;&gt;tmux-continuum&lt;/a&gt; con los cuales me guardaba automáticamente el estado de las sesiones cada tanto, y ante un reinicio este me creaba todas las sesiones anteriormente creadas con los &lt;em&gt;tabs&lt;/em&gt; y paneles correspondientes, pero con esto no mantenía ni las &lt;em&gt;apps&lt;/em&gt;, ni servicios, ni los &lt;em&gt;virtualenv&lt;/em&gt; ejecutados.&lt;/p&gt;
+
+&lt;p&gt;Y hace poco me encontré con &lt;a href=&quot;https://andrewbrookins.com/tech/instant-django-dev-environments-with-tmux-tmuxinator-and-virtualenvwrapper/&quot;&gt;este post&lt;/a&gt; que me iluminó de la existencia de &lt;a href=&quot;https://github.com/tmuxinator/tmuxinator&quot;&gt;Tmuxinator&lt;/a&gt; contenida en una gema Ruby, este me resuelve en mayor medida lo que venía necesitando. Prácticamente este te deja crear una &lt;em&gt;config&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;.yml&lt;/code&gt; donde definir la creación de sesiones ‘&lt;em&gt;custom&lt;/em&gt;’ en &lt;em&gt;tmux&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;instalación-y-configuración&quot;&gt;Instalación y configuración&lt;/h3&gt;
+
+&lt;p&gt;Siguiendo los pasos de instalación y configuración en el mismo &lt;a href=&quot;https://github.com/tmuxinator/tmuxinator#installation&quot;&gt;repo&lt;/a&gt;. (&lt;em&gt;Warning&lt;/em&gt;: los resultados y pasos efectuados son en mi entorno con Archlinux, estos pueden variar en tu caso.)&lt;/p&gt;
+
+&lt;h4 id=&quot;instalación&quot;&gt;Instalación&lt;/h4&gt;
+
+&lt;p&gt;Primero instalamos la gema:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;tmuxinator&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;consola&quot;&gt;Consola&lt;/h4&gt;
+
+&lt;p&gt;Hay que asegurarse que tengamos definida la variable de editor &lt;em&gt;default&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;$EDITOR&lt;/code&gt;. En mi caso usando &lt;em&gt;zsh&lt;/em&gt;, en la &lt;em&gt;config&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt; la tengo definida como &lt;code class=&quot;highlighter-rouge&quot;&gt;export EDITOR=&quot;vim&quot;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;tmux&quot;&gt;Tmux&lt;/h4&gt;
+
+&lt;p&gt;Tmuxinator funciona para versiones de 1.8 en adelante, exceptuando la versión 2.5. Vemos la versión haciendo en consola &lt;code class=&quot;highlighter-rouge&quot;&gt;tmux -V&lt;/code&gt; en mi caso me devuelve &lt;code class=&quot;highlighter-rouge&quot;&gt;tmux 2.6&lt;/code&gt;.
+Además si utilizamos en nuestra &lt;em&gt;config&lt;/em&gt; de &lt;em&gt;tmux&lt;/em&gt; (/etc/tmux.conf) la opción &lt;code class=&quot;highlighter-rouge&quot;&gt;base-index&lt;/code&gt; distinta a la &lt;em&gt;default&lt;/em&gt; (que es 0) también hay que setear &lt;code class=&quot;highlighter-rouge&quot;&gt;pane-base-index&lt;/code&gt;.
+En mi caso entonces, tengo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;..]
+&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-g&lt;/span&gt; base-index 1
+set-window-option &lt;span class=&quot;nt&quot;&gt;-g&lt;/span&gt; pane-base-index 1
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;..]&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;completion&quot;&gt;Completion&lt;/h4&gt;
+
+&lt;p&gt;Para conseguir autocompletado de los comandos de &lt;em&gt;tmuxinator&lt;/em&gt; en la consola, hay que hacer un &lt;em&gt;source&lt;/em&gt; sobre los que correspondan a tu &lt;em&gt;shell&lt;/em&gt;. En mi caso, haciendo uso de &lt;em&gt;zsh&lt;/em&gt; en &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt; encuentro el archivo de &lt;em&gt;completion&lt;/em&gt; haciendo &lt;code class=&quot;highlighter-rouge&quot;&gt;source ~/.gem/ruby/2.5.0/gems/tmuxinator-0.10.1/completion/tmuxinator.zsh&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;verificación&quot;&gt;Verificación&lt;/h4&gt;
+
+&lt;p&gt;Podemos ahora hacer un &lt;code class=&quot;highlighter-rouge&quot;&gt;tmuxinator doctor&lt;/code&gt; para confirmar que tenemos todo lo necesario instalado y configurado. Si nos muestra algo como esto:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Checking &lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;tmux is installed &lt;span class=&quot;o&quot;&gt;==&amp;gt;&lt;/span&gt; Yes
+Checking &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$EDITOR&lt;/span&gt; is &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&amp;gt;&lt;/span&gt; Yes
+Checking &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$SHELL&lt;/span&gt; is &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&amp;gt;&lt;/span&gt; Yes&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Estamos listos. En caso contrario, vuelvan a leer los pasos anteriores a ver qué les faltó. Y/o lean el error y resuelvan.&lt;/p&gt;
+
+&lt;h3 id=&quot;ahora-cómo-lo-uso&quot;&gt;Ahora ¿cómo lo uso?&lt;/h3&gt;
+
+&lt;p&gt;Para crear una nueva &lt;em&gt;config&lt;/em&gt; de &lt;em&gt;tmuxinator&lt;/em&gt;, simplemente hacemos:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;tmuxinator new foobar&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Esto nos crea un nueva &lt;em&gt;config&lt;/em&gt; en &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.config/tmuxinator/foobar.yml&lt;/code&gt; con contenido de ejemplo para completar.&lt;/p&gt;
+
+&lt;h4 id=&quot;editando-config&quot;&gt;Editando config&lt;/h4&gt;
+
+&lt;p&gt;Una vez creada esta nueva &lt;em&gt;config&lt;/em&gt;, la abrimos con nuestro editor de preferencia y podemos ver entre los distintos parámetros cosas como:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;name&lt;/code&gt;: setea nombre del proyecto de tmuxinator.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;root&lt;/code&gt;: la ruta raíz de nuestro proyecto sobre el que se ejecutan todas las operaciones. Por default abre cualquier &lt;em&gt;tab&lt;/em&gt; de tmux sobre este directorio.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;on_project_first_start&lt;/code&gt;: ejecuta lo que pongamos en esta línea al iniciar el proyecto con &lt;code class=&quot;highlighter-rouge&quot;&gt;tmuxinator start foobar&lt;/code&gt; (útil para inicializar servicios, como base de datos).&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pre_window&lt;/code&gt;: ejecuta esta línea sobre cada nueva &lt;em&gt;window&lt;/em&gt; abierta en tmux (muy útil para inicializar virtualenvs).&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;windows&lt;/code&gt;: acá definimos la estructura de &lt;em&gt;windows&lt;/em&gt; por nombre y qué se ejecuta inicialmente en cada una. De similar forma se pueden gestionar los &lt;em&gt;tabs&lt;/em&gt; y &lt;em&gt;panes&lt;/em&gt;, además del &lt;em&gt;layout&lt;/em&gt; en cada uno.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Esta es un ejemplo de configuración propia sobre un proyecto Django:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# ~/.tmuxinator/django_project.yml&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;django_project&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;~/work/django_project/&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;on_project_first_start&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;sudo systemctl start mysqld.service &amp;amp;&amp;amp; sudo systemctl start postgresql.service&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;pre_window&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;workon django_project&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;startup_window&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;vim&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;windows&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;vim&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;vim&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./manage.py runserver --configuration=Dev&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;python&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./manage.py shell&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;zsh&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;otras-opciones&quot;&gt;Otras opciones&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tmuxinator list&lt;/code&gt; nos lista todos nuestros proyectos creados en tmuxinator.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tmuxinator delete foobar&lt;/code&gt; borra el proyecto foobar.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Pueden ver otras opciones disponibles haciendo &lt;code class=&quot;highlighter-rouge&quot;&gt;tmuxinator --help&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;extra&quot;&gt;Extra&lt;/h4&gt;
+
+&lt;p&gt;Una comodidad extra que nos brinda este &lt;em&gt;workflow&lt;/em&gt; es que al cambiar de branch sobre un proyecto, si este tiene varios servicios y/o comandos que se tienen que verificar o ejecutar al levantar este proyecto. Podemos simplemente hacer un &lt;code class=&quot;highlighter-rouge&quot;&gt;kill-session&lt;/code&gt; sobre &lt;em&gt;tmux&lt;/em&gt; y volver a inicializar el proyecto con &lt;em&gt;tmuxinator&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Espero les sea tan útil como me es útil a mí. Lo utilizo para prácticamente todos mis proyectos en desarrollo e incluso para otros casos recurrentes, como una sesión para escribir en este mismo &lt;em&gt;blog&lt;/em&gt; ;).&lt;/p&gt;
+</description>
+        <pubDate>Tue, 27 Mar 2018 12:51:23 -0300</pubDate>
+        <link>http://cravacuore.com.ar/blog/2018/03/27/tmuxinator-fast-tmux-setups.html</link>
+        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2018/03/27/tmuxinator-fast-tmux-setups.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Lector de Huella en Thinkpad X1 Carbon 4th Gen</title>
@@ -280,19 +388,6 @@ auth required   pam_unix.so
         <pubDate>Mon, 11 Sep 2017 19:16:08 -0300</pubDate>
         <link>http://cravacuore.com.ar/blog/2017/09/11/konsole-horizontal-lines-problem.html</link>
         <guid isPermaLink="true">http://cravacuore.com.ar/blog/2017/09/11/konsole-horizontal-lines-problem.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Bug Fix - Tomate Tu Tiempo Firefox</title>
-        <description>&lt;p&gt;Me entero por medio de &lt;a href=&quot;https://www.phoronix.com/scan.php?page=news_item&amp;amp;px=Firefox-Middle-Click-Bug&quot;&gt;Phoronix&lt;/a&gt; que la molestia que tenía con Firefox de abrir &lt;em&gt;links&lt;/em&gt; con el click del medio, el cual siempre resolvía como puse en este &lt;a href=&quot;http://cravacuore.com.ar/blog/2016/06/08/firefox-deshabilitar-abrir-url-del-clipboard-con-click-del-medio.html&quot;&gt;post&lt;/a&gt;, era tratado como un &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=366945&quot;&gt;bug&lt;/a&gt;. Uno que fue agregado hace unos muy poquitos 11 años y recién ahora pasa a ser solucionado.&lt;/p&gt;
-
-&lt;p&gt;No era el único entonces que tenía este problema. Y la moraleja, es que no hay que perder fe a que un &lt;em&gt;bug&lt;/em&gt; sea resuelto..aunque haya que esperar 11 años :P.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 06 Sep 2017 20:43:25 -0300</pubDate>
-        <link>http://cravacuore.com.ar/blog/2017/09/06/bug-fix-tomate-tu-tiempo-firefox.html</link>
-        <guid isPermaLink="true">http://cravacuore.com.ar/blog/2017/09/06/bug-fix-tomate-tu-tiempo-firefox.html</guid>
         
         
       </item>
