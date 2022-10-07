@@ -1,5 +1,5 @@
-_site
-.sass-cache
-.jekyll-metadata
-.deploy/
-_drafts/
+.DS_Store
+node_modules
+/build
+/.svelte-kit
+/package
